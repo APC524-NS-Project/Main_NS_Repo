@@ -1,3 +1,5 @@
+## \file spatial_driver.py
+
 ## \package spatial_driver
 #  These objects drive the solution of the spatial part of the
 #  PDE problem.
