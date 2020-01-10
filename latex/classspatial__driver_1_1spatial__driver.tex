@@ -22,11 +22,11 @@ def \hyperlink{classspatial__driver_1_1spatial__driver_a379238cfd02adf2ae124015e
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classspatial__driver_1_1spatial__driver_aeb66b87c7c18067c8a9a16b47bcbbd2f}{boundhandl}
-\item 
+\begin{DoxyCompactList}\small\item\em A boundary handler object. \end{DoxyCompactList}\item 
 \hyperlink{classspatial__driver_1_1spatial__driver_a22bfac114fe305ab4089d9ce0e71c678}{pde\+\_\+problem}
-\item 
+\begin{DoxyCompactList}\small\item\em A P\+DE problem object. \end{DoxyCompactList}\item 
 \hyperlink{classspatial__driver_1_1spatial__driver_a5d9fcdf9d8185cb89fb1941038cfbbc8}{logger}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A data logger object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -65,11 +65,14 @@ Initializes the spatial driver with a P\+DE problem object, a boundary handler, 
 
 Evaluate the right hand side of the given P\+DE. 
 
-This method simply calls the R\+H\+S() method of the problem object. Retruns the spatial grid of approximate R\+HS values. 
+This method simply calls the R\+H\+S() method of the problem object. Returns the spatial grid of approximate R\+HS values. 
 \begin{DoxyParams}{Parameters}
 {\em val\+\_\+grid} & The spatial grid of function values \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The spatial grid of approximate R\+HS values 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classspatial__driver_1_1spatial__driver_a2f07b13c98f23f86409eea8f66a90fa0}\label{classspatial__driver_1_1spatial__driver_a2f07b13c98f23f86409eea8f66a90fa0}} 
 \index{spatial\+\_\+driver\+::spatial\+\_\+driver@{spatial\+\_\+driver\+::spatial\+\_\+driver}!log\+\_\+data@{log\+\_\+data}}
 \index{log\+\_\+data@{log\+\_\+data}!spatial\+\_\+driver\+::spatial\+\_\+driver@{spatial\+\_\+driver\+::spatial\+\_\+driver}}
@@ -102,6 +105,9 @@ This method simply calls the set\+\_\+bound\+\_\+vals() method of the boundary\+
 {\em val\+\_\+grid} & The spatial grid of function values \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated grid with correct boundary values 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classspatial__driver_1_1spatial__driver_a379238cfd02adf2ae124015e1108182d}\label{classspatial__driver_1_1spatial__driver_a379238cfd02adf2ae124015e1108182d}} 
 \index{spatial\+\_\+driver\+::spatial\+\_\+driver@{spatial\+\_\+driver\+::spatial\+\_\+driver}!solve@{solve}}
 \index{solve@{solve}!spatial\+\_\+driver\+::spatial\+\_\+driver@{spatial\+\_\+driver\+::spatial\+\_\+driver}}
@@ -126,6 +132,9 @@ This method calls the other methods defined in this class. Returns the grid of R
 {\em val\+\_\+grid} & The output grid from the time stepper \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The grid object to pass to the time stepper 
+\end{DoxyReturn}
 
 
 \subsection{Member Data Documentation}
@@ -135,17 +144,29 @@ This method calls the other methods defined in this class. Returns the grid of R
 \subsubsection{\texorpdfstring{boundhandl}{boundhandl}}
 {\footnotesize\ttfamily spatial\+\_\+driver.\+spatial\+\_\+driver.\+boundhandl}
 
+
+
+A boundary handler object. 
+
 \mbox{\Hypertarget{classspatial__driver_1_1spatial__driver_a5d9fcdf9d8185cb89fb1941038cfbbc8}\label{classspatial__driver_1_1spatial__driver_a5d9fcdf9d8185cb89fb1941038cfbbc8}} 
 \index{spatial\+\_\+driver\+::spatial\+\_\+driver@{spatial\+\_\+driver\+::spatial\+\_\+driver}!logger@{logger}}
 \index{logger@{logger}!spatial\+\_\+driver\+::spatial\+\_\+driver@{spatial\+\_\+driver\+::spatial\+\_\+driver}}
 \subsubsection{\texorpdfstring{logger}{logger}}
 {\footnotesize\ttfamily spatial\+\_\+driver.\+spatial\+\_\+driver.\+logger}
 
+
+
+A data logger object. 
+
 \mbox{\Hypertarget{classspatial__driver_1_1spatial__driver_a22bfac114fe305ab4089d9ce0e71c678}\label{classspatial__driver_1_1spatial__driver_a22bfac114fe305ab4089d9ce0e71c678}} 
 \index{spatial\+\_\+driver\+::spatial\+\_\+driver@{spatial\+\_\+driver\+::spatial\+\_\+driver}!pde\+\_\+problem@{pde\+\_\+problem}}
 \index{pde\+\_\+problem@{pde\+\_\+problem}!spatial\+\_\+driver\+::spatial\+\_\+driver@{spatial\+\_\+driver\+::spatial\+\_\+driver}}
 \subsubsection{\texorpdfstring{pde\+\_\+problem}{pde\_problem}}
 {\footnotesize\ttfamily spatial\+\_\+driver.\+spatial\+\_\+driver.\+pde\+\_\+problem}
+
+
+
+A P\+DE problem object. 
 
 
 

@@ -25,8 +25,14 @@ class spatial_driver():
     #  \param pde_problem The PDE problem object
     #  \param logger The data logger object
     def __init__(self, boundhandl, pde_problem, logger):
+        
+        ## A boundary handler object
         self.boundhandl = boundhandl
+
+        ## A PDE problem object
         self.pde_problem = pde_problem
+
+        ## A data logger object
         self.logger = logger
 
     ## Set the spatial boundaries to the appropriate values
@@ -36,15 +42,17 @@ class spatial_driver():
     #  the boundary_handler object. Returns the updated grid with
     #  the correct boundary values.
     #  \param val_grid The spatial grid of function values
+    #  \return Updated grid with correct boundary values
     def set_BCs(self, val_grid):
         return self.boundhandl.set_bound_vals(val_grid)
 
     ## Evaluate the right hand side of the given PDE
     #  
     #  This method simply calls the RHS() method of the
-    #  problem object. Retruns the spatial grid of approximate
+    #  problem object. Returns the spatial grid of approximate
     #  RHS values.
     #  \param val_grid The spatial grid of function values
+    #  \return The spatial grid of approximate RHS values
     def eval_rhs(self, val_grid):
         return self.pde_problem.RHS(val_grid)
 
@@ -69,6 +77,7 @@ class spatial_driver():
     #  passed to the time stepper.
     #  \param t The current time step
     #  \param val_grid The output grid from the time stepper
+    #  \return The grid object to pass to the time stepper
     def solve(self, t, val_grid):
         val_grid = self.set_BCs(val_grid)
         self.log_data(t, val_grid)

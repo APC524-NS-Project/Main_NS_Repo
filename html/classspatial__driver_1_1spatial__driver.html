@@ -95,10 +95,13 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aeb66b87c7c18067c8a9a16b47bcbbd2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatial__driver_1_1spatial__driver.html#aeb66b87c7c18067c8a9a16b47bcbbd2f">boundhandl</a></td></tr>
+<tr class="memdesc:aeb66b87c7c18067c8a9a16b47bcbbd2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boundary handler object.  <a href="#aeb66b87c7c18067c8a9a16b47bcbbd2f">More...</a><br /></td></tr>
 <tr class="separator:aeb66b87c7c18067c8a9a16b47bcbbd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22bfac114fe305ab4089d9ce0e71c678"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatial__driver_1_1spatial__driver.html#a22bfac114fe305ab4089d9ce0e71c678">pde_problem</a></td></tr>
+<tr class="memdesc:a22bfac114fe305ab4089d9ce0e71c678"><td class="mdescLeft">&#160;</td><td class="mdescRight">A PDE problem object.  <a href="#a22bfac114fe305ab4089d9ce0e71c678">More...</a><br /></td></tr>
 <tr class="separator:a22bfac114fe305ab4089d9ce0e71c678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9fcdf9d8185cb89fb1941038cfbbc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classspatial__driver_1_1spatial__driver.html#a5d9fcdf9d8185cb89fb1941038cfbbc8">logger</a></td></tr>
+<tr class="memdesc:a5d9fcdf9d8185cb89fb1941038cfbbc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A data logger object.  <a href="#a5d9fcdf9d8185cb89fb1941038cfbbc8">More...</a><br /></td></tr>
 <tr class="separator:a5d9fcdf9d8185cb89fb1941038cfbbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -182,12 +185,13 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Evaluate the right hand side of the given PDE. </p>
-<p>This method simply calls the RHS() method of the problem object. Retruns the spatial grid of approximate RHS values. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method simply calls the RHS() method of the problem object. Returns the spatial grid of approximate RHS values. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">val_grid</td><td>The spatial grid of function values </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The spatial grid of approximate RHS values </dd></dl>
 
 </div>
 </div>
@@ -267,6 +271,7 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Updated grid with correct boundary values </dd></dl>
 
 </div>
 </div>
@@ -315,6 +320,7 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The grid object to pass to the time stepper </dd></dl>
 
 </div>
 </div>
@@ -331,6 +337,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>A boundary handler object. </p>
+
 </div>
 </div>
 <a id="a5d9fcdf9d8185cb89fb1941038cfbbc8"></a>
@@ -345,6 +353,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>A data logger object. </p>
+
 </div>
 </div>
 <a id="a22bfac114fe305ab4089d9ce0e71c678"></a>
@@ -358,6 +368,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A PDE problem object. </p>
 
 </div>
 </div>
