@@ -1,4 +1,4 @@
-## @package spatial_driver
+## \package spatial_driver
 #  These objects drive the solution of the spatial part of the
 #  PDE problem.
 #
@@ -19,9 +19,9 @@ class spatial_driver():
     #  
     #  Initializes the spatial driver with a PDE problem object,
     #  a boundary handler, and a data logger object.
-    #  @param boundhandl The boundary_handler object
-    #  @param pde_problem The PDE problem object
-    #  @param logger The data logger object
+    #  \param boundhandl The boundary_handler object
+    #  \param pde_problem The PDE problem object
+    #  \param logger The data logger object
     def __init__(self, boundhandl, pde_problem, logger):
         self.boundhandl = boundhandl
         self.pde_problem = pde_problem
@@ -31,18 +31,18 @@ class spatial_driver():
     #  based on the boundary conditions.
     #  
     #  This method simply calls the set_bound_vals() method of
-    #  the boundary_handler object.
-    #  @param val_grid The spatial grid of function values
-    #  @return An updated grid with the correct boundary values
+    #  the boundary_handler object. Returns the updated grid with
+    #  the correct boundary values.
+    #  \param val_grid The spatial grid of function values
     def set_BCs(self, val_grid):
         return self.boundhandl.set_bound_vals(val_grid)
 
     ## Evaluate the right hand side of the given PDE
     #  
     #  This method simply calls the RHS() method of the
-    #  problem object.
-    #  @param val_grid The spatial grid of function values
-    #  @return The spatial grid of approximate RHS values
+    #  problem object. Retruns the spatial grid of approximate
+    #  RHS values.
+    #  \param val_grid The spatial grid of function values
     def eval_rhs(self, val_grid):
         return self.pde_problem.RHS(val_grid)
 
@@ -51,8 +51,8 @@ class spatial_driver():
     #  
     #  This method simply calls the log() method of the data
     #  logger object.
-    #  @param t The current time step
-    #  @param val_grid The spatial grid of function values
+    #  \param t The current time step
+    #  \param val_grid The spatial grid of function values
     def log_data(self, t, val_grid):
         self.logger.log(t, val_grid)
         return
@@ -63,10 +63,10 @@ class spatial_driver():
     #  3. Evaluate the approximate RHS values
     #  
     #  This method calls the other methods defined in this
-    #  class.
-    #  @param t The current time step
-    #  @param val_grid The output grid from the time stepper
-    #  @return The grid of RHS values for passing to time stepper
+    #  class. Returns the grid of RHS values that will be
+    #  passed to the time stepper.
+    #  \param t The current time step
+    #  \param val_grid The output grid from the time stepper
     def solve(self, t, val_grid):
         val_grid = self.set_BCs(val_grid)
         self.log_data(t, val_grid)
