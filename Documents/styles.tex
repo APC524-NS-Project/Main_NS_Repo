@@ -1,0 +1,49 @@
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[bottom]{footmisc}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[makeroom]{cancel}
+\usepackage{pifont}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{wrapfig}
+\usepackage[framemethod=Tikz]{mdframed}
+
+\usepackage{tikz,eepic}
+\usepackage[mode=buildnew]{standalone}
+\usetikzlibrary{patterns}
+
+\renewcommand{\vec}[1]{\mathbf{\underline{#1}}}
+\newcommand{\grad}{\nabla}
+\newcommand{\cross}[2]{\vec{#1}\wedge\vec{#2}}
+\newcommand{\crosso}[2]{\vec{#1}\wedge #2}
+\numberwithin{equation}{section}
+\newcommand*\dif{\mathop{}\!\mathrm{d}}
+\newcommand*\Dif{\mathop{}\!\mathrm{D}}
+\newcommand{\partder}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\partdero}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\fracder}[2]{\frac{\dif #1}{\dif #2}}
+\newcommand{\fracdero}[1]{\frac{\dif}{\dif #1}}
+\newcommand{\matder}[2]{\frac{\Dif #1}{\Dif #2}}
+\newcommand{\matdero}[1]{\frac{\Dif}{\Dif #1}}
+\newcommand*\ddif{\,\dif}
+
+
+\newenvironment{rcases}
+  {\left.\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\setlength{\footnotesep}{.3cm}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\newmdenv[backgroundcolor = black!10!white, roundcorner = 10pt, outerlinewidth=.5, leftmargin = 30, rightmargin = 30, innertopmargin =5pt]{aside}
