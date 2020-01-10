@@ -4,28 +4,44 @@
 
 import numpy as np
 from abc import ABC
+import math
 
 ## finite_dif_stencil_factory
 # Generates stencils for an arbitrary finite difference scheme
 class finite_dif_stencil_factory:
 
 	## gen_stencil
-	# returns an array containing finite difference coefficients for a given set of arbitrary stencil points
-	# implentation according to formula given in https://en.wikipedia.org/wiki/Finite_difference_coefficient for arbitrary stencil points
+	# Returns an array containing finite difference coefficients for a given set of arbitrary stencil points
+	# Implentation according to formula given in https://en.wikipedia.org/wiki/Finite_difference_coefficient for arbitrary stencil points
 	## @var d
-	# order of derivative
+	# Order of derivative
 	## @var s
-	# numpy array containing set of arbitrary stencil points of dimension N
-	def gen_stencil(d,s):
+	# Numpy array containing set of arbitrary stencil points of dimension N
+	## @var s_matrix
+	# Matrix comprising the LHS of the arbitrary stencil point formula
+	## @var s_matrix_inv
+	# Inverse of s_matrix
+	## @var rhs_matrix
+	# Matrix consiting of the RHS of the arbirtrary stencil point forumla. Only non-zero value is d! at the index d. Matrix has dimensions Nx1
+	## @var a_matrix
+	# matrix of stencil coefficient values of size Nx1
+	def gen_stencil(self,d,s):
+		s_matrix = self._stencil_matrix(s)
+		s_matrix_inv = np.linalg.inv(s_matrix)
 
+		rhs_matrix = np.zeros((N,1))
+		rhs_matrix[d] = math.factorial(d)
 
+		a_matrix = s_matrix_inv * rhs_matrix
+
+		return a_matrix
 
 	## _stencil_matrix
-	# generates LHS matrix of stencil points. matrix has dimensions NxN
+	# Generates LHS matrix of stencil points. matrix has dimensions NxN
 	## @var N
-	# number of stencil points
+	# Number of stencil points
 	## @var s_matrix
-	# matrix of size NxN with rows consisting of the stencil points raised to the power of that row's index
+	# Matrix of size NxN with rows consisting of the stencil points raised to the power of that row's index
 	def _stencil_matrix(s):
 		N = s.size()
 		s_matrix = np.zeros((N,N))
