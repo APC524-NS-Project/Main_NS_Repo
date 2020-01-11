@@ -73,7 +73,8 @@ class spatial_driver():
     #  3. Evaluate the approximate RHS values
     #  
     #  This method calls the other methods defined in this
-    #  class. Returns the grid of RHS values that will be
+    #  class. Returns the input grid with updated boundary
+    #  values and the grid of RHS values that will be
     #  passed to the time stepper.
     #  \param t The current time step
     #  \param val_grid The output grid from the time stepper
