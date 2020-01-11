@@ -1,0 +1,22 @@
+\hypertarget{namespacetime__stepper}{}\section{time\+\_\+stepper Namespace Reference}
+\label{namespacetime__stepper}\index{time\+\_\+stepper@{time\+\_\+stepper}}
+
+
+These objects drive the solution to the temporal part of the P\+DE problem.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtime__stepper_1_1fwd__euler}{fwd\+\_\+euler}
+\begin{DoxyCompactList}\small\item\em A concrete Forward Euler subclass of \hyperlink{classtime__stepper_1_1time__stepper}{time\+\_\+stepper}. \end{DoxyCompactList}\item 
+class \hyperlink{classtime__stepper_1_1time__stepper}{time\+\_\+stepper}
+\begin{DoxyCompactList}\small\item\em The abstract \hyperlink{classtime__stepper_1_1time__stepper}{time\+\_\+stepper} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These objects drive the solution to the temporal part of the P\+DE problem. 
+
+This consists of advancing the current time of the problem by one step. This can be implemented in many ways, the simplest of which is a Forward Euler method.
+
+The time stepper is called along with a grid by the main driver class and should return another grid with values that have been updated in time. This grid will then be passed back to the spatial driver for further modification. The main method of the time stepper class is simply called step(). 
