@@ -3,7 +3,7 @@
 # Package contains relevant classes to produce Scheme classes, which have the ability to produce discretizations elementary linear operators for a given Grid object
 
 import numpy as np
-from abc import ABC
+# from abc import ABC
 import math
 
 ## finite_dif_stencil_factory
@@ -26,15 +26,17 @@ class finite_dif_stencil_factory:
 	## @var a_matrix
 	# matrix of stencil coefficient values of size Nx1
 	def gen_stencil(self,d,s):
+		N = s.size
+
 		s_matrix = self._stencil_matrix(s)
 		s_matrix_inv = np.linalg.inv(s_matrix)
 
 		rhs_matrix = np.zeros((N,1))
 		rhs_matrix[d] = math.factorial(d)
 
-		a_matrix = s_matrix_inv * rhs_matrix
+		a_matrix = np.dot(s_matrix_inv,rhs_matrix)
 
-		return a_matrix
+		return np.transpose(a_matrix)
 
 	## _stencil_matrix
 	# Generates LHS matrix of stencil points. matrix has dimensions NxN
@@ -42,8 +44,8 @@ class finite_dif_stencil_factory:
 	# Number of stencil points
 	## @var s_matrix
 	# Matrix of size NxN with rows consisting of the stencil points raised to the power of that row's index
-	def _stencil_matrix(s):
-		N = s.size()
+	def _stencil_matrix(self,s):
+		N = s.size
 		s_matrix = np.zeros((N,N))
 
 		for i in range(N):
