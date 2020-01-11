@@ -8,20 +8,20 @@
 #  hand side of the differential equation
 #  du/dt = f( u, d^(n)u/dx^(n), d^(n)u/dy^(n) )
 #  
-#  The spatial_driver is called by the main driver class and
-#  itself calls the problem class and the boundary_handler
+#  The SpatialDriver is called by the main driver class and
+#  itself calls the problem class and the boundary handler
 #  objects in order to return an approximation for the
 #  values of the right hand side to the data logger object.
 
 
-## The spatial_driver class
-class spatial_driver():
+## The SpatialDriver class
+class SpatialDriver():
 
-    ## The constructor for the spatial_driver class.
+    ## The constructor for the SpatialDriver class.
     #  
     #  Initializes the spatial driver with a PDE problem object,
     #  a boundary handler, and a data logger object.
-    #  \param boundhandl The boundary_handler object
+    #  \param boundhandl The boundary handler object
     #  \param pde_problem The PDE problem object
     #  \param logger The data logger object
     def __init__(self, boundhandl, pde_problem, logger):
@@ -39,7 +39,7 @@ class spatial_driver():
     #  based on the boundary conditions.
     #  
     #  This method simply calls the set_bound_vals() method of
-    #  the boundary_handler object. Returns the updated grid with
+    #  the boundary handler object. Returns the updated grid with
     #  the correct boundary values.
     #  \param val_grid The spatial grid of function values
     #  \return Updated grid with correct boundary values
