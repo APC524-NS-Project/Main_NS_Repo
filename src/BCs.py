@@ -5,7 +5,6 @@
 # Uses numpy for internal handling of arrays
 
 import abc
-import numpy
 
 ## Abstract base class for representing the PDE problem's boundary conditions.
 class BCs(abc.ABC):
@@ -17,6 +16,11 @@ class BCs(abc.ABC):
     ## Method to spit out the contained boundary conditions, for debugging and planning.
     def print_BCs(self):
         pass
+   
+    ## Method to return the number of the boundary this boundary applies to
+    def get_bd(self):
+        pass
+    
     
 ## Child BCs class for handling one side with static Dirichlet boundary conditions.
 class Dirichlet(BCs):
@@ -27,8 +31,19 @@ class Dirichlet(BCs):
     def __init__(self,side,vals):
         self.side = side
         self.vals = vals
-        
+
+    ## Method to spit out the contained boundary conditions, for debugging and planning.
+    #
+    # Mentions the side number, the kind of boundary (in this case Dirichlet), and spits out the prescribed values.        
     def print_BCs(self):
         print("This boundary value object represents side {} and has Dirichlet"
               " boundary conditions.\n".format(self.side))
         print("Set boundary values:{}\n".format(self.vals))
+    
+    ## Method to return the side that this Dirichlet boundary condition applies to 
+    def get_bd(self):
+        return self.side
+        
+        
+        
+    
