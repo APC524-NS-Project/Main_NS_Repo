@@ -1,0 +1,49 @@
+\hypertarget{classtime__stepper_1_1time__stepper}{}\section{time\+\_\+stepper.\+time\+\_\+stepper Class Reference}
+\label{classtime__stepper_1_1time__stepper}\index{time\+\_\+stepper.\+time\+\_\+stepper@{time\+\_\+stepper.\+time\+\_\+stepper}}
+
+
+The abstract \hyperlink{classtime__stepper_1_1time__stepper}{time\+\_\+stepper} class.  
+
+
+
+
+Inheritance diagram for time\+\_\+stepper.\+time\+\_\+stepper\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classtime__stepper_1_1time__stepper_a874974dcfa5f9b51de6598c7e1cd3b6a}{step} (self, val\+\_\+grid, rhs\+\_\+grid, dt)
+\begin{DoxyCompactList}\small\item\em The main step method of the time stepper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The abstract \hyperlink{classtime__stepper_1_1time__stepper}{time\+\_\+stepper} class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtime__stepper_1_1time__stepper_a874974dcfa5f9b51de6598c7e1cd3b6a}\label{classtime__stepper_1_1time__stepper_a874974dcfa5f9b51de6598c7e1cd3b6a}} 
+\index{time\+\_\+stepper\+::time\+\_\+stepper@{time\+\_\+stepper\+::time\+\_\+stepper}!step@{step}}
+\index{step@{step}!time\+\_\+stepper\+::time\+\_\+stepper@{time\+\_\+stepper\+::time\+\_\+stepper}}
+\subsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily def time\+\_\+stepper.\+time\+\_\+stepper.\+step (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val\+\_\+grid,  }\item[{}]{rhs\+\_\+grid,  }\item[{}]{dt }\end{DoxyParamCaption})}
+
+
+
+The main step method of the time stepper. 
+
+This method must be overwritten in the child class where the actual implementation algorithm is defined. 
+\begin{DoxyParams}{Parameters}
+{\em val\+\_\+grid} & The spatial grid of values at the current time \\
+\hline
+{\em rhs\+\_\+grid} & The spatial grid of R\+HS values \\
+\hline
+{\em dt} & The time step size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Spatial grid with new values for the next time step 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{time__stepper_8py}{time\+\_\+stepper.\+py}\end{DoxyCompactItemize}
