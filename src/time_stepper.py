@@ -13,8 +13,8 @@
 #  method of the time stepper class is simply called step().
 
 
-## The abstract time_stepper class
-class time_stepper():
+## The abstract TimeStepper class
+class TimeStepper():
 
     ## The main step method of the time stepper.
     #  
@@ -28,13 +28,13 @@ class time_stepper():
         pass
 
 
-## A concrete Forward Euler subclass of time_stepper
+## A concrete Forward Euler subclass of TimeStepper
 #  
 #  The Forward Euler method uses a simple forward finite difference
 #  approach to estimate a value at the next time step. This is done
 #  with the approximation {u(t+dt) - u(t)}/dt = RHS which can be
 #  rearranged to give u(t+dt) = u(t) + dt*RHS.
-class fwd_euler(time_stepper):
+class ForwardEuler(time_stepper):
 
     ## The step method of the Forward Euler class
     #  
