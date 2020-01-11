@@ -1,0 +1,93 @@
+\documentclass[border = 5pt, tikz, multi]{standalone}
+\usepackage{tikz}
+\usepackage{commath}
+
+\usetikzlibrary{arrows,shapes,positioning,math,calc}
+\usetikzlibrary{patterns,decorations.markings,decorations.pathmorphing}
+\usetikzlibrary{calc}
+
+\renewcommand{\vec}[1]{\mathbf{\underline{#1}}}
+\newcommand{\grad}{\nabla}\usepackage[american,siunitx]{circuitikz}
+\usepackage{tikz-uml}
+\usetikzlibrary{arrows,shapes,calc,positioning}
+
+\begin{document}
+\begin{tikzpicture}
+    \pgfmathsetmacro{\gridy}{-3}
+    \pgfmathsetmacro{\gridx}{1}
+    \pgfmathsetmacro{\schemex}{7}
+    \pgfmathsetmacro{\schemey}{\gridy}
+    \pgfmathsetmacro{\probx}{16}
+    \pgfmathsetmacro{\proby}{0}
+    \pgfmathsetmacro{\drivex}{24}
+    \pgfmathsetmacro{\drivey}{\proby}
+
+    \umlemptyclass[x=-1, y=0]{Importer};
+    \umlemptyclass[x = 1, y=-\gridy, type=abstract]{BCs};
+    \umlemptyclass[x = \gridx+4,y=-\gridy+1.5]{Dirichlet};
+    \umlemptyclass[x = \gridx+4,y=-\gridy-1.5]{Neuman};
+    \umlemptyclass[x = \gridx+7,y=-\gridy]{Periodic};
+
+    \umlclass[x=\gridx,y=\gridy,type=abstract]{Grid}{}{};
+    \umlclass[x = \gridx-3, y = \gridy]{GridFactory}{}{};
+    \umlemptyclass[x=\gridx,y=\gridy - 2]{CartesianGrid};
+    \umlclass[x=\schemex,y=\schemey,type=abstract]{Scheme}{}{};
+    \umlemptyclass[x=\schemex - 2,y=\schemey-2]{ForwardDif};
+    \umlemptyclass[x=\schemex,y=\schemey - 4]{CenterDif};
+    \umlemptyclass[x=\schemex+2,y=\schemey-2]{BackDif};
+    \umlclass[x = \schemex, y =\schemey + 2]{OperatorFactory}{}{};
+    \umlemptyclass[x = \schemex + 5, y = \schemey + 2]{LinearOperator}
+    \umlclass[x=\probx,y=\proby,type=abstract]{Problem}{}{};
+    \umlclass[x=\probx-1.5,y=\proby+3,type=abstract]{Standard}{}{};
+    \umlclass[x=\probx+1.5,y=\proby+3,type=abstract]{Constrained}{}{};
+    \umlclass[x=\probx-1.5,y=\proby+5]{HeatEq}{}{};
+    \umlclass[x=\probx+1.5,y=\proby+5]{NavierStokes}{}{};
+    \umlemptyclass[x=\probx,y=\proby-3,type=abstract]{BCHandler};
+    \umlemptyclass[x=\probx-2,y=\proby-5]{DirichletHand};
+    \umlemptyclass[x=\probx+2,y=\proby-5]{NeumanHand};
+    \umlemptyclass[x=\probx,y=\proby-7]{PeriodicHand};
+    \umlemptyclass[x=\probx+4,y=\proby]{SpacialDriver};
+    \umlclass[x=\drivex,y=\drivey]{Driver}{}{};
+    \umlemptyclass[x=\drivex,y=\drivey+3,type=abstract]{TimeStepper};
+    \umlemptyclass[x=\drivex-2,y=\drivey+5]{ForwardEuler};
+    \umlemptyclass[x=\drivex+2,y=\drivey+5]{RungeKutta};
+    \umlemptyclass[x=\drivex+3,y=\drivey]{Logger};
+    \umlemptyclass[x=\drivex+6,y=\drivey]{DataOutput};
+
+    \umluniassoc[very thick]{Importer}{Problem};
+    \umluniassoc[very thick,geometry=|-]{Importer}{BCs};
+    \umluniassoc[very thick,geometry=-|]{Importer}{Grid};
+    \umlinherit[very thick]{Grid}{CartesianGrid};
+    \umluniaggreg[very thick]{Grid}{GridFactory};
+    \umlinherit[very thick]{BCs}{Periodic};
+    \umlinherit[very thick,geometry=-|]{BCs}{Dirichlet};
+    \umlinherit[very thick,geometry=-|]{BCs}{Neuman};
+    \umluniaggreg[very thick,geometry=|-,anchor2=20,attr2=1|*]{BCs}{Problem};
+    \umluniaggreg[very thick,geometry=-|-,arg2=1]{Grid}{OperatorFactory};
+    \umlinherit[very thick,geometry=|-]{Scheme}{ForwardDif};
+    \umlinherit[very thick,geometry=|-]{Scheme}{BackDif};
+    \umlinherit[very thick]{Scheme}{CenterDif};
+    \umluniaggreg[very thick,arg2=1]{Scheme}{OperatorFactory};
+    \umluniassoc[very thick,attr2=1|*]{OperatorFactory}{LinearOperator};
+    \umluniaggreg[very thick,attr2=1|*,geometry=-|-,anchor2=-20]{LinearOperator}{Problem};
+    \umlinherit[very thick,geometry=|-|]{Problem}{Standard};
+    \umlinherit[very thick,geometry=|-|]{Problem}{Constrained};
+    \umlinherit[very thick]{Standard}{HeatEq};
+    \umlinherit[very thick]{Constrained}{NavierStokes};
+    \umluniassoc[very thick,attr2=1|*]{BCHandler}{Problem};
+    \umlinherit[very thick]{BCHandler}{PeriodicHand};
+    \umlinherit[very thick,geometry=-|]{BCHandler}{DirichletHand};
+    \umlinherit[very thick,geometry=|-]{BCHandler}{NeumanHand};
+    \umlinherit[very thick,geometry=-|]{TimeStepper}{ForwardEuler};
+    \umlinherit[very thick,geometry=-|]{TimeStepper}{RungeKutta};
+    \umluniaggreg[very thick,attr2=1|*,geometry=-|]{BCHandler}{SpacialDriver};
+    \umluniaggreg[very thick,arg2=1]{Problem}{SpacialDriver};
+
+    \umluniaggreg[very thick,arg2=1]{SpacialDriver}{Driver};
+    \umluniaggreg[very thick, arg2=1]{TimeStepper}{Driver};
+    \umlassoc[very thick]{Driver}{Logger};
+    \umluniassoc[very thick]{Logger}{DataOutput};
+    \draw[very thick,tikzuml unidirectional aggregation style](1.75,-3.4) -| (3,-8.5)-|(27,-.65);
+
+\end{tikzpicture}
+\end{document}
