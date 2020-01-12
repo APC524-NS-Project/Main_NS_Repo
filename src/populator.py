@@ -46,7 +46,7 @@ class Populator():
 	# @var new_coords Coordinates modified by the value in the stencil in the dimesion the op_matrix is being populated for
 	# @var weight_index single index value in the flattened grid corresponding to 
 	def _set_row(self,op1d,coords,op_mat, op_index):
-		for weight, idx in enumerate(op1d.weights):
+		for idx, weight in enumerate(op1d.weights):
 			new_coords = coords
 			new_coords[self.dim] += op1d.stencil[idx]
 			weight_index = self._get_single_index(new_coords)
@@ -63,10 +63,10 @@ class Populator():
 	def _get_single_index(self,coords):
 		index = 0
 		for idx, val in enumerate(self.shape):
-			if idx = 0:
+			if idx == 0:
 				index += coords[idx]
 			else:
-				idx = += coords[idx]*sum(self.shape[0:idx])
+				idx += coords[idx]*sum(self.shape[0:idx])
 
 		return index
 
