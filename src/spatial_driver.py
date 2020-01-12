@@ -41,10 +41,11 @@ class SpatialDriver():
     #  This method simply calls the set_bound_vals() method of
     #  the boundary handler object. Returns the updated grid with
     #  the correct boundary values.
+    #  \param t The current time
     #  \param val_grid The spatial grid of function values
     #  \return Updated grid with correct boundary values
-    def set_BCs(self, val_grid):
-        return self.boundhandl.set_bound_vals(val_grid)
+    def set_BCs(self, t, val_grid):
+        return self.boundhandl.set_BCs(t, val_grid)
 
     ## Evaluate the right hand side of the given PDE
     #  
@@ -77,10 +78,10 @@ class SpatialDriver():
     #  values and the grid of RHS values that will be
     #  passed to the time stepper.
     #  \param t The current time step
-    #  \param val_grid The output grid from the time stepper
+    #  \param val_grid A spatial grid object
     #  \return The spatial grid with correct boundary values
     #  \return The grid object to pass to the time stepper
     def solve(self, t, val_grid):
-        val_grid = self.set_BCs(val_grid)
+        val_grid = self.set_BCs(t, val_grid)
         self.log_data(t, val_grid)
         return val_grid, self.eval_rhs(val_grid)

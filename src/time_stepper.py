@@ -49,14 +49,8 @@ class ForwardEuler(time_stepper):
                  self.get_num_grid_elems(rhs_grid),
                  "Grid objects must be equally sized!" )
         
-        num_grid_elems = self.get_num_grid_elems(val_grid)
-
-        for index in range(num_grid_elems):
-            new_entry = ( val_grid.get_val_1d(index)
-                         + dt * rhs_grid.get_val_1d(index) )
-            val_grid.set_val_1d(index, new_entry)
-
-        return val_grid
+        new_val_grid = val_grid + dt * rhs_grid
+        return new_val_grid
 
     ## A method for determining the number of elements in a grid
     #  
