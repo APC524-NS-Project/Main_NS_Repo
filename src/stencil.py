@@ -39,6 +39,7 @@ class Stencil():
 	# Generates matrix of stencil coefficients
 	#
 	# Matrix has rows corresponding to stencil index location raised to a power equal to the index of the row
+	# @var s_matrix matrix of stencil indicies for use in valculation
 	def _stencil_matrix(self):
 		self.s_matrix = np.zeros((self.N,self.N))
 
