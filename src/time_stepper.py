@@ -34,7 +34,7 @@ class TimeStepper():
 #  approach to estimate a value at the next time step. This is done
 #  with the approximation {u(t+dt) - u(t)}/dt = RHS which can be
 #  rearranged to give u(t+dt) = u(t) + dt*RHS.
-class ForwardEuler(time_stepper):
+class ForwardEuler(TimeStepper):
 
     ## The step method of the Forward Euler class
     #  
