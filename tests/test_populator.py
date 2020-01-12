@@ -9,7 +9,7 @@ class testPopulator(unittest.TestCase):
 
 	#test _get_single_index method of populator
 	def test_GSI(self):
-		inputs = (([0,2],[1,0],[3,1]),)
+		inputs = (([2,0],[0,1],[3,1]),)
 		outputs_exp = ((2,4,7),)
 		for idx,popul in enumerate(self.populs):
 			for idx2,coord in enumerate(inputs[idx]):

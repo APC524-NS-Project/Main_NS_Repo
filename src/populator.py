@@ -66,7 +66,7 @@ class Populator():
 			if idx == 0:
 				index += coords[idx]
 			else:
-				idx += coords[idx]*sum(self.shape[0:idx])
+				index += coords[idx]*sum(self.shape[1:idx+1])
 
 		return index
 
