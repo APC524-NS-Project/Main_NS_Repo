@@ -1,6 +1,6 @@
 ## \file operator_nd.py
 
-## The N-dimensional operator class simply contains a list of
+## The N-dimensional operator class simply contains a tuple of
 #  Operator1D objects, as well as the value of N.
 
 ## The OperatorND class
