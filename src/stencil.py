@@ -8,10 +8,10 @@ class Stencil():
 	## Constructor
 	# Constructs stencil from an initial array.
 	#
-	# @param s list containing index of points contained in stencil. 0 corresponds to point operator is calculating for
+	# @param s list containing index of points contained in stencil. 0 corresponds to point operator is calculating for. Implemented as numpy array
 	# @var N number of stencil points
 	def __init__(self, s):
-		self.s = s
+		self.s = np.array(s)
 		self.N = len(self.s)
 
 
@@ -33,7 +33,7 @@ class Stencil():
 
 		weights = np.dot(s_matrix_inv,rhs_matrix)
 
-		return weights
+		return np.transpose(weights)
 
 	## _stencil_matrix
 	# Generates matrix of stencil coefficients
