@@ -5,4 +5,4 @@ class TestConductHeatEqn(TestCase):
 
     def test_RHSAssert(self):
         problem = heat_eqn.ConductHeatEqn(alpha=0.005)
-        self.assertRaises(AssertionError, problem.RHS([[1,2],[3,4]]))
+        self.assertRaises(AssertionError, problem.RHS, [[1,2],[1,2]])
