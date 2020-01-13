@@ -5,7 +5,7 @@ from src import problem
 ## The conductive heat equation problem with no advective
 #  transport in the form dT/dt = alpha * laplacian(T)
 #  where T is temperature and alpha is the thermal diffusivity.
-class ConductHeatEqn(Problem):
+class ConductHeatEqn(problem.Problem):
 
     ## The constructor
     #  \param alpha The value of the thermal diffusivity.
