@@ -36,7 +36,7 @@ class Populator():
 				coords.append(axis.flat(index))
 
 			op_index = self._get_single_index(coords)
-			self._set_row()
+			self._set_row(op1d,coords,op_mat,op_index)
 
 
 	## _set_row
@@ -47,12 +47,10 @@ class Populator():
 	# @var weight_index single index value in the flattened grid corresponding to 
 	def _set_row(self,op1d,coords,op_mat, op_index):
 		for idx, weight in enumerate(op1d.weights):
-			new_coords = coords
+			new_coords = coords.copy()
 			new_coords[self.dim] += op1d.stencil[idx]
 			weight_index = self._get_single_index(new_coords)
-			op_mat[op_index,weight_index] = weight/np.pow(self.dx,op1d.d)
-
-
+			op_mat[op_index,weight_index] = weight/np.power(self.dx,op1d.d)
 
 	## _get_single_index
 	# Generates a single flattened index for an n-dimensional grid position.

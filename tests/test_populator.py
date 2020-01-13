@@ -1,5 +1,7 @@
 import unittest
 from src import populator
+from src import OperatorMatrix
+import numpy as np
 
 class testPopulator(unittest.TestCase):
 	def setUp(self):
@@ -17,7 +19,31 @@ class testPopulator(unittest.TestCase):
 
 				self.assertEqual(output,outputs_exp[idx][idx2])
 
+	def test_set_row(self):
+		op1d = mockOp1D([-1,0,1],[1,-2,1],2)
+		popul = self.populs[0]
+		opmat = OperatorMatrix.OperatorMatrix(8)
+		coords = [1,0]
+		opindex = popul._get_single_index(coords)
+
+		# Build correct output
+		opmat_out = OperatorMatrix.OperatorMatrix(8)
+		opmat_out[1,0] = 1
+		opmat_out[1,1] = -2
+		opmat_out[1,2] = 1
+
+		# Test function
+		popul._set_row(op1d,coords,opmat,opindex)
+
+		np.testing.assert_array_equal(opmat.array,opmat_out.array)
+
 class mockSpec():
 	def __init__(self,shape,dx):
 		self.shape = shape
 		self.dx = dx
+
+class mockOp1D():
+	def __init__(self,stencil,weights,d):
+		self.stencil = stencil
+		self.weights = weights
+		self.d = d
