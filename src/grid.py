@@ -12,12 +12,12 @@ class CartesianGridSpec(GridSpec):
     # Initialize the CartesianGridSpec with coordination, dimention, and shape of Grid
     # @param coords A tuple of tuples where the dimension of the gridspec and the inner tuples difine the coordinate space
      def __init__(self, coords):
-     # A coordination object
-     self.coords = coords
-     # A dimention object
-     self.ndim = len(coords)
-     # A Shape object
-     self.gridshape = tuple([len(c) for c in self.coords])
+         # A coordination object
+         self.coords = coords
+         # A dimention object
+         self.ndim = len(coords)
+         # A Shape object
+         self.gridshape = tuple([len(c) for c in self.coords])
             
 ## The GridQty abstract base class
 class GridQty(ABC):
