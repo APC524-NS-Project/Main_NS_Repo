@@ -28,6 +28,3 @@ class OperatorMatrix():
 
 	def __str__(self):
 		self.array.__str__()
-
-	def __repr__(self):
-		self.array.__repr__()
