@@ -8,20 +8,20 @@
 #  hand side of the differential equation
 #  du/dt = f( u, d^(n)u/dx^(n), d^(n)u/dy^(n) )
 #  
-#  The spatial_driver is called by the main driver class and
-#  itself calls the problem class and the boundary_handler
+#  The SpatialDriver is called by the main driver class and
+#  itself calls the problem class and the boundary handler
 #  objects in order to return an approximation for the
 #  values of the right hand side to the data logger object.
 
 
-## The spatial_driver class
-class spatial_driver():
+## The SpatialDriver class
+class SpatialDriver():
 
-    ## The constructor for the spatial_driver class.
+    ## The constructor for the SpatialDriver class.
     #  
     #  Initializes the spatial driver with a PDE problem object,
     #  a boundary handler, and a data logger object.
-    #  \param boundhandl The boundary_handler object
+    #  \param boundhandl The boundary handler object
     #  \param pde_problem The PDE problem object
     #  \param logger The data logger object
     def __init__(self, boundhandl, pde_problem, logger):
@@ -39,12 +39,13 @@ class spatial_driver():
     #  based on the boundary conditions.
     #  
     #  This method simply calls the set_bound_vals() method of
-    #  the boundary_handler object. Returns the updated grid with
+    #  the boundary handler object. Returns the updated grid with
     #  the correct boundary values.
+    #  \param t The current time
     #  \param val_grid The spatial grid of function values
     #  \return Updated grid with correct boundary values
-    def set_BCs(self, val_grid):
-        return self.boundhandl.set_bound_vals(val_grid)
+    def set_BCs(self, t, val_grid):
+        return self.boundhandl.set_BCs(t, val_grid)
 
     ## Evaluate the right hand side of the given PDE
     #  
@@ -77,10 +78,10 @@ class spatial_driver():
     #  values and the grid of RHS values that will be
     #  passed to the time stepper.
     #  \param t The current time step
-    #  \param val_grid The output grid from the time stepper
+    #  \param val_grid A spatial grid object
     #  \return The spatial grid with correct boundary values
     #  \return The grid object to pass to the time stepper
     def solve(self, t, val_grid):
-        val_grid = self.set_BCs(val_grid)
+        val_grid = self.set_BCs(t, val_grid)
         self.log_data(t, val_grid)
         return val_grid, self.eval_rhs(val_grid)
