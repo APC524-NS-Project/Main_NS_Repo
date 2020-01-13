@@ -33,6 +33,8 @@ class GridOperator():
 	# @var opmat an OperatorMatrix that will be filled 
 	# @var popul Populator object for the given dimension being considered
 	# @var interior coordinates of the interior of the 
+	# @var opmats recast opmats list to a tuple after instantiation 
+	# @var scalar_op The given grid operator linearlly combined such that it would act on a scalar and return a scalar
 	def __init__(self,spec,ndscheme):
 		self.spec = spec
 		self.ndscheme = ndscheme
@@ -41,18 +43,25 @@ class GridOperator():
 			raise ValueError("ND Scheme does not have the appropriate dimensions for this Grid")
 
 		self.basemesh = mesh.Mesh(self.spec.gridshape)
+		self.N = np.product(spec.gridshape)
 
 		for idx in range(self.spec.ndim):
 			if self.ndscheme.interior[idx] != None:
-				N = np.product(spec.gridshape)
-				opmat = operatormatrix.OperatorMatrix()
+				opmat = operatormatrix.OperatorMatrix(self.N)
 				popul = populator.Populator(self.spec,idx)
 
 				interior = self._get_Int(self.ndscheme.interior[idx],self.spec.gridshape[idx])
 				self._apply_op(popul,opmat,self.ndscheme.interior[idx],interior)
 
+				self._bl_set(popul,opmat,self.ndscheme.edge[idx],interior,self.spec.gridshape[idx])
 
+				opmats.append(opmat)
+			else:
+				opmats.append(None)
 
+		opmats = tuple(opmats)
+
+		
 
 	## _get_Int
 	# return a tuple corresponding to the coordinates of the interior
@@ -85,3 +94,28 @@ class GridOperator():
 		sub_mesh = self.mesh.sub_slice(slices)
 		popul.populate_op(sub_mesh,opmat,op1d)
 
+	## _bl_set
+	# set the FD scheme for the Boundary Layer operators in the OperatorMatrix
+	#
+	# Takes a set of edge operators in the form 
+	# ((op1D_L1, op1D_L2,...),(op1D_R1, op1D_R2,...))
+	# and applies them to each layer of the boundary layer in the grid, where the boundary layer are the non-interior points
+	# the Left side is the side with idx = 0
+	# A different op1d is specified for each slice of the boundary layer
+	# @params a Populator object
+	# @params an OperatorMatrix object
+	# @params edgeop a tuple of edge operators in the form ((op1D_L1, op1D_L2,...),(op1D_R1, op1D_R2,...))
+	# @params layer_dim a tuple corresponding to the left and rightmost edges of the interior points
+	# @params N total size of the layer
+	# @var slc a tuple containing the appropriate indexes for a single value slice of the mesh
+	def _bl_set(self,popul,opmat,edgeop,layer_dim,N):
+		for idx in range(layer_dim[0]):
+			slc = (idx,idx+1)
+			self._apply_op(popul,opmat,edgeop[0][idx],slc)
+
+		for idx in range(N-layer_dim[0]):
+			slc = (N-1-idx,N-idx)
+			self._apply_op(popul,opmat,edgeop[1][idx],slc)
+
+	def __call__(self,grid):
+		
