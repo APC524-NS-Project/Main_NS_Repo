@@ -15,7 +15,7 @@ import populator
 ## GridOperator
 # GridOperator class definition
 class GridOperator():
-	# @var opmats list to hold the operatormatricies generated for each dimension
+	# @var opmats list to hold the operator matricies generated for each dimension
 	opmats = []
 
 	## Contstructor
@@ -27,16 +27,29 @@ class GridOperator():
 	# as laid out in the op_nd_scheme specification. Note that the dimensions of the grid MUST match the dimensions of the NDscheme
 	# @param spec a GridSpec object corresponding to the grid on which the GridOperator will be applied
 	# @param ndscheme an OperatorNDScheme object containing an interior ND operator as well as a tuple of boundary operators. Must have same dimensions as grid
+	# @var basemesh a Mesh object instantiated to match the shape of the underlying Grid
+	# @var N size of the operator matrix, consists of the product of the size of each axis in grid
+	# @var idx integer representation of the dimension being evaluated, where the representation corresponds to the dimension's index in spec.gridshape
+	# @var opmat an OperatorMatrix that will be filled 
+	# @var popul Populator object for the given dimension being considered
+	# @var interior coordinates of the interior of the 
 	def __init__(self,spec,ndscheme):
 		self.spec = spec
 		self.ndscheme = ndscheme
 
-		if self.spec.dim != self.ndscheme.dim:
+		if self.spec.ndim != self.ndscheme.dim:
 			raise ValueError("ND Scheme does not have the appropriate dimensions for this Grid")
 
-		for idx in range(self.spec.dim):
+		self.basemesh = mesh.Mesh(self.spec.gridshape)
+
+		for idx in range(self.spec.ndim):
 			if self.ndscheme.interior[idx] != None:
+				N = np.product(spec.gridshape)
+				opmat = operatormatrix.OperatorMatrix()
+				popul = populator.Populator(self.spec,idx)
+
 				interior = self._get_Int(self.ndscheme.interior[idx],self.spec.gridshape[idx])
+				self._apply_op(popul,opmat,self.ndscheme.interior[idx],interior)
 
 
 
@@ -53,3 +66,22 @@ class GridOperator():
 		blr = size - op1d.stcl.s[-1]
 
 		return (bll,blr)
+
+	## _apply_op
+	# Apply a 1d operator to a subset of the mesh using the populator
+	#
+	# Create an appropriate slices tuple for the given slice in the dimension of the populator.
+	# Then use that to generate a submesh and then call the Populator's populate_op function on that given sub_mesh
+	# @params popul a Populator object
+	# @params opmat an OperatorMatrix object
+	# @params op1d a Operator1D object
+	# @params slc a tuple containing (start, end) of a particular slice of the mesh
+	# @var slices a set of slices for each dimension
+	# @var sub_mesh a sliced version of the main mesh sliced by the tuple pairs in slices
+	def _apply_op(self,popul,opmat,op1d,slc):
+		slices = [(None,)]*self.spec.ndim
+		slices[popul.dim] = slc
+
+		sub_mesh = self.mesh.sub_slice(slices)
+		popul.populate_op(sub_mesh,opmat,op1d)
+
