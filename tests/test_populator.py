@@ -64,7 +64,7 @@ class testPopulator(unittest.TestCase):
 
 class mockSpec():
 	def __init__(self,shape,dx):
-		self.shape = shape
+		self.gridshape = shape
 		self.dx = dx
 
 class mockOp1D():
