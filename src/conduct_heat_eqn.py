@@ -42,7 +42,6 @@ class ConductHeatEqn(problem.Problem):
     #  \param val_grid The spatial grid of current values
     #  \return The grid containing the evaluated RHS values
     def RHS(self, val_grid):
-        assert self.ops_set_flag, '''The RHS operators must 
-                                  be defined before calling
-                                  RHS()!'''
+        (assert self.ops_set_flag,
+        'The RHS operators must be defined before calling RHS()!')
         return self.alpha * self.laplacian(val_grid)
