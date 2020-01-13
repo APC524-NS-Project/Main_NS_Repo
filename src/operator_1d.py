@@ -24,8 +24,8 @@ class Operator1D():
         #  equal to the number of stencil points minus the
         #  derivative degree
         self.accuracy = self.stncl.N - self.deg
-        assert self.accuracy > 0, '''Improper 1D operator formation: 
-                                  increase number of stencil points!'''
+        assert self.accuracy > 0, \
+        'Improper 1D operator formation: increase number of stencil points!'
 
         ## \var weights The appropriate weighting coefficients for
         #  the finite difference approximation
