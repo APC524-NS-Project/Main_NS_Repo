@@ -14,16 +14,43 @@ import numpy
 
 class DirichletTest(unittest.TestCase):
     def setUp(self):
-        self.side = 5
+        self.dimen = 1
+        self.side = 'r'
         self.vals=numpy.array([4.,5.,6.,7.])
-        self.bcs=BCs.Dirichlet(self.side,self.vals)
+        self.bcs=BCs.Dirichlet(self.dimen,self.side,self.vals)
         
     def test_init(self): #checks that the attributes were assigned correctly
         self.assertEqual(self.side,self.bcs.side)
-        self.assertEqual(self.vals[0],self.bcs.vals[0])
+        self.assertEqual(self.dimen,self.bcs.dimen)
+        self.assertEqual(self.vals[0],self.bcs.bound_vals[0])
         
-    def test_get_bd(self): #checks that side number is returned correctly
-        self.assertEqual(self.side,self.bcs.get_bd())
+    def test_get_bd(self): #checks that boundary info is returned correctly
+        dimen,side = self.bcs.get_bd()
+        self.assertEqual(self.side,side)
+        self.assertEqual(self.dimen,dimen)
+        
+    def test_get_bctype(self): #checks that bc type is returned correctly
+        self.assertEqual(self.bcs.get_bctype().lower(),"dirichlet")
+        
+class NeumannTest(unittest.TestCase):
+    def setUp(self):
+        self.dimen = 1
+        self.side = 'r'
+        self.vals=numpy.array([4.,5.,6.,7.])
+        self.bcs=BCs.Neumann(self.dimen,self.side,self.vals)
+        
+    def test_init(self): #checks that the attributes were assigned correctly
+        self.assertEqual(self.side,self.bcs.side)
+        self.assertEqual(self.dimen,self.bcs.dimen)
+        self.assertEqual(self.vals[0],self.bcs.bound_vals[0])
+        
+    def test_get_bd(self): #checks that boundary info is returned correctly
+        dimen,side = self.bcs.get_bd()
+        self.assertEqual(self.side,side)
+        self.assertEqual(self.dimen,dimen)
+        
+    def test_get_bctype(self): #checks that bc type is returned correctly
+        self.assertEqual(self.bcs.get_bctype().lower(),"neumann")
 
 if __name__ == '__main__':
     unittest.main()
