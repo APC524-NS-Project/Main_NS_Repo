@@ -28,12 +28,12 @@ class Populator():
 	# @var coords n-dimensional coordinates of point given by different grid meshes
 	# @var op_index row index of the row corresponding to the current point in the operator matrix
 	def populate_op(self,mesh,op_mat,op1d):
-		total_points = np.prod(mesh[0].shape)
+		total_points = np.prod(mesh.shape)
 
 		for point in range(0,total_points):
 			coords = []
-			for axis in mesh:
-				coords.append(axis.flat(index))
+			for axis in mesh.meshes:
+				coords.append(axis.flat[point])
 
 			op_index = self._get_single_index(coords)
 			self._set_row(op1d,coords,op_mat,op_index)
@@ -61,10 +61,10 @@ class Populator():
 	def _get_single_index(self,coords):
 		index = 0
 		for idx, val in enumerate(self.shape):
-			if idx == 0:
+			if idx == len(self.shape)-1:
 				index += coords[idx]
 			else:
-				index += coords[idx]*sum(self.shape[1:idx+1])
+				index += coords[idx]*sum(self.shape[idx+1:])
 
 		return index
 
