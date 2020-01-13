@@ -47,3 +47,5 @@ class OperatorNDScheme():
 
         ## \var edge The tuple of 1D edge operators
         self.edge = edge_op1D
+
+        self.dim = opND_int.dim
