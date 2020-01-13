@@ -48,7 +48,7 @@ class Populator():
 	def _set_row(self,op1d,coords,op_mat, op_index):
 		for idx, weight in enumerate(op1d.weights):
 			new_coords = coords.copy()
-			new_coords[self.dim] += op1d.stencil[idx]
+			new_coords[self.dim] += op1d.stncl.s[idx]
 			weight_index = self._get_single_index(new_coords)
 			op_mat[op_index,weight_index] = weight/np.power(self.dx,op1d.d)
 

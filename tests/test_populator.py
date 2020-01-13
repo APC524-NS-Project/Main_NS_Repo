@@ -3,6 +3,7 @@ from src import populator
 from src import operatormatrix
 from src import mesh
 import numpy as np
+import mock
 
 class testPopulator(unittest.TestCase):
 	def setUp(self):
@@ -68,6 +69,7 @@ class mockSpec():
 
 class mockOp1D():
 	def __init__(self,stencil,weights,d):
-		self.stencil = stencil
+		self.stncl = mock.Mock()
+		self.stncl.s = stencil
 		self.weights = weights
 		self.d = d
