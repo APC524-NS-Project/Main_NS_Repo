@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['s',['s',['../classMain__PDE__Repo_1_1src_1_1stencil_1_1Stencil.html#a8522227e34c5d0d63a988ccf1d589fd9',1,'Main_PDE_Repo::src::stencil::Stencil']]],
+  ['s_5fmatrix',['s_matrix',['../classMain__PDE__Repo_1_1src_1_1stencil_1_1Stencil.html#a008c7722934b3af3a21d8d945f12b597',1,'Main_PDE_Repo::src::stencil::Stencil']]],
+  ['scalar_5fop',['scalar_op',['../classMain__PDE__Repo_1_1src_1_1gridoperator_1_1GridOperator.html#ae92052af91aaaefda0465ae51d816100',1,'Main_PDE_Repo::src::gridoperator::GridOperator']]],
+  ['scheme',['scheme',['../classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme.html#a393609130eb8b43a11601473d09eae44',1,'Main_PDE_Repo::src::op_nd_scheme::OperatorNDScheme']]],
+  ['set_5fbcs',['set_BCs',['../classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver.html#a8383df7f86b0bca04a6787290438cde7',1,'Main_PDE_Repo::src::spatial_driver::SpatialDriver']]],
+  ['set_5fops',['set_ops',['../classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn.html#a9733763f77bf263a466bb08effec78ab',1,'Main_PDE_Repo.src.conduct_heat_eqn.ConductHeatEqn.set_ops()'],['../classMain__PDE__Repo_1_1src_1_1problem_1_1Problem.html#aeaea1beb92b43dde42d5175ddde1f276',1,'Main_PDE_Repo.src.problem.Problem.set_ops()']]],
+  ['shape',['shape',['../classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix.html#aa973994badfd46a4774be7d9399838e3',1,'Main_PDE_Repo.src.operatormatrix.OperatorMatrix.shape()'],['../classMain__PDE__Repo_1_1src_1_1populator_1_1Populator.html#af9e860df7e6784efab29a3f3677a6728',1,'Main_PDE_Repo.src.populator.Populator.shape()'],['../classMain__PDE__Repo_1_1src_1_1mesh_1_1Mesh.html#a6f83620aa1c76185e2b81412957a4758',1,'Main_PDE_Repo.src.mesh.Mesh.shape()']]],
+  ['slice',['slice',['../classMain__PDE__Repo_1_1src_1_1mesh_1_1Mesh.html#afcb5da499b85e096c5ab20bbf11ad1c6',1,'Main_PDE_Repo::src::mesh::Mesh']]],
+  ['solve',['solve',['../classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver.html#ada0ed39211b437d2f86b9b103a690eb3',1,'Main_PDE_Repo::src::spatial_driver::SpatialDriver']]],
+  ['space_5fdrive',['space_drive',['../namespaceMain__PDE__Repo_1_1main.html#a9450a1548e6c8d9316ce9ef5b053883e',1,'Main_PDE_Repo::main']]],
+  ['space_5fdriver',['space_driver',['../classMain__PDE__Repo_1_1src_1_1driver_1_1Driver.html#afbceb17919398235d08dfa86fc9bd797',1,'Main_PDE_Repo::src::driver::Driver']]],
+  ['spatial_5fdriver',['spatial_driver',['../namespacespatial__driver.html',1,'']]],
+  ['spatial_5fdriver_2epy',['spatial_driver.py',['../spatial__driver_8py.html',1,'']]],
+  ['spatialdriver',['SpatialDriver',['../classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver.html',1,'Main_PDE_Repo::src::spatial_driver']]],
+  ['spec',['spec',['../classMain__PDE__Repo_1_1src_1_1gridoperator_1_1GridOperator.html#a4fb567c3ca465539b3a726f7532dc0ee',1,'Main_PDE_Repo::src::gridoperator::GridOperator']]],
+  ['stencil',['Stencil',['../classMain__PDE__Repo_1_1src_1_1stencil_1_1Stencil.html',1,'Main_PDE_Repo::src::stencil']]],
+  ['stencil_2epy',['stencil.py',['../stencil_8py.html',1,'']]],
+  ['step',['step',['../classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler.html#aafec83c8cc54107baf7aa842563199b0',1,'Main_PDE_Repo.src.forward_euler.ForwardEuler.step()'],['../classMain__PDE__Repo_1_1src_1_1time__stepper_1_1TimeStepper.html#a4e5f0ba51d77777a3ef499258f1982ac',1,'Main_PDE_Repo.src.time_stepper.TimeStepper.step()']]],
+  ['stncl',['stncl',['../classMain__PDE__Repo_1_1src_1_1operator__1d_1_1Operator1D.html#a37a9116a49b9aa2a799a7a6afe93b2cb',1,'Main_PDE_Repo::src::operator_1d::Operator1D']]],
+  ['sub_5fslice',['sub_slice',['../classMain__PDE__Repo_1_1src_1_1mesh_1_1Mesh.html#adfbc08946443424b523a771ca67a7009',1,'Main_PDE_Repo::src::mesh::Mesh']]]
+];

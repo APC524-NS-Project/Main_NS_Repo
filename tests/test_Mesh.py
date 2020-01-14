@@ -56,6 +56,14 @@ class testMesh(unittest.TestCase):
 		self.array_equal(new_mesh.meshes[1],self.ygrid[keys])
 		self.array_equal(new_mesh.meshes[2],self.xgrid[keys])
 
+		slices = ((None,),(None,),(1,3))
+		keys = tuple((slice(*slc) for slc in slices))
+
+		new_mesh = self.mesh.sub_slice(slices)
+		self.array_equal(new_mesh.meshes[0],self.zgrid[keys])
+		self.array_equal(new_mesh.meshes[1],self.ygrid[keys])
+		self.array_equal(new_mesh.meshes[2],self.xgrid[keys])
+
 
 	def array_equal(self,ar1,ar2):
 		np.testing.assert_array_equal(ar1,ar2)

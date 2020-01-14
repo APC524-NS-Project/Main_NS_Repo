@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fwd_5feuler',['fwd_euler',['../classtime__stepper_1_1fwd__euler.html',1,'time_stepper']]]
+  ['conductheateqn',['ConductHeatEqn',['../classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn.html',1,'Main_PDE_Repo::src::conduct_heat_eqn']]]
 ];

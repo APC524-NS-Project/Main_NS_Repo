@@ -6,8 +6,8 @@
 #  the grid. The second item is a sub-tuple of sub-tuples. This
 #  argument should take the form:
 #  
-#  ( (x_op1D_L1, x_op1D_R1, x_op1D_L2, x_op1D_R2, etc.),
-#    (y_op1D_L1, y_op1D_R1, y_op1D_L2, y_op1D_R2, etc.),
+#  ( ((x_op1D_L1, x_op1D_L2,...),(x_op1D_R1, x_op1D_R2,...)),
+#    ((y_op1D_L1, y_op1D_L2,...),(y_op1D_R1, y_op1D_R2,...)),
 #    etc. for as many axes as you need )
 #  
 #  where L and R correspond to the left and right (or low and
@@ -44,3 +44,5 @@ class OperatorNDScheme():
 
         ## \var edge The tuple of 1D edge operators
         self.edge = edge_op1D
+
+        self.dim = opND_int.dim

@@ -1,0 +1,86 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme}}
+
+
+The N-\/dimensional operator scheme class contains a tuple of operator objects.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_ac4dbbc0240cc4c65f01c481376a352f2}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, op\+N\+D\+\_\+int, edge\+\_\+op1D=())
+\begin{DoxyCompactList}\small\item\em The scheme constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a393609130eb8b43a11601473d09eae44}{scheme}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_af2d3463cf3af532d774064ebcbe67624}{interior}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a620a7d25f82c6a6d2b1b89f8120ff057}{edge}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a52e818422354004ce07125bc996d57e7}{dim}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The N-\/dimensional operator scheme class contains a tuple of operator objects. 
+
+The first item in the tuple corresponds to the Operator\+ND to be used on the \char`\"{}interior\char`\"{} portion of the grid. The second item is a sub-\/tuple of sub-\/tuples. This argument should take the form\+:
+
+( ((x\+\_\+op1\+D\+\_\+\+L1, x\+\_\+op1\+D\+\_\+\+L2,...),(x\+\_\+op1\+D\+\_\+\+R1, x\+\_\+op1\+D\+\_\+\+R2,...)), ((y\+\_\+op1\+D\+\_\+\+L1, y\+\_\+op1\+D\+\_\+\+L2,...),(y\+\_\+op1\+D\+\_\+\+R1, y\+\_\+op1\+D\+\_\+\+R2,...)), etc. for as many axes as you need )
+
+where L and R correspond to the left and right (or low and high) ends of the axis of interest. The edge operators will be applied from the outside in (x\+\_\+op1\+D\+\_\+\+L1 corresponds to the outermost points at the left end of the x-\/axis, L2 would be the next step inward, and so on).
+
+The length of the edge operator tuple should be equal to the dim attribute of the interior operator. The \hyperlink{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme}{Operator\+N\+D\+Scheme} class 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_ac4dbbc0240cc4c65f01c481376a352f2}\label{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_ac4dbbc0240cc4c65f01c481376a352f2}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{op\+N\+D\+\_\+int,  }\item[{}]{edge\+\_\+op1D = {\ttfamily ()} }\end{DoxyParamCaption})}
+
+
+
+The scheme constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+N\+D\+\_\+int} & An Operator\+ND object to be applied to the grid interior \\
+\hline
+{\em edge\+\_\+op1D} & A tuple of Operator1D objects to be applied at the grid edges \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a52e818422354004ce07125bc996d57e7}\label{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a52e818422354004ce07125bc996d57e7}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}!dim@{dim}}
+\index{dim@{dim}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}}
+\subsubsection{\texorpdfstring{dim}{dim}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme.\+dim}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a620a7d25f82c6a6d2b1b89f8120ff057}\label{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a620a7d25f82c6a6d2b1b89f8120ff057}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}!edge@{edge}}
+\index{edge@{edge}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}}
+\subsubsection{\texorpdfstring{edge}{edge}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme.\+edge}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_af2d3463cf3af532d774064ebcbe67624}\label{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_af2d3463cf3af532d774064ebcbe67624}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}!interior@{interior}}
+\index{interior@{interior}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}}
+\subsubsection{\texorpdfstring{interior}{interior}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme.\+interior}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a393609130eb8b43a11601473d09eae44}\label{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme_a393609130eb8b43a11601473d09eae44}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}!scheme@{scheme}}
+\index{scheme@{scheme}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::op\+\_\+nd\+\_\+scheme\+::\+Operator\+N\+D\+Scheme}}
+\subsubsection{\texorpdfstring{scheme}{scheme}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme.\+scheme}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{op__nd__scheme_8py}{op\+\_\+nd\+\_\+scheme.\+py}\end{DoxyCompactItemize}
