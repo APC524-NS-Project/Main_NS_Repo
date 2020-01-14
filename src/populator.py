@@ -15,7 +15,7 @@ class Populator():
 	def __init__(self,spec,dim):
 		self.shape = spec.gridshape
 		self.dim = dim
-		self.dx = spec.dx[dim]
+		self.dx = spec.spacing[dim]
 
 	## populate_op
 	# Populates rows of an operator matrix for specified grid points
@@ -50,7 +50,7 @@ class Populator():
 			new_coords = coords.copy()
 			new_coords[self.dim] += op1d.stncl.s[idx]
 			weight_index = self._get_single_index(new_coords)
-			op_mat[op_index,weight_index] = weight/np.power(self.dx,op1d.d)
+			op_mat[op_index,weight_index] = weight/np.power(self.dx,op1d.deg)
 
 	## _get_single_index
 	# Generates a single flattened index for an n-dimensional grid position.

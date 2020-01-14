@@ -83,11 +83,11 @@ class testPopulator(unittest.TestCase):
 class mockSpec():
 	def __init__(self,shape,dx):
 		self.gridshape = shape
-		self.dx = dx
+		self.spacing = dx
 
 class mockOp1D():
 	def __init__(self,stencil,weights,d):
 		self.stncl = mock.Mock()
 		self.stncl.s = stencil
 		self.weights = weights
-		self.d = d
+		self.deg = d
