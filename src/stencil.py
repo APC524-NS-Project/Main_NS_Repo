@@ -33,7 +33,7 @@ class Stencil():
 
 		weights = np.dot(s_matrix_inv,rhs_matrix)
 
-		return np.transpose(weights)
+		return np.transpose(weights)[0]
 
 	## _stencil_matrix
 	# Generates matrix of stencil coefficients

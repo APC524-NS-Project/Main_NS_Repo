@@ -102,7 +102,7 @@ class op1d():
 		self.weights = weights
 		self.stncl = stencil(s)
 
-		self.d = d
+		self.deg = d
 
 class stencil():
 	def __init__(self,s):

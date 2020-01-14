@@ -50,7 +50,7 @@ class Populator():
 			new_coords = coords.copy()
 			new_coords[self.dim] += op1d.stncl.s[idx]
 			weight_index = self._get_single_index(new_coords)
-			op_mat[op_index,weight_index] = weight/np.power(self.dx,op1d.d)
+			op_mat[op_index,weight_index] = weight/np.power(self.dx,op1d.deg)
 
 	## _get_single_index
 	# Generates a single flattened index for an n-dimensional grid position.

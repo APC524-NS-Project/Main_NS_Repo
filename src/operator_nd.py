@@ -21,3 +21,6 @@ class OperatorND():
 
         ## \var dim The number of 1D operators contained in this object
         self.dim = len(self.ops1d)
+
+    def __getitem__(self,key):
+        return self.ops1d.__getitem__(key)

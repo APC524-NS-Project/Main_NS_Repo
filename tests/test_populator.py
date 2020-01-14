@@ -90,4 +90,4 @@ class mockOp1D():
 		self.stncl = mock.Mock()
 		self.stncl.s = stencil
 		self.weights = weights
-		self.d = d
+		self.deg = d
