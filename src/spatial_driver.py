@@ -78,6 +78,6 @@ class SpatialDriver():
     #  \return The spatial grid with correct boundary values
     #  \return The grid object to pass to the time stepper
     def solve(self, t, val_grid):
-        val_grid = self.set_BCs(t, val_grid)
+        self.set_BCs(t, val_grid)
         self.log_data(t, val_grid)
         return val_grid, self.eval_rhs(val_grid)

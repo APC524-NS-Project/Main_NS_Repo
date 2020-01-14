@@ -48,7 +48,9 @@ class ConductHeatEqn(problem.Problem):
     def RHS(self, val_grid):
         assert self.ops_set_flag, \
         'The RHS operators must be defined before calling RHS()!'
-        return self.alpha * self.laplacian(val_grid)
+        new_grid0 = val_grid.applyOp(self.laplacian.scalar_op)
+        new_grid1 = new_grid0 * self.alpha
+        return new_grid1
 
     ## Call the boundary handler to set the spatial boundaries
     #  to the appropriate values based on the BCs.
