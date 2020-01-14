@@ -140,9 +140,11 @@ class GridScalar(GridQty):
     #
     # First ravel the grid into a 1D array. Then have the opmat dot that grid 
     # Finally, reshape the new_grid and use it to instantiate a new grid object to be returned
+    # @param opmat An OperatorMatrix object
+    # @var new_grid np array of the output of the operator applied to the grid
     def applyOp(self,opmat):
-        if type(opmat) == operations.OperatorMatrix
-            flat_grid = self.grid._ravel()
+        if isinstance(opmat,operatormatrix.OperatorMatrix):
+            flat_grid = self._ravel()
             new_grid = opmat @ flat_grid
             new_grid = np.reshape(new_grid,self.spec.gridshape)
             return GridScalar(self.spec,new_grid)
