@@ -22,8 +22,7 @@ class testGridInt(unittest.TestCase):
 
 		self.grid_op = gridoperator.GridOperator(self.spec,self.laplace_scheme)
 
-	def test_integration(self):
-		# Define correct outputs
+		# Define correct output
 		x_out_cor = operatormatrix.OperatorMatrix(9)
 		int_points = [1,4,7]
 		weights = [1,-2,1]
@@ -44,9 +43,26 @@ class testGridInt(unittest.TestCase):
 			for i in range(3):
 				y_out_cor[3*i+j,j:j+7] = yweights
 
-		laplace_cor = x_out_cor + y_out_cor
+		self.laplace_cor = x_out_cor + y_out_cor
 
-		self.compare_arrays(laplace_cor,self.grid_op.scalar_op)
+	def test_integration(self):
+		
+		self.compare_arrays(self.laplace_cor,self.grid_op.scalar_op)
+
+	def test_applyOpintegration(self):
+		tgrid = np.zeros((3,3))
+		tgrid[1,1] = 1
+		tgrid = grid.GridScalar(self.spec,tgrid)
+
+		result_grid = tgrid.applyOp(self.grid_op.scalar_op)
+
+		result_cor = np.zeros((3,3))
+		result_cor[1,:] = [-2,-4,-2]
+		result_cor[0,1] = -2
+		result_cor[2,1] = -2
+
+		self.compare_arrays(result_grid.grid,result_cor)
+
 
 	def compare_arrays(self,ar1,ar2):
 		np.testing.assert_array_almost_equal(ar1,ar2)
