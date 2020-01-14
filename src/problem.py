@@ -29,5 +29,9 @@ class Problem():
     def set_ops(self):
         pass
 
+    ## Call the boundary handler to set the boundary values
+    def set_BCs(self):
+        pass
+
 
 
