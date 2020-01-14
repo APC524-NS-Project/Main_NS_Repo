@@ -8,9 +8,9 @@
 # operator matricies for each dimension and then combines them to produce a single operator matrix
 
 import numpy as np
-import operatormatrix
-import mesh
-import populator
+from . import operatormatrix
+from . import mesh
+from . import populator
 
 ## GridOperator
 # GridOperator class definition
@@ -74,8 +74,8 @@ class GridOperator():
 	# @var bll index of leftmost interior point
 	# @var blr index to the right of rightmost interior point
 	def _get_Int(self,op1d,size):
-		bll = - op1d.stcl.s[0]
-		blr = size - op1d.stcl.s[-1]
+		bll = - op1d.stncl.s[0]
+		blr = size - op1d.stncl.s[-1]
 
 		return (bll,blr)
 
@@ -94,7 +94,7 @@ class GridOperator():
 		slices = [(None,)]*self.spec.ndim
 		slices[popul.dim] = slc
 
-		sub_mesh = self.mesh.sub_slice(slices)
+		sub_mesh = self.basemesh.sub_slice(slices)
 		popul.populate_op(sub_mesh,opmat,op1d)
 
 	## _bl_set
@@ -110,15 +110,16 @@ class GridOperator():
 	# @params edgeop a tuple of edge operators in the form ((op1D_L1, op1D_L2,...),(op1D_R1, op1D_R2,...))
 	# @params layer_dim a tuple corresponding to the left and rightmost edges of the interior points
 	# @params N total size of the layer
-	# @var slc a tuple containing the appropriate indexes for a single value slice of the mesh
+	# @var slcL a tuple containing the appropriate indexes for a single value slice of the mesh on the left
+	# @var slcL a tuple containing the appropriate indexes for a single value slice of the mesh on the left	
 	def _bl_set(self,popul,opmat,edgeop,layer_dim,N):
 		for idx in range(layer_dim[0]):
-			slc = (idx,idx+1)
-			self._apply_op(popul,opmat,edgeop[0][idx],slc)
+			slcL = (idx,idx+1)
+			self._apply_op(popul,opmat,edgeop[0][idx],slcL)
 
-		for idx in range(N-layer_dim[0]):
-			slc = (N-1-idx,N-idx)
-			self._apply_op(popul,opmat,edgeop[1][idx],slc)
+		for idx in range(N-layer_dim[1]):
+			self.slcR = (N-1-idx,N-idx)
+			self._apply_op(popul,opmat,edgeop[1][idx],self.slcR)
 
 	## __call__
 	# Evaluate the scalar version of the grid operator on a given grid

@@ -39,6 +39,24 @@ class testPopulator(unittest.TestCase):
 
 		self.array_equal(opmat.array,opmat_out.array)
 
+		op1d = mockOp1D([-2,-1,0],[1,-2,1],2)
+		mock2 = mockSpec((4,),1)
+		popul = populator.Populator(mock2,0)
+		opmat = operatormatrix.OperatorMatrix(4)
+		coords = [3]
+		opindex = popul._get_single_index(coords)
+
+		# Build correct output
+		opmat_out = operatormatrix.OperatorMatrix(4)
+		opmat_out[3,-3] = 1
+		opmat_out[3,-2] = -2
+		opmat_out[3,-1] = 1
+
+		# Test function
+		popul._set_row(op1d,coords,opmat,opindex)
+
+		self.array_equal(opmat.array,opmat_out.array)
+
 	def test_populate(self):
 		popul = self.populs[0]
 		op1d = mockOp1D([-1,0,1],[1,-2,1],2)
