@@ -53,7 +53,10 @@ class GridOperator():
 				interior = self._get_Int(self.ndscheme.interior[idx],self.spec.gridshape[idx])
 				self._apply_op(popul,opmat,self.ndscheme.interior[idx],interior)
 
-				self._bl_set(popul,opmat,self.ndscheme.edge[idx],interior,self.spec.gridshape[idx])
+				if self.ndscheme.edge[idx].name == 'fixed':
+					self._bl_set(popul,opmat,self.ndscheme.edge[idx],interior,self.spec.gridshape[idx])
+				else:
+					raise AttributeError("An edge operator non-fixed edge operator has been specified which is outside of the current implementation scope")
 
 				self.opmats.append(opmat)
 			else:
@@ -117,11 +120,11 @@ class GridOperator():
 	def _bl_set(self,popul,opmat,edgeop,layer_dim,N):
 		for idx in range(layer_dim[0]):
 			slcL = (idx,idx+1)
-			self._apply_op(popul,opmat,edgeop[0][idx],slcL)
+			self._apply_op(popul,opmat,edgeop.left[idx],slcL)
 
 		for idx in range(N-layer_dim[1]):
 			slcR = (N-1-idx,N-idx)
-			self._apply_op(popul,opmat,edgeop[1][idx],slcR)
+			self._apply_op(popul,opmat,edgeop.right[idx],slcR)
 
 	## __call__
 	# Evaluate the scalar version of the grid operator on a given grid
@@ -129,6 +132,8 @@ class GridOperator():
 	# Take a gridqty object of arbitrary dimension and apply the gridoperator object to each scalar contained in the grid
 	# Return a new gridqty object of the same type and size with the values corresponding to the 
 	# @param grid a GridQty object
+	# @param new_grid a new grid object containing the results of the scalar_op
 	def __call__(self,grid):
-		pass
+		new_grid = grid.applyOp(self.scalar_op)
+		return new_grid
 		

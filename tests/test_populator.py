@@ -7,7 +7,7 @@ import mock
 
 class testPopulator(unittest.TestCase):
 	def setUp(self):
-		mock1 = mockSpec((2,4),1)
+		mock1 = mockSpec((2,4),(1,1))
 		inputs = ((mock1,1),)
 		self.populs = (populator.Populator(inputs[0][0],inputs[0][1]),)
 
@@ -40,7 +40,7 @@ class testPopulator(unittest.TestCase):
 		self.array_equal(opmat.array,opmat_out.array)
 
 		op1d = mockOp1D([-2,-1,0],[1,-2,1],2)
-		mock2 = mockSpec((4,),1)
+		mock2 = mockSpec((4,),(1,))
 		popul = populator.Populator(mock2,0)
 		opmat = operatormatrix.OperatorMatrix(4)
 		coords = [3]

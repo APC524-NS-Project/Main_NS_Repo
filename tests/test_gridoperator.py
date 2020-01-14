@@ -12,6 +12,10 @@ class testGridOp(unittest.TestCase):
 		self.mockbd = op1d([-2,-1,0],[1,-2,1],2)
 		self.mockcd = op1d([-1,0,1],[1,-2,1],2)
 
+		self.edgeOp = Mock()
+		self.edgeOp.left = (self.mockfd,)
+		self.edgeOp.right = (self.mockbd,)
+		self.edgeOp.name = 'fixed'
 
 	def test_getInt(self):
 		mock1d = op1d([-1,0,2],[1,-2,1],2)
@@ -28,7 +32,7 @@ class testGridOp(unittest.TestCase):
 
 	def test_instantization1d(self):
 		self.mockSpec = Mock()
-		self.mockSpec.dx = 1
+		self.mockSpec.dx = (1,)
 		self.mockSpec.gridshape = (4,)
 		self.mockSpec.ndim = 1
 
@@ -36,7 +40,7 @@ class testGridOp(unittest.TestCase):
 		self.mockScheme.dim = 1
 		self.mockScheme.interior = [self.mockcd]
 
-		self.mockScheme.edge = (((self.mockfd,),(self.mockbd,)),)
+		self.mockScheme.edge = (self.edgeOp,)
 
 		gop_test = gridoperator.GridOperator(self.mockSpec,self.mockScheme)
 
@@ -50,7 +54,7 @@ class testGridOp(unittest.TestCase):
 
 	def test_instatization2d(self):
 		self.mockSpec2 = Mock()
-		self.mockSpec2.dx = 1
+		self.mockSpec2.dx = (1,1)
 		self.mockSpec2.gridshape = (3,3)
 		self.mockSpec2.ndim = 2
 
@@ -58,7 +62,7 @@ class testGridOp(unittest.TestCase):
 		self.mockScheme2.dim = 2
 		self.mockScheme2.interior = [self.mockcd,self.mockcd]
 
-		self.mockScheme2.edge = (((self.mockfd,),(self.mockbd,)),((self.mockfd,),(self.mockbd,)))
+		self.mockScheme2.edge = (self.edgeOp,self.edgeOp)
 
 		gop_test2 = gridoperator.GridOperator(self.mockSpec2,self.mockScheme2)
 
