@@ -1,7 +1,9 @@
 from unittest import TestCase
 import numpy as np
-from src import operator_1d
-from src import stencil
+import sys
+import os
+sys.path.append(os.path.abspath('../src'))
+from src import stencil, operator_1d
 
 class test_Operator1D(TestCase):
 	def test_init(self):

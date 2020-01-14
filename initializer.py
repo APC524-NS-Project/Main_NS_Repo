@@ -1,7 +1,7 @@
 
-import operator_1d
-import operator_nd
-import op_nd_scheme
+from src import operator_1d
+from src import operator_nd
+from src import op_nd_scheme
 
 # Make the interior laplacian operator
 # A first order, center difference, 2nd derivative

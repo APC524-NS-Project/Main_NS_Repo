@@ -4,7 +4,7 @@
 #  a 1-dimensional linear operator such as a spatial derivative using
 #  a stencil for a finite difference scheme.
 
-from . import stencil
+from src import stencil
 
 ## The Operator1D class
 class Operator1D():
