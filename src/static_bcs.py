@@ -4,6 +4,7 @@
 import src.BCs as bcs
 
 ## Child BCs class for handling one side with static boundary conditions.
+# @var bctype the kind of boundary condition being specified
 class StaticBCs(bcs.BCs):
     bctype = "None"
     ## The constructor
