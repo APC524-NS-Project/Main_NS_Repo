@@ -1,6 +1,7 @@
 ## @file grid.py
 import numpy as np
 from abc import ABC, ABCMeta, abstractmethod
+from src import operatormatrix
 
 ## the GridSpec abstract base class
 class GridSpec(ABC):
@@ -99,7 +100,9 @@ class GridQty(ABC):
 class GridScalar(GridQty):
     def _qtyshape(self):
             return ()
-        
+    
+    ## __add__
+    # reformat magic method to add grids together element wise     
     def __add__(self, other):
         if isinstance(other,GridScalar):
             added_np_grid = self.grid.__add__(other.grid)
@@ -114,6 +117,8 @@ class GridScalar(GridQty):
         else:
             return self.__add__(other)
 
+    ## __mul__
+    # reformat magic method of multiply to multiply two grids together elementwise
     def __mul__(self,other):
         if isinstance(other,GridScalar):
             muled_np_grid = self.grid.__mul__(other.grid)
@@ -123,7 +128,29 @@ class GridScalar(GridQty):
         return GridScalar(self.spec,muled_np_grid)  
 
     def __rmul__(self, other):
-        return self.__mul__(other)      
+        return self.__mul__(other)
+
+    ## _ravel
+    # call np.ravel method on the underlying grid
+    def _ravel(self):
+        return np.ravel(self.grid)
+
+    ## applyOp
+    # apply a linear operator to a grid
+    #
+    # First ravel the grid into a 1D array. Then have the opmat dot that grid 
+    # Finally, reshape the new_grid and use it to instantiate a new grid object to be returned
+    # @param opmat An OperatorMatrix object
+    # @var new_grid np array of the output of the operator applied to the grid
+    def applyOp(self,opmat):
+        if isinstance(opmat,operatormatrix.OperatorMatrix):
+            flat_grid = self._ravel()
+            new_grid = opmat @ flat_grid
+            new_grid = np.reshape(new_grid,self.spec.gridshape)
+            return GridScalar(self.spec,new_grid)
+        else:
+            raise TypeError("Attempted to apply a non-operator matrix as an operator")
+
         
 ## the GridVector childclass          
 class GridVector(GridQty):
