@@ -32,7 +32,7 @@ class testGridOp(unittest.TestCase):
 
 	def test_instantization1d(self):
 		self.mockSpec = Mock()
-		self.mockSpec.dx = (1,)
+		self.mockSpec.spacing = (1,)
 		self.mockSpec.gridshape = (4,)
 		self.mockSpec.ndim = 1
 
@@ -54,7 +54,7 @@ class testGridOp(unittest.TestCase):
 
 	def test_instatization2d(self):
 		self.mockSpec2 = Mock()
-		self.mockSpec2.dx = (1,1)
+		self.mockSpec2.spacing = (1,1)
 		self.mockSpec2.gridshape = (3,3)
 		self.mockSpec2.ndim = 2
 

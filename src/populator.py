@@ -15,7 +15,7 @@ class Populator():
 	def __init__(self,spec,dim):
 		self.shape = spec.gridshape
 		self.dim = dim
-		self.dx = spec.dx[dim]
+		self.dx = spec.spacing[dim]
 
 	## populate_op
 	# Populates rows of an operator matrix for specified grid points
