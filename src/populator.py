@@ -13,7 +13,7 @@ class Populator():
 	# @params dim The dimension along which the 1D operator is being applied
 	# @var dx The grid spacing in real space
 	def __init__(self,spec,dim):
-		self.shape = spec.shape
+		self.shape = spec.gridshape
 		self.dim = dim
 		self.dx = spec.dx
 
