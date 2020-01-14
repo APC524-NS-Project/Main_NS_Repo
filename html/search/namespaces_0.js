@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spatial_5fdriver',['spatial_driver',['../namespacespatial__driver.html',1,'']]]
+  ['driver',['driver',['../namespacedriver.html',1,'']]]
 ];

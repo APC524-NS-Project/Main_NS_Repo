@@ -1,0 +1,138 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn}}
+
+
+The conductive heat equation problem with no advective transport in the form d\+T/dt = alpha $\ast$ laplacian(\+T) where T is temperature and alpha is the thermal diffusivity.  
+
+
+
+
+Inheritance diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_aa17c55ed50c88c1c70811b23467a66bd}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_abd7a28d699a29f455f2be1c6a8620345}{alpha}=1)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a9733763f77bf263a466bb08effec78ab}{set\+\_\+ops} (self, lin\+\_\+ops\+\_\+dict)
+\begin{DoxyCompactList}\small\item\em The set\+\_\+ops function takes a dictionary of linear operators defined elsewhere and sets them to the correct member variables in the problem. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a5889ab024d0a42bf84a00c1c156a19a9}{R\+HS} (self, val\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em The R\+HS function applies the defined operators to the grid argument in a defined manner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_ab59c6cb80b17b0e0b17e64dffc341ec5}{ops\+\_\+set\+\_\+flag}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a37601e4988c38b8a9a7f5d60867b528c}{ops}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a3db974e4df85f88ce996026771f915cc}{laplacian}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_abd7a28d699a29f455f2be1c6a8620345}{alpha}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The conductive heat equation problem with no advective transport in the form d\+T/dt = alpha $\ast$ laplacian(\+T) where T is temperature and alpha is the thermal diffusivity. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_aa17c55ed50c88c1c70811b23467a66bd}\label{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_aa17c55ed50c88c1c70811b23467a66bd}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alpha = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & The value of the thermal diffusivity. Default value is 1 m$^\wedge$2/s. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a5889ab024d0a42bf84a00c1c156a19a9}\label{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a5889ab024d0a42bf84a00c1c156a19a9}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}!R\+HS@{R\+HS}}
+\index{R\+HS@{R\+HS}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}}
+\subsubsection{\texorpdfstring{R\+H\+S()}{RHS()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn.\+R\+HS (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val\+\_\+grid }\end{DoxyParamCaption})}
+
+
+
+The R\+HS function applies the defined operators to the grid argument in a defined manner. 
+
+Here the R\+HS evaluates alpha $\ast$ laplacian(val\+\_\+grid) 
+\begin{DoxyParams}{Parameters}
+{\em val\+\_\+grid} & The spatial grid of current values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The grid containing the evaluated R\+HS values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a9733763f77bf263a466bb08effec78ab}\label{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a9733763f77bf263a466bb08effec78ab}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}!set\+\_\+ops@{set\+\_\+ops}}
+\index{set\+\_\+ops@{set\+\_\+ops}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}}
+\subsubsection{\texorpdfstring{set\+\_\+ops()}{set\_ops()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn.\+set\+\_\+ops (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lin\+\_\+ops\+\_\+dict }\end{DoxyParamCaption})}
+
+
+
+The set\+\_\+ops function takes a dictionary of linear operators defined elsewhere and sets them to the correct member variables in the problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lin\+\_\+ops\+\_\+dict} & Dictionary of linear operators \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_abd7a28d699a29f455f2be1c6a8620345}\label{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_abd7a28d699a29f455f2be1c6a8620345}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}!alpha@{alpha}}
+\index{alpha@{alpha}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}}
+\subsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn.\+alpha}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a3db974e4df85f88ce996026771f915cc}\label{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a3db974e4df85f88ce996026771f915cc}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}!laplacian@{laplacian}}
+\index{laplacian@{laplacian}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}}
+\subsubsection{\texorpdfstring{laplacian}{laplacian}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn.\+laplacian}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a37601e4988c38b8a9a7f5d60867b528c}\label{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_a37601e4988c38b8a9a7f5d60867b528c}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}!ops@{ops}}
+\index{ops@{ops}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}}
+\subsubsection{\texorpdfstring{ops}{ops}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn.\+ops}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_ab59c6cb80b17b0e0b17e64dffc341ec5}\label{classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn_ab59c6cb80b17b0e0b17e64dffc341ec5}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}!ops\+\_\+set\+\_\+flag@{ops\+\_\+set\+\_\+flag}}
+\index{ops\+\_\+set\+\_\+flag@{ops\+\_\+set\+\_\+flag}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::conduct\+\_\+heat\+\_\+eqn\+::\+Conduct\+Heat\+Eqn}}
+\subsubsection{\texorpdfstring{ops\+\_\+set\+\_\+flag}{ops\_set\_flag}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn.\+ops\+\_\+set\+\_\+flag}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{conduct__heat__eqn_8py}{conduct\+\_\+heat\+\_\+eqn.\+py}\end{DoxyCompactItemize}

@@ -29,5 +29,13 @@ class OperatorMatrix():
 	def __str__(self):
 		self.array.__str__()
 
-	def __repr__(self):
-		self.array.__repr__()
+	def __add__(self,other):
+		if type(other) == OperatorMatrix:
+			if other.shape == self.shape:
+				new_op = OperatorMatrix(self.shape[0])
+				new_op.array = np.add(self.array,other.array)
+				return new_op
+			else:
+				raise IndexError("Attempted to add two operators of different size.")
+		else:
+			raise TypeError("Attempted to add an OperatorMatrix to another object.")

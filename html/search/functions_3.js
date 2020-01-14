@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['set_5fbcs',['set_BCs',['../classspatial__driver_1_1spatial__driver.html#a9e108d8aae84dbbfdbd522ef47e8f559',1,'spatial_driver::spatial_driver']]],
-  ['solve',['solve',['../classspatial__driver_1_1spatial__driver.html#a379238cfd02adf2ae124015e1108182d',1,'spatial_driver::spatial_driver']]],
-  ['step',['step',['../classtime__stepper_1_1time__stepper.html#a874974dcfa5f9b51de6598c7e1cd3b6a',1,'time_stepper.time_stepper.step()'],['../classtime__stepper_1_1fwd__euler.html#a3157f250d951782252b80e4dc7002a9d',1,'time_stepper.fwd_euler.step()']]]
+  ['get_5fnum_5fgrid_5felems',['get_num_grid_elems',['../classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler.html#aebafa27619dffaadc2f9b1c7f6240892',1,'Main_PDE_Repo::src::forward_euler::ForwardEuler']]],
+  ['get_5fweights',['get_weights',['../classMain__PDE__Repo_1_1src_1_1stencil_1_1Stencil.html#a929a771df412bf27d03c2aae1a4ee7a0',1,'Main_PDE_Repo::src::stencil::Stencil']]]
 ];
