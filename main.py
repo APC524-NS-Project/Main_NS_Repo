@@ -20,6 +20,12 @@ BCs.append(static_bcs.Dirichlet(0,'l',0))
 BCs.append(static_bcs.Dirichlet(0,'r',0))
 BCs.append(static_bcs.Dirichlet(1,'l',0))
 BCs.append(static_bcs.Dirichlet(1,'r',0))
+#set each of the boundaries (using all dirichlet zero for now)
+BCs = []
+BCs.append(static_bcs.Dirichlet(0,'l',None))
+BCs.append(static_bcs.Dirichlet(0,'r',None))
+BCs.append(static_bcs.Dirichlet(1,'l',None))
+BCs.append(static_bcs.Dirichlet(1,'r',None))
 
 bound_handlr = dirichlet_hand.DirichletHand(BCs)
 
