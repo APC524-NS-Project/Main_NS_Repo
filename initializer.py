@@ -39,7 +39,7 @@ x_edge_ops = fixed_edge_ops.FixedEdgeOps( (d2_left,), (d2_right,) )
 y_edge_ops = fixed_edge_ops.FixedEdgeOps( (d2_left,), (d2_right,) )
 
 # Full laplacian operator
-laplacian = op_nd_scheme.OperatorNDScheme( laplac_int, (y_edge_ops, x_edge_ops) )
+laplace_scheme = op_nd_scheme.OperatorNDScheme( laplac_int, (y_edge_ops, x_edge_ops) )
 
 # Make the dictionary
-ops_dict = {'laplacian': laplacian}
+# ops_dict = {'laplacian': laplacian}

@@ -1,5 +1,6 @@
 import numpy as np
 from src import grid
+from src import gridoperator
 from src import static_bcs
 from src import dirichlet_hand
 from src import logger
@@ -11,6 +12,9 @@ import initializer
 
 gspec = grid.CartesianGridSpec(initializer.coords)
 grid_u = grid.GridScalar(gspec,initializer.u)  # initial grid of temperature values
+
+laplace_op = gridoperator.GridOperator(gspec, initializer.laplace_scheme)
+ops_dict = {'laplacian': laplace_op}
 
 #set each of the boundaries (using all dirichlet zero for now)
 BCs = []
@@ -25,13 +29,11 @@ data_logger = logger.Logger()
 
 time_stpr = forward_euler.ForwardEuler()
 
-prblm = conduct_heat_eqn.ConductHeatEqn(alpha=0.05)
+prblm = conduct_heat_eqn.ConductHeatEqn(bound_handlr, alpha=0.05)
 
-prblm.set_ops(initializer.ops_dict)
+prblm.set_ops(ops_dict)
 
-space_drive = spatial_driver.SpatialDriver(bound_handlr,
-                                           prblm,
-                                           data_logger)
+space_drive = spatial_driver.SpatialDriver(prblm, data_logger)
 
 drive = driver.Driver(space_drive, time_stpr)
 
