@@ -35,7 +35,7 @@ class DirichletHand(bch.BCHandler):
         idxs_list = []
         for i in range(qty_dim):
             if i == bc_dimen:
-                idxs_list.append(tuple(bc_idx))
+                idxs_list.append(tuple([bc_idx,bc_idx+1]))
             else:
                 idxs_list.append((0,gridqty.gqshape[i]))
         
@@ -50,7 +50,7 @@ class DirichletHand(bch.BCHandler):
         for bc in self.bc_list:
             idxs = self._BC_idxs_tuple(bc,gridqty)
             try:
-                gridqty.setslice(idxs,bc.vals)
+                gridqty.setslice(idxs,bc.bound_vals)
             except:
                 raise ValueError("Incorrect boundary condition dimensions were specified. Try again.\n")
             
