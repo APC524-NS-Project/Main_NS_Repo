@@ -47,7 +47,7 @@ class testGridInt(unittest.TestCase):
 
 	def test_integration(self):
 		
-		self.compare_arrays(self.laplace_cor,self.grid_op.scalar_op)
+		self.compare_arrays(self.laplace_cor.toarray(),self.grid_op.scalar_op.toarray())
 
 	def test_applyOpintegration(self):
 		tgrid = np.zeros((3,3))

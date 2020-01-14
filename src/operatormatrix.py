@@ -1,4 +1,5 @@
 import numpy as np
+import scipy.sparse as sparse
 
 ## OperatorMatrix
 # A Finite Difference Linear operator expressed as a matrix corresponding to the relevant combinations of values in a grid
@@ -9,7 +10,7 @@ class OperatorMatrix():
 	# @param N dimensions of the matrix operator
 	def __init__(self,N):
 		self.shape = (N,N)
-		self.array = np.zeros(self.shape)
+		self.array = sparse.lil_matrix(self.shape)
 
 	## __getattr__
 	# Recast attribute calls to calls on the underlying array
@@ -33,7 +34,7 @@ class OperatorMatrix():
 		if type(other) == OperatorMatrix:
 			if other.shape == self.shape:
 				new_op = OperatorMatrix(self.shape[0])
-				new_op.array = np.add(self.array,other.array)
+				new_op.array = self.array+other.array
 				return new_op
 			else:
 				raise IndexError("Attempted to add two operators of different size.")
