@@ -7,7 +7,10 @@ from src import edge_operator
 #  conditions in the evaluation of the RHS of the PDE.
 #  
 #  The arguments are tuples of 1D operators. Each tuple corresponds
-#  to either the left or right edge of the axis.
+#  to either the left (more negative) or right (more positive) edge
+#  of the axis. The operators in each tuple will be applied from
+#  the outside in, i.e. the first element in each tuple corresponds
+#  to the outermost edge points.
 class FixedEdgeOps(edge_operator.EdgeOperator):
 
     ## The constructor
