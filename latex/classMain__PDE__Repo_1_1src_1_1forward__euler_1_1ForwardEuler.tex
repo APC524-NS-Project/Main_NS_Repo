@@ -1,0 +1,87 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+forward\+\_\+euler.\+Forward\+Euler Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+forward\+\_\+euler.\+Forward\+Euler@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+forward\+\_\+euler.\+Forward\+Euler}}
+
+
+A concrete Forward Euler subclass of Time\+Stepper.  
+
+
+
+
+Inheritance diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+forward\+\_\+euler.\+Forward\+Euler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+forward\+\_\+euler.\+Forward\+Euler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler_aafec83c8cc54107baf7aa842563199b0}{step} (self, val\+\_\+grid, rhs\+\_\+grid, dt)
+\begin{DoxyCompactList}\small\item\em The step method of the Forward Euler class. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler_aebafa27619dffaadc2f9b1c7f6240892}{get\+\_\+num\+\_\+grid\+\_\+elems} (self, grid\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em A method for determining the number of elements in a grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A concrete Forward Euler subclass of Time\+Stepper. 
+
+The Forward Euler method uses a simple forward finite difference approach to estimate a value at the next time step. This is done with the approximation \{u(t+dt) -\/ u(t)\}/dt = R\+HS which can be rearranged to give u(t+dt) = u(t) + dt$\ast$\+R\+HS. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler_aebafa27619dffaadc2f9b1c7f6240892}\label{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler_aebafa27619dffaadc2f9b1c7f6240892}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::forward\+\_\+euler\+::\+Forward\+Euler@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::forward\+\_\+euler\+::\+Forward\+Euler}!get\+\_\+num\+\_\+grid\+\_\+elems@{get\+\_\+num\+\_\+grid\+\_\+elems}}
+\index{get\+\_\+num\+\_\+grid\+\_\+elems@{get\+\_\+num\+\_\+grid\+\_\+elems}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::forward\+\_\+euler\+::\+Forward\+Euler@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::forward\+\_\+euler\+::\+Forward\+Euler}}
+\subsubsection{\texorpdfstring{get\+\_\+num\+\_\+grid\+\_\+elems()}{get\_num\_grid\_elems()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+forward\+\_\+euler.\+Forward\+Euler.\+get\+\_\+num\+\_\+grid\+\_\+elems (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{grid\+\_\+obj }\end{DoxyParamCaption})}
+
+
+
+A method for determining the number of elements in a grid. 
+
+This is just the product of the spatial dimensions of the grid. 
+\begin{DoxyParams}{Parameters}
+{\em grid\+\_\+obj} & The grid to be querried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of elements in the grid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler_aafec83c8cc54107baf7aa842563199b0}\label{classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler_aafec83c8cc54107baf7aa842563199b0}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::forward\+\_\+euler\+::\+Forward\+Euler@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::forward\+\_\+euler\+::\+Forward\+Euler}!step@{step}}
+\index{step@{step}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::forward\+\_\+euler\+::\+Forward\+Euler@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::forward\+\_\+euler\+::\+Forward\+Euler}}
+\subsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+forward\+\_\+euler.\+Forward\+Euler.\+step (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val\+\_\+grid,  }\item[{}]{rhs\+\_\+grid,  }\item[{}]{dt }\end{DoxyParamCaption})}
+
+
+
+The step method of the Forward Euler class. 
+
+Implements the basic Forward Euler algorithm on the input grid object. 
+\begin{DoxyParams}{Parameters}
+{\em val\+\_\+grid} & The spatial grid of values at the current time \\
+\hline
+{\em rhs\+\_\+grid} & The spatial grid of R\+HS values \\
+\hline
+{\em dt} & The time step size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Spatial grid with new values for the next time step 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{forward__euler_8py}{forward\+\_\+euler.\+py}\end{DoxyCompactItemize}

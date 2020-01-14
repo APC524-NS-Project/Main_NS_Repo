@@ -1,0 +1,179 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver}}
+
+
+The \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver}{Spatial\+Driver} class.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a7e08a0ce817760d8ea8c4e146ab1a82d}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a8e4da2dd5010a3f8e63f2a6aa28ffabf}{boundhandl}, \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a2a61190d268b74c9388d3bbe3e3cce93}{pde\+\_\+problem}, \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_aac2299eb18270b9cc3c17d2d07e0dc57}{logger})
+\begin{DoxyCompactList}\small\item\em The constructor for the \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver}{Spatial\+Driver} class. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a8383df7f86b0bca04a6787290438cde7}{set\+\_\+\+B\+Cs} (self, t, val\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em Set the spatial boundaries to the appropriate values based on the boundary conditions. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_afcf6ad549e5939c1eb267144b26d2042}{eval\+\_\+rhs} (self, val\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em Evaluate the right hand side of the given P\+DE. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_ace8ab1e2e0d8e9da601ecddf44d504c2}{log\+\_\+data} (self, t, val\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em Send a spatial grid of function values to the data logger object. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_ada0ed39211b437d2f86b9b103a690eb3}{solve} (self, t, val\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em Perform the full sequence of spatial problem steps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a8e4da2dd5010a3f8e63f2a6aa28ffabf}{boundhandl}
+\begin{DoxyCompactList}\small\item\em A boundary handler object. \end{DoxyCompactList}\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a2a61190d268b74c9388d3bbe3e3cce93}{pde\+\_\+problem}
+\begin{DoxyCompactList}\small\item\em A P\+DE problem object. \end{DoxyCompactList}\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_aac2299eb18270b9cc3c17d2d07e0dc57}{logger}
+\begin{DoxyCompactList}\small\item\em A data logger object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver}{Spatial\+Driver} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a7e08a0ce817760d8ea8c4e146ab1a82d}\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a7e08a0ce817760d8ea8c4e146ab1a82d}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{boundhandl,  }\item[{}]{pde\+\_\+problem,  }\item[{}]{logger }\end{DoxyParamCaption})}
+
+
+
+The constructor for the \hyperlink{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver}{Spatial\+Driver} class. 
+
+Initializes the spatial driver with a P\+DE problem object, a boundary handler, and a data logger object. 
+\begin{DoxyParams}{Parameters}
+{\em boundhandl} & The boundary handler object \\
+\hline
+{\em pde\+\_\+problem} & The P\+DE problem object \\
+\hline
+{\em logger} & The data logger object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_afcf6ad549e5939c1eb267144b26d2042}\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_afcf6ad549e5939c1eb267144b26d2042}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}!eval\+\_\+rhs@{eval\+\_\+rhs}}
+\index{eval\+\_\+rhs@{eval\+\_\+rhs}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}}
+\subsubsection{\texorpdfstring{eval\+\_\+rhs()}{eval\_rhs()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver.\+eval\+\_\+rhs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val\+\_\+grid }\end{DoxyParamCaption})}
+
+
+
+Evaluate the right hand side of the given P\+DE. 
+
+This method simply calls the R\+H\+S() method of the problem object. Returns the spatial grid of approximate R\+HS values. 
+\begin{DoxyParams}{Parameters}
+{\em val\+\_\+grid} & The spatial grid of function values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The spatial grid of approximate R\+HS values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_ace8ab1e2e0d8e9da601ecddf44d504c2}\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_ace8ab1e2e0d8e9da601ecddf44d504c2}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}!log\+\_\+data@{log\+\_\+data}}
+\index{log\+\_\+data@{log\+\_\+data}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}}
+\subsubsection{\texorpdfstring{log\+\_\+data()}{log\_data()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver.\+log\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{t,  }\item[{}]{val\+\_\+grid }\end{DoxyParamCaption})}
+
+
+
+Send a spatial grid of function values to the data logger object. 
+
+This method simply calls the log() method of the data logger object. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The current time step \\
+\hline
+{\em val\+\_\+grid} & The spatial grid of function values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a8383df7f86b0bca04a6787290438cde7}\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a8383df7f86b0bca04a6787290438cde7}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}!set\+\_\+\+B\+Cs@{set\+\_\+\+B\+Cs}}
+\index{set\+\_\+\+B\+Cs@{set\+\_\+\+B\+Cs}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}}
+\subsubsection{\texorpdfstring{set\+\_\+\+B\+Cs()}{set\_BCs()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver.\+set\+\_\+\+B\+Cs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{t,  }\item[{}]{val\+\_\+grid }\end{DoxyParamCaption})}
+
+
+
+Set the spatial boundaries to the appropriate values based on the boundary conditions. 
+
+This method simply calls the set\+\_\+bound\+\_\+vals() method of the boundary handler object. Returns the updated grid with the correct boundary values. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The current time \\
+\hline
+{\em val\+\_\+grid} & The spatial grid of function values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated grid with correct boundary values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_ada0ed39211b437d2f86b9b103a690eb3}\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_ada0ed39211b437d2f86b9b103a690eb3}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}!solve@{solve}}
+\index{solve@{solve}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}}
+\subsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver.\+solve (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{t,  }\item[{}]{val\+\_\+grid }\end{DoxyParamCaption})}
+
+
+
+Perform the full sequence of spatial problem steps. 
+
+
+\begin{DoxyEnumerate}
+\item Set boundary values
+\item Log the current time step and function values
+\item Evaluate the approximate R\+HS values
+\end{DoxyEnumerate}
+
+This method calls the other methods defined in this class. Returns the input grid with updated boundary values and the grid of R\+HS values that will be passed to the time stepper. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The current time step \\
+\hline
+{\em val\+\_\+grid} & A spatial grid object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The spatial grid with correct boundary values 
+
+The grid object to pass to the time stepper 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a8e4da2dd5010a3f8e63f2a6aa28ffabf}\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a8e4da2dd5010a3f8e63f2a6aa28ffabf}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}!boundhandl@{boundhandl}}
+\index{boundhandl@{boundhandl}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}}
+\subsubsection{\texorpdfstring{boundhandl}{boundhandl}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver.\+boundhandl}
+
+
+
+A boundary handler object. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_aac2299eb18270b9cc3c17d2d07e0dc57}\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_aac2299eb18270b9cc3c17d2d07e0dc57}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}!logger@{logger}}
+\index{logger@{logger}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}}
+\subsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver.\+logger}
+
+
+
+A data logger object. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a2a61190d268b74c9388d3bbe3e3cce93}\label{classMain__PDE__Repo_1_1src_1_1spatial__driver_1_1SpatialDriver_a2a61190d268b74c9388d3bbe3e3cce93}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}!pde\+\_\+problem@{pde\+\_\+problem}}
+\index{pde\+\_\+problem@{pde\+\_\+problem}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::spatial\+\_\+driver\+::\+Spatial\+Driver}}
+\subsubsection{\texorpdfstring{pde\+\_\+problem}{pde\_problem}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+spatial\+\_\+driver.\+Spatial\+Driver.\+pde\+\_\+problem}
+
+
+
+A P\+DE problem object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{spatial__driver_8py}{spatial\+\_\+driver.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,94 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem}}
+
+
+The abstract \hyperlink{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem}{Problem} class.  
+
+
+
+
+Inheritance diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a3bd7ab602ec2348c69edcfc82fc35794}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em The constructor initializes the problem with operator members and constant parameter members. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a1885fe3e15581db4feda8af513ae91e5}{R\+HS} (self)
+\begin{DoxyCompactList}\small\item\em The R\+HS function applies the defined operators to the grid argument in a defined manner. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_aeaea1beb92b43dde42d5175ddde1f276}{set\+\_\+ops} (self)
+\begin{DoxyCompactList}\small\item\em The set\+\_\+ops function takes a dictionary of linear operators defined elsewhere and sets them to the correct member variables in the problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a7700a3b18e39488fbe81a8fb06ebb982}{ops\+\_\+set\+\_\+flag}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a7736044b7f2938008a30043000e62f87}{ops}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The abstract \hyperlink{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem}{Problem} class. 
+
+Concrete sublclasses define the constant parameters and R\+HS function operators 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a3bd7ab602ec2348c69edcfc82fc35794}\label{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a3bd7ab602ec2348c69edcfc82fc35794}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The constructor initializes the problem with operator members and constant parameter members. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a1885fe3e15581db4feda8af513ae91e5}\label{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a1885fe3e15581db4feda8af513ae91e5}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}!R\+HS@{R\+HS}}
+\index{R\+HS@{R\+HS}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}}
+\subsubsection{\texorpdfstring{R\+H\+S()}{RHS()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem.\+R\+HS (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The R\+HS function applies the defined operators to the grid argument in a defined manner. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_aeaea1beb92b43dde42d5175ddde1f276}\label{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_aeaea1beb92b43dde42d5175ddde1f276}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}!set\+\_\+ops@{set\+\_\+ops}}
+\index{set\+\_\+ops@{set\+\_\+ops}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}}
+\subsubsection{\texorpdfstring{set\+\_\+ops()}{set\_ops()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem.\+set\+\_\+ops (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The set\+\_\+ops function takes a dictionary of linear operators defined elsewhere and sets them to the correct member variables in the problem. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a7736044b7f2938008a30043000e62f87}\label{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a7736044b7f2938008a30043000e62f87}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}!ops@{ops}}
+\index{ops@{ops}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}}
+\subsubsection{\texorpdfstring{ops}{ops}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem.\+ops}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a7700a3b18e39488fbe81a8fb06ebb982}\label{classMain__PDE__Repo_1_1src_1_1problem_1_1Problem_a7700a3b18e39488fbe81a8fb06ebb982}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}!ops\+\_\+set\+\_\+flag@{ops\+\_\+set\+\_\+flag}}
+\index{ops\+\_\+set\+\_\+flag@{ops\+\_\+set\+\_\+flag}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::problem\+::\+Problem}}
+\subsubsection{\texorpdfstring{ops\+\_\+set\+\_\+flag}{ops\_set\_flag}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+problem.\+Problem.\+ops\+\_\+set\+\_\+flag}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{problem_8py}{problem.\+py}\end{DoxyCompactItemize}
