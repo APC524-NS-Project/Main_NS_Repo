@@ -56,7 +56,7 @@ class GridOperator():
 				if self.ndscheme.edge[idx].name == 'fixed':
 					self._bl_set(popul,opmat,self.ndscheme.edge[idx],interior,self.spec.gridshape[idx])
 				else:
-					raise AttributeError("An edge operator non-fixed edge operator has been specified which is outside of the current implementation scope")
+					raise AttributeError("A non-fixed edge operator has been specified which is outside of the current implementation scope")
 
 				self.opmats.append(opmat)
 			else:
