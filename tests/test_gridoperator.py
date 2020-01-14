@@ -38,7 +38,7 @@ class testGridOp(unittest.TestCase):
 
 		self.mockScheme.edge = (((self.mockfd,),(self.mockbd,)),)
 
-		self.gop_test = gridoperator.GridOperator(self.mockSpec,self.mockScheme)
+		gop_test = gridoperator.GridOperator(self.mockSpec,self.mockScheme)
 
 		out_cor = operatormatrix.OperatorMatrix(4)
 		out_cor[0,0:3] = self.mockfd.weights
@@ -46,9 +46,9 @@ class testGridOp(unittest.TestCase):
 		out_cor[2,1:4] = self.mockcd.weights
 		out_cor[3,1:4] = self.mockbd.weights
 
-		self.compare_arrays(out_cor.array,self.gop_test.opmats[0].array)
+		self.compare_arrays(out_cor.array,gop_test.opmats[0].array)
 
-	def test_instatization2dx(self):
+	def test_instatization2d(self):
 		self.mockSpec2 = Mock()
 		self.mockSpec2.dx = 1
 		self.mockSpec2.gridshape = (3,3)
@@ -56,26 +56,35 @@ class testGridOp(unittest.TestCase):
 
 		self.mockScheme2 = Mock()
 		self.mockScheme2.dim = 2
-		self.mockScheme2.interior = [None,self.mockcd]
+		self.mockScheme2.interior = [self.mockcd,self.mockcd]
 
-		self.mockScheme2.edge = (None,((self.mockfd,),(self.mockbd,)))
+		self.mockScheme2.edge = (((self.mockfd,),(self.mockbd,)),((self.mockfd,),(self.mockbd,)))
 
-		self.gop_test2 = gridoperator.GridOperator(self.mockSpec2,self.mockScheme2)
+		gop_test2 = gridoperator.GridOperator(self.mockSpec2,self.mockScheme2)
 
-		out_cor = operatormatrix.OperatorMatrix(9)
+		x_out_cor = operatormatrix.OperatorMatrix(9)
 		int_points = [1,4,7]
 		for pt in int_points:
-			out_cor[pt,pt-1:pt+2] = self.mockcd.weights
+			x_out_cor[pt,pt-1:pt+2] = self.mockcd.weights
 
 		left_points = [0,3,6]
 		for pt in left_points:
-			out_cor[pt,pt:pt+3] = self.mockfd.weights
+			x_out_cor[pt,pt:pt+3] = self.mockfd.weights
 
 		right_points = [2,5,8]
 		for pt in right_points:
-			out_cor[pt,pt-2:pt+1] = self.mockbd.weights
+			x_out_cor[pt,pt-2:pt+1] = self.mockbd.weights
 
-		self.compare_arrays(out_cor.array,self.gop_test2.opmats[1].array)
+		y_out_cor = operatormatrix.OperatorMatrix(9)
+		yweights = [1,0,0,-2,0,0,1]
+		for j in range(3):
+			for i in range(3):
+				y_out_cor[3*i+j,j:j+7] = yweights
+
+		self.compare_arrays(x_out_cor.array,gop_test2.opmats[1].array)
+		self.compare_arrays(y_out_cor.array,gop_test2.opmats[0].array)
+		laplace_cor = x_out_cor + y_out_cor
+		self.compare_arrays(laplace_cor,gop_test2.scalar_op.array)
 
 
 
