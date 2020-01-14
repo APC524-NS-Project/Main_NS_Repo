@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['op1d',['op1d',['../classtest__gridoperator_1_1op1d.html',1,'test_gridoperator']]],
   ['op_5fnd_5fscheme_2epy',['op_nd_scheme.py',['../op__nd__scheme_8py.html',1,'']]],
   ['operator1d',['Operator1D',['../classMain__PDE__Repo_1_1src_1_1operator__1d_1_1Operator1D.html',1,'Main_PDE_Repo::src::operator_1d']]],
   ['operator_5f1d_2epy',['operator_1d.py',['../operator__1d_8py.html',1,'']]],

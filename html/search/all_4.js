@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['d',['d',['../classtest__gridoperator_1_1op1d.html#a8f22b6d9225e596f3db185ff9326782b',1,'test_gridoperator.op1d.d()'],['../classtest__populator_1_1mockOp1D.html#aa34be703e90c4cb0c7b62e2058b00a3c',1,'test_populator.mockOp1D.d()']]],
   ['d2_5fint',['d2_int',['../namespaceMain__PDE__Repo_1_1initializer.html#a657e8b73e6463b4e45e67b4854e3bdcc',1,'Main_PDE_Repo::initializer']]],
   ['d2_5fleft',['d2_left',['../namespaceMain__PDE__Repo_1_1initializer.html#a24c8c2b7c649edf215c2573852cd73fc',1,'Main_PDE_Repo::initializer']]],
   ['d2_5fright',['d2_right',['../namespaceMain__PDE__Repo_1_1initializer.html#afd3adfb33fdba510d2b75e2cd9e01e42',1,'Main_PDE_Repo::initializer']]],
@@ -11,5 +10,5 @@ var searchData=
   ['driver',['Driver',['../classMain__PDE__Repo_1_1src_1_1driver_1_1Driver.html',1,'Main_PDE_Repo.src.driver.Driver'],['../namespacedriver.html',1,'driver']]],
   ['driver_2epy',['driver.py',['../driver_8py.html',1,'']]],
   ['dt',['dt',['../namespaceMain__PDE__Repo_1_1main.html#ad3b582748c81751902dd082c0fc4a57c',1,'Main_PDE_Repo::main']]],
-  ['dx',['dx',['../classMain__PDE__Repo_1_1src_1_1populator_1_1Populator.html#abca46171554ca659807610d0c53c8d5d',1,'Main_PDE_Repo.src.populator.Populator.dx()'],['../classtest__populator_1_1mockSpec.html#a19c5edb3d1296b2c8e721c4194a1ae7b',1,'test_populator.mockSpec.dx()']]]
+  ['dx',['dx',['../classMain__PDE__Repo_1_1src_1_1populator_1_1Populator.html#abca46171554ca659807610d0c53c8d5d',1,'Main_PDE_Repo::src::populator::Populator']]]
 ];
