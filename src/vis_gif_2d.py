@@ -16,8 +16,8 @@ class VisGif2d(visualizer.Visualizer):
         
     ## Generates a 2d movie of the output from logger and saves it as a GIF to the given output directory  
     # \param log The Logger object containing the data to be animated.
-    def make_2d_movie(self,log, **kwargs):
-        fext="2d_movie"
+    def make_2d_movie(self,log,name="", **kwargs):
+        fext="2d_movie_"+name
         suffix=".gif"
         framenums=log.get_nframes()
         fig = plt.figure()
