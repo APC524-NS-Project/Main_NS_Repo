@@ -25,13 +25,11 @@ data_logger = logger.Logger()
 
 time_stpr = forward_euler.ForwardEuler()
 
-prblm = conduct_heat_eqn.ConductHeatEqn(alpha=0.05)
+prblm = conduct_heat_eqn.ConductHeatEqn(bound_handlr, alpha=0.05)
 
 prblm.set_ops(initializer.ops_dict)
 
-space_drive = spatial_driver.SpatialDriver(bound_handlr,
-                                           prblm,
-                                           data_logger)
+space_drive = spatial_driver.SpatialDriver(prblm, data_logger)
 
 drive = driver.Driver(space_drive, time_stpr)
 
