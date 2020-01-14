@@ -55,12 +55,15 @@ class GridOperator():
 
 				self._bl_set(popul,opmat,self.ndscheme.edge[idx],interior,self.spec.gridshape[idx])
 
-				opmats.append(opmat)
+				self.opmats.append(opmat)
 			else:
-				opmats.append(None)
+				self.opmats.append(None)
 
-		opmats = tuple(opmats)
+		self.opmats = tuple(self.opmats)
 
+		self.scalar_op = operatormatrix.OperatorMatrix(self.N)
+		for operator in self.opmats:
+			self.scalar_op.array += operator.array
 		
 
 	## _get_Int
@@ -117,5 +120,12 @@ class GridOperator():
 			slc = (N-1-idx,N-idx)
 			self._apply_op(popul,opmat,edgeop[1][idx],slc)
 
+	## __call__
+	# Evaluate the scalar version of the grid operator on a given grid
+	#
+	# Take a gridqty object of arbitrary dimension and apply the gridoperator object to each scalar contained in the grid
+	# Return a new gridqty object of the same type and size with the values corresponding to the 
+	# @param grid a GridQty object
 	def __call__(self,grid):
+		pass
 		
