@@ -15,9 +15,6 @@ from . import populator
 ## GridOperator
 # GridOperator class definition
 class GridOperator():
-	# @var opmats list to hold the operator matricies generated for each dimension
-	opmats = []
-
 	## Contstructor
 	# Constructs grid operator.
 	#
@@ -35,9 +32,12 @@ class GridOperator():
 	# @var interior coordinates of the interior of the 
 	# @var opmats recast opmats list to a tuple after instantiation 
 	# @var scalar_op The given grid operator linearlly combined such that it would act on a scalar and return a scalar
+	# @var opmats list to hold the operator matricies generated for each dimension
+
 	def __init__(self,spec,ndscheme):
 		self.spec = spec
 		self.ndscheme = ndscheme
+		self.opmats = []
 
 		if self.spec.ndim != self.ndscheme.dim:
 			raise ValueError("ND Scheme does not have the appropriate dimensions for this Grid")
@@ -62,8 +62,10 @@ class GridOperator():
 		self.opmats = tuple(self.opmats)
 
 		self.scalar_op = operatormatrix.OperatorMatrix(self.N)
-		for operator in self.opmats:
-			self.scalar_op.array += operator.array
+
+		for idx,operator in enumerate(self.opmats):
+			if operator != None:
+				self.scalar_op = self.scalar_op + operator
 		
 
 	## _get_Int
@@ -118,8 +120,8 @@ class GridOperator():
 			self._apply_op(popul,opmat,edgeop[0][idx],slcL)
 
 		for idx in range(N-layer_dim[1]):
-			self.slcR = (N-1-idx,N-idx)
-			self._apply_op(popul,opmat,edgeop[1][idx],self.slcR)
+			slcR = (N-1-idx,N-idx)
+			self._apply_op(popul,opmat,edgeop[1][idx],slcR)
 
 	## __call__
 	# Evaluate the scalar version of the grid operator on a given grid
