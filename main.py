@@ -1,3 +1,6 @@
+
+from src import static_bcs
+from src import dirichlet_hand
 from src import logger
 from src import forward_euler
 from src import conduct_heat_eqn
@@ -11,9 +14,14 @@ dt = 0.01 # time step size
 
 grid_T = None # initial grid of temperature values
 
-BCs = None
+#set each of the boundaries (using all dirichlet zero for now)
+BCs = []
+BCs.append(static_bcs.Dirichlet(0,'l',0))
+BCs.append(static_bcs.Dirichlet(0,'r',0))
+BCs.append(static_bcs.Dirichlet(1,'l',0))
+BCs.append(static_bcs.Dirichlet(1,'r',0))
 
-bound_handlr = None
+bound_handlr = dirichlet_hand.DirichletHand(BCs)
 
 data_logger = logger.Logger()
 
