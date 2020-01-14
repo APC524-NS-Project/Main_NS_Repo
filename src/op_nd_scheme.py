@@ -3,18 +3,10 @@
 ## The N-dimensional operator scheme class contains a tuple of
 #  operator objects. The first item in the tuple corresponds
 #  to the OperatorND to be used on the "interior" portion of
-#  the grid. The second item is a sub-tuple of sub-tuples. This
-#  argument should take the form:
+#  the grid. The second item is a sub-tuple of edge operators. 
+#  This argument should take the form:
 #  
-#  ( ((x_op1D_L1, x_op1D_L2,...),(x_op1D_R1, x_op1D_R2,...)),
-#    ((y_op1D_L1, y_op1D_L2,...),(y_op1D_R1, y_op1D_R2,...)),
-#    etc. for as many axes as you need )
-#  
-#  where L and R correspond to the left and right (or low and
-#  high) ends of the axis of interest. The edge operators will
-#  be applied from the outside in (x_op1D_L1 corresponds to the
-#  outermost points at the left end of the x-axis, L2 would be
-#  the next step inward, and so on).
+#  ( z_edge_ops, y_edge_ops, x_edge_ops )
 #  
 #  The length of the edge operator tuple should be equal to the
 #  dim attribute of the interior operator.
