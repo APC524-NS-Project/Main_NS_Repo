@@ -1,6 +1,6 @@
 from unittest import TestCase
 import numpy as np
-from src import operator_1d
+from src import stencil, operator_1d
 
 class test_Operator1D(TestCase):
 	def test_init(self):

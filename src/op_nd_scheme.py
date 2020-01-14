@@ -28,7 +28,7 @@ class OperatorNDScheme():
     #  grid interior
     #  \param edge_op1D A tuple of Operator1D objects to be
     #  applied at the grid edges
-    def __init__(opND_int, edge_op1D=()):
+    def __init__(self, opND_int, edge_op1D=()):
 
         assert isinstance(edge_op1D, tuple), \
         'Edge operators must be passed as a tuple! See the documentation!'
