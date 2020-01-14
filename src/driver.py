@@ -33,7 +33,7 @@ class Driver():
     #  \param val_grid A spatial grid object
     def full_solve(self, tstart, tend, dt, val_grid):
         Nsteps = int((tend - tstart)/dt)
-        t = start
+        t = tstart
         for i in range(Nsteps):
             val_grid = self.full_advance(t, dt, val_grid)
             t += dt

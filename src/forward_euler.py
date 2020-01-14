@@ -19,9 +19,9 @@ class ForwardEuler(time_stepper.TimeStepper):
     #  \param dt The time step size
     #  \return Spatial grid with new values for the next time step
     def step(self, val_grid, rhs_grid, dt):
-        assert ( self.get_num_grid_elems(val_grid) == 
-                 self.get_num_grid_elems(rhs_grid),
-                 "Grid objects must be equally sized!" )
+        assert self.get_num_grid_elems(val_grid) == \
+               self.get_num_grid_elems(rhs_grid), \
+               "Grid objects must be equally sized!"
         
         new_val_grid = val_grid + dt * rhs_grid
         return new_val_grid
