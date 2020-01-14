@@ -1,0 +1,95 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator}}
+
+
+\hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator}{Populator} Function to populate an op\+\_\+matrix according to a particular 1d operator.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_a2bf19f9a4fdf912a755f2ba62a583c8f}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, spec, \hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_a301b505c724a5a9c3f446f2260a69469}{dim})
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_adedc630ce47f1836ea4d7321b87ff3cd}{populate\+\_\+op} (self, mesh, op\+\_\+mat, op1d)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_af9e860df7e6784efab29a3f3677a6728}{shape}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_a301b505c724a5a9c3f446f2260a69469}{dim}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_abca46171554ca659807610d0c53c8d5d}{dx}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_ab94a2b5767f776c3a4b62b161a071828}{\+\_\+set\+\_\+row} (self, op1d, coords, op\+\_\+mat, op\+\_\+index)
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_aabb6d0bae97c41cc83ec81dd5f958fa3}{\+\_\+get\+\_\+single\+\_\+index} (self, coords)
+\begin{DoxyCompactList}\small\item\em \+\_\+get\+\_\+single\+\_\+index Generates a single flattened index for an n-\/dimensional grid position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator}{Populator} Function to populate an op\+\_\+matrix according to a particular 1d operator. 
+
+C\+Lass can take a 1d operator and a portion of a grid to generate FD values for each index in a matrix operator that can then calculate that finite difference. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_a2bf19f9a4fdf912a755f2ba62a583c8f}\label{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_a2bf19f9a4fdf912a755f2ba62a583c8f}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{spec,  }\item[{}]{dim }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_aabb6d0bae97c41cc83ec81dd5f958fa3}\label{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_aabb6d0bae97c41cc83ec81dd5f958fa3}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}!\+\_\+get\+\_\+single\+\_\+index@{\+\_\+get\+\_\+single\+\_\+index}}
+\index{\+\_\+get\+\_\+single\+\_\+index@{\+\_\+get\+\_\+single\+\_\+index}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}}
+\subsubsection{\texorpdfstring{\+\_\+get\+\_\+single\+\_\+index()}{\_get\_single\_index()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator.\+\_\+get\+\_\+single\+\_\+index (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{coords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\+\_\+get\+\_\+single\+\_\+index Generates a single flattened index for an n-\/dimensional grid position. 
+
+Private method which returns the corresponding to a particular set of n-\/dimensional coordinates specifying location on a grid.  coords A list of coordinates with length equal to length(self.\+shape).  index The index corresponding to a row-\/major flattening operation applied to the n-\/dimensional matrix to express it as a 1D matrix. \mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_ab94a2b5767f776c3a4b62b161a071828}\label{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_ab94a2b5767f776c3a4b62b161a071828}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}!\+\_\+set\+\_\+row@{\+\_\+set\+\_\+row}}
+\index{\+\_\+set\+\_\+row@{\+\_\+set\+\_\+row}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}}
+\subsubsection{\texorpdfstring{\+\_\+set\+\_\+row()}{\_set\_row()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator.\+\_\+set\+\_\+row (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{op1d,  }\item[{}]{coords,  }\item[{}]{op\+\_\+mat,  }\item[{}]{op\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_adedc630ce47f1836ea4d7321b87ff3cd}\label{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_adedc630ce47f1836ea4d7321b87ff3cd}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}!populate\+\_\+op@{populate\+\_\+op}}
+\index{populate\+\_\+op@{populate\+\_\+op}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}}
+\subsubsection{\texorpdfstring{populate\+\_\+op()}{populate\_op()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator.\+populate\+\_\+op (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mesh,  }\item[{}]{op\+\_\+mat,  }\item[{}]{op1d }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_a301b505c724a5a9c3f446f2260a69469}\label{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_a301b505c724a5a9c3f446f2260a69469}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}!dim@{dim}}
+\index{dim@{dim}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}}
+\subsubsection{\texorpdfstring{dim}{dim}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator.\+dim}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_abca46171554ca659807610d0c53c8d5d}\label{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_abca46171554ca659807610d0c53c8d5d}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}!dx@{dx}}
+\index{dx@{dx}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}}
+\subsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator.\+dx}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_af9e860df7e6784efab29a3f3677a6728}\label{classMain__PDE__Repo_1_1src_1_1populator_1_1Populator_af9e860df7e6784efab29a3f3677a6728}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}!shape@{shape}}
+\index{shape@{shape}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::populator\+::\+Populator}}
+\subsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+populator.\+Populator.\+shape}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{populator_8py}{populator.\+py}\end{DoxyCompactItemize}

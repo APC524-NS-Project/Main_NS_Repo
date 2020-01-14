@@ -1,0 +1,112 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+driver.\+Driver Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+driver.\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+driver.\+Driver}}
+
+
+The main \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver}{Driver} class.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_a3511ca3e52659cc97066122ff811693b}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_afbceb17919398235d08dfa86fc9bd797}{space\+\_\+driver}, \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_ad203ab5d16ddeedc0717612a1d040b1e}{time\+\_\+stepper})
+\begin{DoxyCompactList}\small\item\em The constructor for the \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver}{Driver} class. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_a04fa6f2d8ec0bf649a21a9303e0dfdcf}{full\+\_\+advance} (self, t, dt, val\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em Advance the full probelm one time step. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_acaae71ffc87871c6873a1f348c7a396b}{full\+\_\+solve} (self, tstart, tend, dt, val\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em Solve the full problem for a pre-\/defined number of time steps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_afbceb17919398235d08dfa86fc9bd797}{space\+\_\+driver}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_ad203ab5d16ddeedc0717612a1d040b1e}{time\+\_\+stepper}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver}{Driver} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_a3511ca3e52659cc97066122ff811693b}\label{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_a3511ca3e52659cc97066122ff811693b}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+driver.\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{space\+\_\+driver,  }\item[{}]{time\+\_\+stepper }\end{DoxyParamCaption})}
+
+
+
+The constructor for the \hyperlink{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver}{Driver} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space\+\_\+driver} & A Spatial\+Driver instance \\
+\hline
+{\em \hyperlink{namespaceMain__PDE__Repo_1_1src_1_1time__stepper}{time\+\_\+stepper}} & A Time\+Stepper instance \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_a04fa6f2d8ec0bf649a21a9303e0dfdcf}\label{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_a04fa6f2d8ec0bf649a21a9303e0dfdcf}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}!full\+\_\+advance@{full\+\_\+advance}}
+\index{full\+\_\+advance@{full\+\_\+advance}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}}
+\subsubsection{\texorpdfstring{full\+\_\+advance()}{full\_advance()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+driver.\+Driver.\+full\+\_\+advance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{t,  }\item[{}]{dt,  }\item[{}]{val\+\_\+grid }\end{DoxyParamCaption})}
+
+
+
+Advance the full probelm one time step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The current time \\
+\hline
+{\em dt} & The time step size \\
+\hline
+{\em val\+\_\+grid} & A spatial grid object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The grid output from the time stepper 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_acaae71ffc87871c6873a1f348c7a396b}\label{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_acaae71ffc87871c6873a1f348c7a396b}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}!full\+\_\+solve@{full\+\_\+solve}}
+\index{full\+\_\+solve@{full\+\_\+solve}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}}
+\subsubsection{\texorpdfstring{full\+\_\+solve()}{full\_solve()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+driver.\+Driver.\+full\+\_\+solve (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tstart,  }\item[{}]{tend,  }\item[{}]{dt,  }\item[{}]{val\+\_\+grid }\end{DoxyParamCaption})}
+
+
+
+Solve the full problem for a pre-\/defined number of time steps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tstart} & The initial time value \\
+\hline
+{\em tend} & The ending time value \\
+\hline
+{\em dt} & The time step size \\
+\hline
+{\em val\+\_\+grid} & A spatial grid object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_afbceb17919398235d08dfa86fc9bd797}\label{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_afbceb17919398235d08dfa86fc9bd797}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}!space\+\_\+driver@{space\+\_\+driver}}
+\index{space\+\_\+driver@{space\+\_\+driver}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}}
+\subsubsection{\texorpdfstring{space\+\_\+driver}{space\_driver}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+driver.\+Driver.\+space\+\_\+driver}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_ad203ab5d16ddeedc0717612a1d040b1e}\label{classMain__PDE__Repo_1_1src_1_1driver_1_1Driver_ad203ab5d16ddeedc0717612a1d040b1e}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}!time\+\_\+stepper@{time\+\_\+stepper}}
+\index{time\+\_\+stepper@{time\+\_\+stepper}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::driver\+::\+Driver}}
+\subsubsection{\texorpdfstring{time\+\_\+stepper}{time\_stepper}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+driver.\+Driver.\+time\+\_\+stepper}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{driver_8py}{driver.\+py}\end{DoxyCompactItemize}
