@@ -28,16 +28,13 @@ class OperatorNDScheme():
     #  grid interior
     #  \param edge_op1D A tuple of Operator1D objects to be
     #  applied at the grid edges
-    def __init__(opND_int, edge_op1D=()):
+    def __init__(self, opND_int, edge_op1D=()):
 
-        assert isinstance(edge_op1D, tuple), '''Edge operators must
-                                             be passed as a tuple!
-                                             See the documentation!'''
+        assert isinstance(edge_op1D, tuple), \
+        'Edge operators must be passed as a tuple! See the documentation!'
 
-        assert opND_int.dim == len(edge_op1D), '''Length of edge
-                                               operator tuple must
-                                               match dimensionality
-                                               of interior operator!'''
+        assert opND_int.dim == len(edge_op1D), \
+        'Length of edge operator tuple must match dimensionality of interior operator!'
 
         ## \var scheme The tuple with info about the linear operator
         self.scheme = (opND_int, edge_op1D)
