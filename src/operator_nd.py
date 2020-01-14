@@ -8,11 +8,13 @@ class OperatorND():
 
     ## The N-D operator constructor
     #  \param ops1d Must be a tuple of 1D operators
-    def __init__(self, ops1d):
-        assert isinstance(ops1d, tuple), '''Constructor argument
-                                         must be a tuple!'''
-        assert len(ops1d) > 0, '''Argument must contain at least
-                               one 1D operator object!'''
+    def __init__(self, ops1d=()):
+        
+        assert isinstance(ops1d, tuple), \
+        'Constructor argument must be a tuple!'
+
+        assert len(ops1d) > 0, \
+        'Argument must contain at least one 1D operator object!'
 
         ## \var ops1d A tuple of Operator1D objects
         self.ops1d = ops1d
