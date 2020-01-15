@@ -22,7 +22,7 @@ ops_dict = {'laplacian': laplace_op}
 BCs = []
 # BCs.append(static_bcs.Dirichlet(0,'l',np.array([1])))
 # BCs.append(static_bcs.Dirichlet(0,'r',np.array([0])))
-BCs.append(static_bcs.Dirichlet(0,'l',np.ones(grid_u.shape[0])))
+BCs.append(static_bcs.Dirichlet(0,'l',np.zeros(grid_u.shape[0])))
 BCs.append(static_bcs.Dirichlet(0,'r',np.zeros(grid_u.shape[0])))
 BCs.append(static_bcs.Dirichlet(1,'l',np.zeros(grid_u.shape[0])))
 BCs.append(static_bcs.Dirichlet(1,'r',np.zeros(grid_u.shape[0])))

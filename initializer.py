@@ -9,7 +9,7 @@ out_loc = r"outputs/"
 out_name = "initializer_2d_plot_1"
 
 t_start = 0.0 # start time
-t_end = 5.0 # end time
+t_end = 2.0 # end time
 dt = 0.0001 # time step size
 
 #sloppily define the solution grid and stuff
