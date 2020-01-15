@@ -1,0 +1,139 @@
+\documentclass[border = 5pt, tikz, multi]{standalone}
+\input{tikzstyles.tex}
+\usepackage[american,siunitx]{circuitikz}
+\usepackage{tikz-uml}
+\usetikzlibrary{arrows,shapes,calc,positioning}
+
+\begin{document}
+\begin{tikzpicture}
+    \pgfmathsetmacro{\gridx}{4}
+    \pgfmathsetmacro{\gridy}{4}
+
+    \pgfmathsetmacro{\opx}{20}
+    \pgfmathsetmacro{\opy}{2}
+
+    \pgfmathsetmacro{\prox}{13}
+    \pgfmathsetmacro{\proy}{2}
+
+    
+
+    \tikzset{unimp/.style={fill=black!20}};
+    \tikzset{limimp/.style={fill=blue!20}};
+
+    \tikzstyle{asoc} = [very thick];
+
+    \node[](user) at (0,0) {\Huge USER};
+    \umlemptyclass[x=\gridx,y=0,limimp] {Initializer};
+    \umluniassoc[asoc]{Initializer}{user}
+
+    \umlemptyclass[x = \gridx,y=\gridy,type=abstract]{BCHandler};
+    \umluniassoc[asoc]{BCHandler}{Initializer}
+
+    \umlemptyclass[x = \gridx - 2.5, y=\gridy+2]{DirichletHand};
+    \umlemptyclass[x=\gridx+2.5,y=\gridy+2,unimp]{NeumanHand};
+    \umlimpl[asoc,geometry = |-]{BCHandler}{DirichletHand};
+    \umlimpl[asoc,geometry = |-]{BCHandler}{NeumanHand};
+
+    \umlemptyclass[x=\gridx-6,y=\gridy,type=abstract]{BC};
+    \umlemptyclass[x=\gridx-9,y=\gridy,type=abstract]{StaticBCs};
+    \umlemptyclass[x=\gridx-6,y=\gridy+2,type=abstract,unimp]{PeriodicBCs};
+    \umlemptyclass[x=\gridx-12,y=\gridy+1.5]{Dirichlet};
+    \umlemptyclass[x=\gridx-12,y=\gridy-1.5]{Neuman};
+    \umlimpl[asoc]{BC}{PeriodicBCs};
+    \umlimpl[asoc]{BC}{StaticBCs};
+    \umlimpl[asoc,geometry=-|]{StaticBCs}{Dirichlet};
+    \umlimpl[asoc,geometry=-|]{StaticBCs}{Neuman};
+    \umluniaggreg[asoc,attr1=1|*]{BC}{BCHandler};
+
+    \umlemptyclass[x=\gridx+1,y=-\gridy,type=abstract]{GridSpec};
+    \umlemptyclass[x=\gridx+1,y=-\gridy-3]{CartesianGridSpec};
+    \umlemptyclass[x=\gridx+7,y=-\gridy,type=abstract]{GridQty};
+    \umlemptyclass[x=\gridx+5.5,y=-\gridy-3]{GridScalar};
+    \umlemptyclass[x=\gridx+8.5,y=-\gridy-3,unimp]{GridVector};
+    \umlimpl[asoc]{GridSpec}{CartesianGridSpec};
+    \umlimpl[asoc,geometry=|-|]{GridQty}{GridScalar};
+    \umlimpl[asoc,geometry=|-|]{GridQty}{GridVector};
+    \umluniaggreg[asoc,arg1=1]{GridSpec}{GridQty};
+    \umluniassoc[asoc,anchor1=120,anchor2=-60,geometry=|-|]{GridSpec}{Initializer};
+
+    \umlemptyclass[x=\opx,y=\opy]{GridOperator};
+    \umlemptyclass[x=\opx,y=\opy-3]{OperatorNDScheme};
+    \umlemptyclass[x=\opx,y=\opy-6]{OperatorND};
+    \umlemptyclass[x=\opx-4,y=\opy-6]{Operator1D};
+    \umlemptyclass[x=\opx-4,y=\opy-9]{Stencil};
+    \umlemptyclass[x=\opx+5,y=\opy-3,type=abstract]{EdgeOperator};
+    \umlemptyclass[x=\opx+3.5,y=\opy-6]{FixedEdgeOps};
+    \umlemptyclass[x=\opx+6.5,y=\opy-9,unimp]{PeriodicEdgeOps};
+    \umlemptyclass[x=\opx+5,y=\opy,unimp]{VectorOperator};
+    \umluniassoc[asoc]{GridOperator}{OperatorNDScheme};
+    \umluniaggreg[asoc,arg1=1]{OperatorND}{OperatorNDScheme};
+    \umluniaggreg[asoc,attr1=1|*]{Operator1D}{OperatorND};
+    \umluniaggreg[asoc,arg1=1]{Stencil}{Operator1D};
+    \umlVHVimpl[asoc]{EdgeOperator}{FixedEdgeOps};
+    \umlVHVimpl[asoc,arm1=-1.5]{EdgeOperator}{PeriodicEdgeOps};
+    \umlVHVuniaggreg[asoc,attr1=1|*,arm2=-2,anchor1 = -50]{Operator1D}{FixedEdgeOps}
+    \node(a) at (\opx+3.5,\opy-7){};
+    \umlVHuniassoc[asoc]{a}{PeriodicEdgeOps};
+    \umluniaggreg[asoc,arg1=1]{OperatorNDScheme}{EdgeOperator};
+    \umluniaggreg[asoc,attr1=1|*]{GridOperator}{VectorOperator};
+    \node(b) at (\opx-4,\opy-4){};
+    \node(c) at (\opx-5,\opy-4){};
+    \umlHVuniassoc[asoc,anchor2=60]{b}{GridSpec};
+    \umlHVHassoc[asoc,anchor1=-160,arm1 = -2]{GridOperator}{c};
+
+    \umlemptyclass[x=\prox,y=\proy,type=abstract]{Problem};
+    \umlemptyclass[x=\prox,y=\proy-2.5]{CondHeatEqn};
+    \umlimpl[asoc]{Problem}{CondHeatEqn};
+    \umlHVHuniassoc[asoc,anchor1=-170]{Problem}{Initializer};
+    \umlHVHuniaggreg[asoc,attr1=1|*,anchor2=170]{BCHandler}{Problem};
+    \umluniaggreg[asoc,attr1=1|*]{GridOperator}{Problem};
+    \node(d) at(\prox+3,\proy){};
+    \umlVHVaggreg[asoc,arm1=1.5,attr1=0|*]{VectorOperator}{d};
+    \node(e) at (\prox+3,\proy+1){};
+    \node(f) at(\prox+2,\proy){};
+    \umlHVassoc[asoc]{f}{e};
+
+    \umlemptyclass[x=\opx,y=\proy+4]{SpacialDriver};
+    \umlemptyclass[x=\opx+10,y=\proy+4]{Driver};
+    \umlemptyclass[x=\opx+10,y=\proy,type=abstract]{TimeStepper};
+    \umlemptyclass[x=\opx+10,y=\proy-3]{ForwardEuler};
+    \umlemptyclass[x=\opx+15,y=\proy]{Logger};
+    \umlemptyclass[x=\opx+10,y=\proy-6,unimp]{RungeKutta};
+    \umlVHuniassoc[asoc]{SpacialDriver}{Problem};
+    \umluniaggreg[asoc,arg1=1]{SpacialDriver}{Driver};
+    \umluniaggreg[asoc,arg1=1]{TimeStepper}{Driver};
+    \umlimpl[asoc]{TimeStepper}{ForwardEuler};
+    \umlHVHimpl[asoc,arm1=2]{TimeStepper}{RungeKutta};
+    \umlHVuniassoc[asoc]{Driver}{Logger};
+
+    \umlemptyclass[x=\opx+15,y=\proy-3,limimp]{Output};
+    \umluniassoc[asoc]{Output}{Logger};
+    \node(g) at (\opx+12,\opy-11){};
+    \node(h) at (\opx+12.5,\opy-11){};
+    \umlHVHassoc[asoc]{g}{Logger};
+    \node(i) at (2,\opy-10){};
+    \umlVHassoc[asoc]{i}{h};
+    \node(j) at (2,\opy-11){};
+    \umlVHVuniassoc[asoc,anchor2=-120]{j}{Initializer};
+
+    \node(k) at (10,-1.5){};
+    \umlHVHassoc[asoc,arm1 = -3]{OperatorNDScheme}{k};
+    \node(l) at(11,-1.5){};
+    \umlHVHuniassoc[asoc,anchor2=-25]{l}{Initializer};
+
+    \umlHVHassoc[asoc,arm1=-1.5]{Logger}{Output};
+
+    \umlemptyclass[x=\opx+16,y=\proy-6,type=abstract]{Visualizer};
+    \umlemptyclass[x=\opx+16,y=\proy-9]{VisGif2d};
+    \umlemptyclass[x=\opx+16,y=\proy-12]{PlotEnd};
+    \umlVHVuniassoc[asoc]{Visualizer}{Output};
+    \umlimpl[asoc]{Visualizer}{VisGif2d};
+    \umlHVHimpl[asoc,arm1=2]{Visualizer}{PlotEnd};
+
+
+
+
+
+    
+\end{tikzpicture}
+\end{document}
