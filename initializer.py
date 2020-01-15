@@ -9,24 +9,24 @@ out_loc = r"outputs/"
 out_name = "initializer_test_1"
 
 t_start = 0.0 # start time
-t_end = 10.0 # end time
-dt = 0.01 # time step size
+t_end = 5.0 # end time
+dt = 0.0001 # time step size
 
 #sloppily define the solution grid and stuff
-nx = 31
+nx = 100
 ny = 31
 dx = 2 / (nx - 1)
 dy = 2 / (ny - 1)
 
 x = np.linspace(0, 2, nx)
 y = np.linspace(0, 2, ny)
-coords=(tuple(x),tuple(y))
+coords=(tuple(x),)
 
 
 # Sloppily assign initial conditions
-u = np.zeros((ny, nx))
+u = np.zeros(nx)
 # set hat function I.C. : u(.5<=x<=1 && .5<=y<=1 ) is 2
-u[int(.5 / dy):int(1 / dy + 1),int(.5 / dx):int(1 / dx + 1)] = 2  
+# u[int(.5 / dy):int(1 / dy + 1),int(.5 / dx):int(1 / dx + 1)] = 2  
 
 # Make the interior laplacian operator
 # A first order, center difference, 2nd derivative
@@ -41,7 +41,7 @@ x_edge_ops = fixed_edge_ops.FixedEdgeOps( (d2_left,), (d2_right,) )
 y_edge_ops = fixed_edge_ops.FixedEdgeOps( (d2_left,), (d2_right,) )
 
 # Full laplacian operator
-laplace_scheme = op_nd_scheme.OperatorNDScheme( laplac_int, (y_edge_ops, x_edge_ops) )
+laplace_scheme = op_nd_scheme.OperatorNDScheme( laplac_int, (x_edge_ops,) )
 
 # Make the dictionary
 # ops_dict = {'laplacian': laplacian}

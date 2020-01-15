@@ -19,10 +19,10 @@ ops_dict = {'laplacian': laplace_op}
 
 #set each of the boundaries (using all dirichlet zero for now)
 BCs = []
-BCs.append(static_bcs.Dirichlet(0,'l',np.zeros(grid_u.shape[0])))
-BCs.append(static_bcs.Dirichlet(0,'r',np.zeros(grid_u.shape[0])))
 BCs.append(static_bcs.Dirichlet(1,'l',np.zeros(grid_u.shape[0])))
-BCs.append(static_bcs.Dirichlet(1,'r',np.zeros(grid_u.shape[0])))
+BCs.append(static_bcs.Dirichlet(0,'r',np.zeros(grid_u.shape[0])))
+# BCs.append(static_bcs.Dirichlet(1,'l',np.zeros(grid_u.shape[0])))
+# BCs.append(static_bcs.Dirichlet(1,'r',np.zeros(grid_u.shape[0])))
 
 bound_handlr = dirichlet_hand.DirichletHand(BCs)
 
