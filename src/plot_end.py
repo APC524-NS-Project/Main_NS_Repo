@@ -19,7 +19,7 @@ class PlotEnd(visualizer.Visualizer):
 			raise IndexError("Attempting to do a 1d plot of a multi dimensional grid")
 
 		x = last_frame[1].spec.coords
-		x = np.array(x)
+		x = np.transpose(np.array(x))
 
 		plt.figure()
 		plt.subplot(211)

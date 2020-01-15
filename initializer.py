@@ -6,7 +6,7 @@ from src import fixed_edge_ops
 
 # initialize desired parameters (that the user would specify)
 out_loc = r"outputs/"
-out_name = "initializer_test_1"
+out_name = "initializer_test_2"
 
 t_start = 0.0 # start time
 t_end = 5.0 # end time
@@ -24,7 +24,7 @@ coords=(tuple(x),)
 
 
 # Sloppily assign initial conditions
-u = np.zeros(nx)
+u = np.zeros((nx,))
 # set hat function I.C. : u(.5<=x<=1 && .5<=y<=1 ) is 2
 # u[int(.5 / dy):int(1 / dy + 1),int(.5 / dx):int(1 / dx + 1)] = 2  
 
@@ -32,7 +32,7 @@ u = np.zeros(nx)
 # A first order, center difference, 2nd derivative
 d2_int = operator_1d.Operator1D([-1,0,1], 2)
 # The OperatorND object for a 2D laplacian
-laplac_int = operator_nd.OperatorND((d2_int, d2_int))
+laplac_int = operator_nd.OperatorND((d2_int,))
 
 # Make the exterior laplacian operators
 d2_left = operator_1d.Operator1D([0,1,2], 2)

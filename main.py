@@ -9,6 +9,7 @@ from src import conduct_heat_eqn
 from src import spatial_driver
 from src import driver
 from src import vis_gif_2d
+from src import plot_end
 import initializer
 
 gspec = grid.CartesianGridSpec(initializer.coords)
@@ -19,8 +20,10 @@ ops_dict = {'laplacian': laplace_op}
 
 #set each of the boundaries (using all dirichlet zero for now)
 BCs = []
-BCs.append(static_bcs.Dirichlet(1,'l',np.zeros(grid_u.shape[0])))
-BCs.append(static_bcs.Dirichlet(0,'r',np.zeros(grid_u.shape[0])))
+BCs.append(static_bcs.Dirichlet(0,'l',np.array([1])))
+BCs.append(static_bcs.Dirichlet(0,'r',np.array([0])))
+# BCs.append(static_bcs.Dirichlet(0,'l',np.ones(grid_u.shape[0])))
+# BCs.append(static_bcs.Dirichlet(0,'r',np.zeros(grid_u.shape[0])))
 # BCs.append(static_bcs.Dirichlet(1,'l',np.zeros(grid_u.shape[0])))
 # BCs.append(static_bcs.Dirichlet(1,'r',np.zeros(grid_u.shape[0])))
 
@@ -40,5 +43,9 @@ drive = driver.Driver(space_drive, time_stpr)
 
 drive.full_solve(initializer.t_start, initializer.t_end, initializer.dt, grid_u)
 
-visualizer = vis_gif_2d.VisGif2d(initializer.out_loc)
-visualizer.make_2d_movie(data_logger,name = initializer.out_name)
+visualizer = plot_end.PlotEnd(initializer.out_loc)
+
+visualizer.plot1d(data_logger,name=initializer.out_name)
+
+# visualizer = vis_gif_2d.VisGif2d(initializer.out_loc)
+# visualizer.make_2d_movie(data_logger,name = initializer.out_name)
