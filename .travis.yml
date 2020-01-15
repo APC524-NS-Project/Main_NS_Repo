@@ -5,6 +5,7 @@ matrix:
       cache: pip
       install:
       - pip install matplotlib 
+      - pip install scipy
       script:
       - python -c "print('Hello from Python!')"
       - python -m unittest discover -s tests
