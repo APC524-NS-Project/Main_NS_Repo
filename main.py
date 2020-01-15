@@ -8,6 +8,7 @@ from src import forward_euler
 from src import conduct_heat_eqn
 from src import spatial_driver
 from src import driver
+from src import vis_gif_2d
 import initializer
 
 gspec = grid.CartesianGridSpec(initializer.coords)
@@ -38,3 +39,6 @@ space_drive = spatial_driver.SpatialDriver(prblm, data_logger)
 drive = driver.Driver(space_drive, time_stpr)
 
 drive.full_solve(initializer.t_start, initializer.t_end, initializer.dt, grid_u)
+
+visualizer = vis_gif_2d.VisGif2d(initializer.out_loc)
+visualizer.make_2d_movie(data_logger,name = initializer.out_name)

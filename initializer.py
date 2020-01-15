@@ -5,6 +5,8 @@ from src import op_nd_scheme
 from src import fixed_edge_ops
 
 # initialize desired parameters (that the user would specify)
+out_loc = r"outputs/"
+out_name = "initializer_test_1"
 
 t_start = 0.0 # start time
 t_end = 10.0 # end time
