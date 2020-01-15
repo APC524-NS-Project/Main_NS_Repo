@@ -58,6 +58,8 @@ class GridOperator():
 				else:
 					raise AttributeError("A non-fixed edge operator has been specified which is outside of the current implementation scope")
 
+				opmat.set_populated()
+
 				self.opmats.append(opmat)
 			else:
 				self.opmats.append(None)
