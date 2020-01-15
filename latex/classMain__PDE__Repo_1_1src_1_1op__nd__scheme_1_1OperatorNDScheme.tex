@@ -26,11 +26,9 @@ def \hyperlink{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme
 \subsection{Detailed Description}
 The N-\/dimensional operator scheme class contains a tuple of operator objects. 
 
-The first item in the tuple corresponds to the Operator\+ND to be used on the \char`\"{}interior\char`\"{} portion of the grid. The second item is a sub-\/tuple of sub-\/tuples. This argument should take the form\+:
+The first item in the tuple corresponds to the Operator\+ND to be used on the \char`\"{}interior\char`\"{} portion of the grid. The second item is a sub-\/tuple of edge operators. This argument should take the form\+:
 
-( ((x\+\_\+op1\+D\+\_\+\+L1, x\+\_\+op1\+D\+\_\+\+L2,...),(x\+\_\+op1\+D\+\_\+\+R1, x\+\_\+op1\+D\+\_\+\+R2,...)), ((y\+\_\+op1\+D\+\_\+\+L1, y\+\_\+op1\+D\+\_\+\+L2,...),(y\+\_\+op1\+D\+\_\+\+R1, y\+\_\+op1\+D\+\_\+\+R2,...)), etc. for as many axes as you need )
-
-where L and R correspond to the left and right (or low and high) ends of the axis of interest. The edge operators will be applied from the outside in (x\+\_\+op1\+D\+\_\+\+L1 corresponds to the outermost points at the left end of the x-\/axis, L2 would be the next step inward, and so on).
+( z\+\_\+edge\+\_\+ops, y\+\_\+edge\+\_\+ops, x\+\_\+edge\+\_\+ops )
 
 The length of the edge operator tuple should be equal to the dim attribute of the interior operator. The \hyperlink{classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme}{Operator\+N\+D\+Scheme} class 
 

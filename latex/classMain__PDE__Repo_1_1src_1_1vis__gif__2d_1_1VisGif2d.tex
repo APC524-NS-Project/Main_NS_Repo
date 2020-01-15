@@ -1,0 +1,122 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d}}
+
+
+Class for creating a gif movie of simulation results for 2d scalar variables.  
+
+
+
+
+Inheritance diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_ac831ff56d31525f11311e5b6e4c894a6}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_a48a438a24012dc8496b8008ab4f13da0}{direc})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_aa4b0092b49e7fecbc62f57adcd491c12}{make\+\_\+2d\+\_\+movie} (self, log, name=\char`\"{}\char`\"{}, kwargs)
+\begin{DoxyCompactList}\small\item\em Generates a 2d movie of the output from logger and saves it as a G\+IF to the given output directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_a48a438a24012dc8496b8008ab4f13da0}{direc}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_abf86f9c00a0481f04e982efbea8520ed}{\+\_\+animate} (self, i, X, Y, ax, surf, log)
+\begin{DoxyCompactList}\small\item\em Method used to step forward a frame for the make\+\_\+2d\+\_\+movie method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for creating a gif movie of simulation results for 2d scalar variables. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_ac831ff56d31525f11311e5b6e4c894a6}\label{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_ac831ff56d31525f11311e5b6e4c894a6}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{direc }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+\hyperlink{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d}{Vis\+Gif2d} objects are instantiated with an output directory. 
+\begin{DoxyParams}{Parameters}
+{\em direc} & The directory in which to save the output \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_abf86f9c00a0481f04e982efbea8520ed}\label{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_abf86f9c00a0481f04e982efbea8520ed}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d}!\+\_\+animate@{\+\_\+animate}}
+\index{\+\_\+animate@{\+\_\+animate}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d}}
+\subsubsection{\texorpdfstring{\+\_\+animate()}{\_animate()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d.\+\_\+animate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i,  }\item[{}]{X,  }\item[{}]{Y,  }\item[{}]{ax,  }\item[{}]{surf,  }\item[{}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method used to step forward a frame for the make\+\_\+2d\+\_\+movie method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The frame to step to \\
+\hline
+{\em X} & The dim number 0 meshgrid \\
+\hline
+{\em Y} & The dim number 1 meshgrid \\
+\hline
+{\em ax} & The matplotlib Axes object used to make the ovie \\
+\hline
+{\em surf} & The matplotlib ax.\+plot\+\_\+surface() instance to update \\
+\hline
+{\em log} & The Logger object containing the data to be plotted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_aa4b0092b49e7fecbc62f57adcd491c12}\label{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_aa4b0092b49e7fecbc62f57adcd491c12}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d}!make\+\_\+2d\+\_\+movie@{make\+\_\+2d\+\_\+movie}}
+\index{make\+\_\+2d\+\_\+movie@{make\+\_\+2d\+\_\+movie}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d}}
+\subsubsection{\texorpdfstring{make\+\_\+2d\+\_\+movie()}{make\_2d\_movie()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d.\+make\+\_\+2d\+\_\+movie (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{log,  }\item[{}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Generates a 2d movie of the output from logger and saves it as a G\+IF to the given output directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log} & The Logger object containing the data to be animated. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_a48a438a24012dc8496b8008ab4f13da0}\label{classMain__PDE__Repo_1_1src_1_1vis__gif__2d_1_1VisGif2d_a48a438a24012dc8496b8008ab4f13da0}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d}!direc@{direc}}
+\index{direc@{direc}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::vis\+\_\+gif\+\_\+2d\+::\+Vis\+Gif2d}}
+\subsubsection{\texorpdfstring{direc}{direc}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+vis\+\_\+gif\+\_\+2d.\+Vis\+Gif2d.\+direc}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{vis__gif__2d_8py}{vis\+\_\+gif\+\_\+2d.\+py}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gridoperator_2epy',['gridoperator.py',['../gridoperator_8py.html',1,'']]]
+  ['edge_5foperator_2epy',['edge_operator.py',['../edge__operator_8py.html',1,'']]]
 ];

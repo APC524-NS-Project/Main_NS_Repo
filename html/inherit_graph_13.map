@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classMain__PDE__Repo_1_1src_1_1problem_1_1Problem.html" title="The abstract Problem class. " alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$classMain__PDE__Repo_1_1src_1_1conduct__heat__eqn_1_1ConductHeatEqn.html" title="The conductive heat equation problem with no advective transport in the form dT/dt = alpha * laplacia..." alt="" coords="252,5,447,47"/>
+</map>

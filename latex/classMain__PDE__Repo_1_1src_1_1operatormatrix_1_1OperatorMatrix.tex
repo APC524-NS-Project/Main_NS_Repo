@@ -9,7 +9,9 @@
 \begin{DoxyCompactItemize}
 \item 
 def \hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a15495a68ab1363574aa90ce186112902}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, N)
-\begin{DoxyCompactList}\small\item\em Constructor initialize the operator matrix to be a numpy array full of zeros. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor initialize the operator matrix to be a sparse lil\+\_\+matrix. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a119a9a5351c0e396d6dcc77df1ec1cd9}{set\+\_\+populated} (self)
+\begin{DoxyCompactList}\small\item\em freeze\+\_\+\+Op method to convert internal storage from lil\+\_\+matrix to a csr for better performance \end{DoxyCompactList}\item 
 def \hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_ac0a77d7612e956bee24bdfb07c9b9d13}{\+\_\+\+\_\+getattr\+\_\+\+\_\+} (self, name)
 \begin{DoxyCompactList}\small\item\em {\bfseries getattr} Recast attribute calls to calls on the underlying array \end{DoxyCompactList}\item 
 def \hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a1ee9ad94eeb37416c8841c2284ca3a61}{\+\_\+\+\_\+getitem\+\_\+\+\_\+} (self, key)
@@ -26,6 +28,8 @@ def \hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a
 \hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_aa973994badfd46a4774be7d9399838e3}{shape}
 \item 
 \hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a85c4c68c7cb184de85df6280358ee3d5}{array}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a2895edbf574cf039646d85a7ac9a6b78}{populated}
 \end{DoxyCompactItemize}
 
 
@@ -41,7 +45,7 @@ def \hyperlink{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a
 
 
 
-Constructor initialize the operator matrix to be a numpy array full of zeros. 
+Constructor initialize the operator matrix to be a sparse lil\+\_\+matrix. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -85,7 +89,17 @@ Constructor initialize the operator matrix to be a numpy array full of zeros.
 \subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
 {\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+operatormatrix.\+Operator\+Matrix.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a119a9a5351c0e396d6dcc77df1ec1cd9}\label{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a119a9a5351c0e396d6dcc77df1ec1cd9}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix}!set\+\_\+populated@{set\+\_\+populated}}
+\index{set\+\_\+populated@{set\+\_\+populated}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix}}
+\subsubsection{\texorpdfstring{set\+\_\+populated()}{set\_populated()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+operatormatrix.\+Operator\+Matrix.\+set\+\_\+populated (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
+
+
+freeze\+\_\+\+Op method to convert internal storage from lil\+\_\+matrix to a csr for better performance 
+
+Call this method to transform the lil\+\_\+matrix storage of the operator array to a csr\+\_\+matrix storage to improve speed when evaluating operator. Additionally, set the populated Flag to true so that the operator knows it is populated 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a85c4c68c7cb184de85df6280358ee3d5}\label{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a85c4c68c7cb184de85df6280358ee3d5}} 
@@ -93,6 +107,12 @@ Constructor initialize the operator matrix to be a numpy array full of zeros.
 \index{array@{array}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix}}
 \subsubsection{\texorpdfstring{array}{array}}
 {\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+operatormatrix.\+Operator\+Matrix.\+array}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a2895edbf574cf039646d85a7ac9a6b78}\label{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_a2895edbf574cf039646d85a7ac9a6b78}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix}!populated@{populated}}
+\index{populated@{populated}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix}}
+\subsubsection{\texorpdfstring{populated}{populated}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+operatormatrix.\+Operator\+Matrix.\+populated}
 
 \mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_aa973994badfd46a4774be7d9399838e3}\label{classMain__PDE__Repo_1_1src_1_1operatormatrix_1_1OperatorMatrix_aa973994badfd46a4774be7d9399838e3}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::operatormatrix\+::\+Operator\+Matrix}!shape@{shape}}

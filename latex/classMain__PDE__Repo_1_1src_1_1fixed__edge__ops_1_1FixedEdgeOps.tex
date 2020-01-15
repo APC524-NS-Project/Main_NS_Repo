@@ -1,0 +1,103 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops}}
+
+
+The fixed edge operator class handles the operators applied to the edges of the grid which correspond to fixed boundary conditions in the evaluation of the R\+HS of the P\+DE.  
+
+
+
+
+Inheritance diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a10e78a05dd1fdb424be03fa98c2ddb01}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, left\+\_\+ops\+\_\+tup, right\+\_\+ops\+\_\+tup)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a91399d66e3712e6a1a2dd991d3d26e9e}{name}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a3297adebb84dd9e74cd5effe428a9bde}{left}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_aea006d7915a600521621a4bb3c89f45b}{right}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a15597526848fef9dfa96ea8e6c41c4f2}{\+\_\+set\+\_\+name} (self)
+\begin{DoxyCompactList}\small\item\em Private method for setting name attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The fixed edge operator class handles the operators applied to the edges of the grid which correspond to fixed boundary conditions in the evaluation of the R\+HS of the P\+DE. 
+
+The arguments are tuples of 1D operators. Each tuple corresponds to either the left (more negative) or right (more positive) edge of the axis. The operators in each tuple will be applied from the outside in, i.\+e. the first element in each tuple corresponds to the outermost edge points. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a10e78a05dd1fdb424be03fa98c2ddb01}\label{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a10e78a05dd1fdb424be03fa98c2ddb01}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{left\+\_\+ops\+\_\+tup,  }\item[{}]{right\+\_\+ops\+\_\+tup }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a15597526848fef9dfa96ea8e6c41c4f2}\label{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a15597526848fef9dfa96ea8e6c41c4f2}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}!\+\_\+set\+\_\+name@{\+\_\+set\+\_\+name}}
+\index{\+\_\+set\+\_\+name@{\+\_\+set\+\_\+name}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}}
+\subsubsection{\texorpdfstring{\+\_\+set\+\_\+name()}{\_set\_name()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops.\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private method for setting name attribute. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a3297adebb84dd9e74cd5effe428a9bde}\label{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a3297adebb84dd9e74cd5effe428a9bde}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}!left@{left}}
+\index{left@{left}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops.\+left}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a91399d66e3712e6a1a2dd991d3d26e9e}\label{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_a91399d66e3712e6a1a2dd991d3d26e9e}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}!name@{name}}
+\index{name@{name}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops.\+name}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_aea006d7915a600521621a4bb3c89f45b}\label{classMain__PDE__Repo_1_1src_1_1fixed__edge__ops_1_1FixedEdgeOps_aea006d7915a600521621a4bb3c89f45b}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}!right@{right}}
+\index{right@{right}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::fixed\+\_\+edge\+\_\+ops\+::\+Fixed\+Edge\+Ops}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops.\+right}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{fixed__edge__ops_8py}{fixed\+\_\+edge\+\_\+ops.\+py}\end{DoxyCompactItemize}

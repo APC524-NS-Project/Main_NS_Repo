@@ -82,6 +82,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5028b1f1929f7124fc5322aaa917f118"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMain__PDE__Repo_1_1src_1_1logger_1_1Logger.html#a5028b1f1929f7124fc5322aaa917f118">log</a> (self, t, val_grid)</td></tr>
 <tr class="memdesc:a5028b1f1929f7124fc5322aaa917f118"><td class="mdescLeft">&#160;</td><td class="mdescRight">The log function appends the current timestep.  <a href="#a5028b1f1929f7124fc5322aaa917f118">More...</a><br /></td></tr>
 <tr class="separator:a5028b1f1929f7124fc5322aaa917f118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a3ec736e4a23eb8738f52fc0d27248"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMain__PDE__Repo_1_1src_1_1logger_1_1Logger.html#a07a3ec736e4a23eb8738f52fc0d27248">get_frame</a> (self, i)</td></tr>
+<tr class="memdesc:a07a3ec736e4a23eb8738f52fc0d27248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get the log_list element at a particular frame.  <a href="#a07a3ec736e4a23eb8738f52fc0d27248">More...</a><br /></td></tr>
+<tr class="separator:a07a3ec736e4a23eb8738f52fc0d27248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9c0a4d4efcc23c16de9f19652cb552"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMain__PDE__Repo_1_1src_1_1logger_1_1Logger.html#a3a9c0a4d4efcc23c16de9f19652cb552">get_nframes</a> (self)</td></tr>
+<tr class="memdesc:a3a9c0a4d4efcc23c16de9f19652cb552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return the number of frame currently contained in the <a class="el" href="classMain__PDE__Repo_1_1src_1_1logger_1_1Logger.html" title="The Logger class. ">Logger</a> This is a wrapper of len(LoggerObject.log_list) in case we ever change how the log stores its stuff.  <a href="#a3a9c0a4d4efcc23c16de9f19652cb552">More...</a><br /></td></tr>
+<tr class="separator:a3a9c0a4d4efcc23c16de9f19652cb552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80ede43eb3e9305a18b9ede9f2a8607"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMain__PDE__Repo_1_1src_1_1logger_1_1Logger.html#af80ede43eb3e9305a18b9ede9f2a8607">get_data_limits</a> (self)</td></tr>
+<tr class="memdesc:af80ede43eb3e9305a18b9ede9f2a8607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get the min and max values of the data contained in the <a class="el" href="classMain__PDE__Repo_1_1src_1_1logger_1_1Logger.html" title="The Logger class. ">Logger</a>.  <a href="#af80ede43eb3e9305a18b9ede9f2a8607">More...</a><br /></td></tr>
+<tr class="separator:af80ede43eb3e9305a18b9ede9f2a8607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -113,6 +122,82 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af80ede43eb3e9305a18b9ede9f2a8607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80ede43eb3e9305a18b9ede9f2a8607">&#9670;&nbsp;</a></span>get_data_limits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Main_PDE_Repo.src.logger.Logger.get_data_limits </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to get the min and max values of the data contained in the <a class="el" href="classMain__PDE__Repo_1_1src_1_1logger_1_1Logger.html" title="The Logger class. ">Logger</a>. </p>
+
+</div>
+</div>
+<a id="a07a3ec736e4a23eb8738f52fc0d27248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a3ec736e4a23eb8738f52fc0d27248">&#9670;&nbsp;</a></span>get_frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Main_PDE_Repo.src.logger.Logger.get_frame </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to get the log_list element at a particular frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Int- the frame that is desired, starting from 0 This is basically a wrapper of LoggerObject.log_list[i], in case we ever want to change how the log stores its stuff. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a9c0a4d4efcc23c16de9f19652cb552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9c0a4d4efcc23c16de9f19652cb552">&#9670;&nbsp;</a></span>get_nframes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Main_PDE_Repo.src.logger.Logger.get_nframes </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to return the number of frame currently contained in the <a class="el" href="classMain__PDE__Repo_1_1src_1_1logger_1_1Logger.html" title="The Logger class. ">Logger</a> This is a wrapper of len(LoggerObject.log_list) in case we ever change how the log stores its stuff. </p>
+
+</div>
+</div>
 <a id="a5028b1f1929f7124fc5322aaa917f118"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5028b1f1929f7124fc5322aaa917f118">&#9670;&nbsp;</a></span>log()</h2>
 

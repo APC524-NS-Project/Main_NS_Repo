@@ -1,0 +1,188 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty}}
+
+
+The \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{Grid\+Qty} abstract base class.  
+
+
+
+
+Inheritance diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a9adaebfb98afe1a1074e9aad8d6ca879}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_af8f206d6eb9037737417e4fefb52990e}{spec}, initial\+\_\+vals)
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_ab9b199129e09cd0f959e553292a75015}{\+\_\+\+\_\+getattr\+\_\+\+\_\+} (self, attr)
+\begin{DoxyCompactList}\small\item\em Getattr method\+: If a method isn\textquotesingle{}t specified for a \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{Grid\+Qty} object, instead try doing operations on the grid attribute. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a5080f35125b0d132cc1226d7967996bb}{getslice} (self, indices, squeeze=False)
+\begin{DoxyCompactList}\small\item\em Getslice method. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a991e5653e03be1daeabfd5dd512fd75c}{setslice} (self, indices, values)
+\begin{DoxyCompactList}\small\item\em Setslice method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_af8f206d6eb9037737417e4fefb52990e}{spec}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_ad506c5469e4f07ccdcd1cca7239d1555}{gqshape}
+\begin{DoxyCompactList}\small\item\em The constructor for the \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{Grid\+Qty}. \end{DoxyCompactList}\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a78259425113459873f41c8ece6d05c1c}{grid}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a0c68e16bd939efac875a60f539bb66f6}{\+\_\+qtyshape} (self)
+\begin{DoxyCompactList}\small\item\em Abstract method \+\_\+qtyshape, to return the dimensions of the stored object (versus the \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridSpec}{Grid\+Spec}) A non-\/abstract child must override each abstract method inherited from its parent by defining a method with the same signature and same return type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_af7f9a9ebb90e4911e7292e721f7d1de9}{\+\_\+makegrid} (shape, initial\+\_\+vals, kwargs)
+\begin{DoxyCompactList}\small\item\em Static method \+\_\+makegrid $\ast$$\ast$kwards\+: whatever keywords that also want to include in the grid static method that is agnostic to the particular child class calling it. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a048ff999254cfe9420fd377a6edc289b}{\+\_\+indexify} (indices)
+\begin{DoxyCompactList}\small\item\em \+\_\+indexify method for use by getslice and setslice methods Static method knows nothing about the class and just deals with the parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{Grid\+Qty} abstract base class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a9adaebfb98afe1a1074e9aad8d6ca879}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a9adaebfb98afe1a1074e9aad8d6ca879}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{spec,  }\item[{}]{initial\+\_\+vals }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_ab9b199129e09cd0f959e553292a75015}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_ab9b199129e09cd0f959e553292a75015}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!\+\_\+\+\_\+getattr\+\_\+\+\_\+@{\+\_\+\+\_\+getattr\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+getattr\+\_\+\+\_\+@{\+\_\+\+\_\+getattr\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+getattr\+\_\+\+\_\+()}{\_\_getattr\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+\_\+\+\_\+getattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attr }\end{DoxyParamCaption})}
+
+
+
+Getattr method\+: If a method isn\textquotesingle{}t specified for a \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{Grid\+Qty} object, instead try doing operations on the grid attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr} & The attribute of \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{Grid\+Qty} we are attempting to reference \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a048ff999254cfe9420fd377a6edc289b}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a048ff999254cfe9420fd377a6edc289b}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!\+\_\+indexify@{\+\_\+indexify}}
+\index{\+\_\+indexify@{\+\_\+indexify}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{\+\_\+indexify()}{\_indexify()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+\_\+indexify (\begin{DoxyParamCaption}\item[{}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\+\_\+indexify method for use by getslice and setslice methods Static method knows nothing about the class and just deals with the parameters. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_af7f9a9ebb90e4911e7292e721f7d1de9}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_af7f9a9ebb90e4911e7292e721f7d1de9}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!\+\_\+makegrid@{\+\_\+makegrid}}
+\index{\+\_\+makegrid@{\+\_\+makegrid}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{\+\_\+makegrid()}{\_makegrid()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+\_\+makegrid (\begin{DoxyParamCaption}\item[{}]{shape,  }\item[{}]{initial\+\_\+vals,  }\item[{}]{kwargs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Static method \+\_\+makegrid $\ast$$\ast$kwards\+: whatever keywords that also want to include in the grid static method that is agnostic to the particular child class calling it. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a0c68e16bd939efac875a60f539bb66f6}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a0c68e16bd939efac875a60f539bb66f6}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!\+\_\+qtyshape@{\+\_\+qtyshape}}
+\index{\+\_\+qtyshape@{\+\_\+qtyshape}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{\+\_\+qtyshape()}{\_qtyshape()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+\_\+qtyshape (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Abstract method \+\_\+qtyshape, to return the dimensions of the stored object (versus the \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridSpec}{Grid\+Spec}) A non-\/abstract child must override each abstract method inherited from its parent by defining a method with the same signature and same return type. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a5080f35125b0d132cc1226d7967996bb}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a5080f35125b0d132cc1226d7967996bb}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!getslice@{getslice}}
+\index{getslice@{getslice}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{getslice()}{getslice()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+getslice (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{indices,  }\item[{}]{squeeze = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Getslice method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & idxs A tuple of indices for the slice ((start,noninclusive end),(start,noninclusive end),...) \\
+\hline
+{\em squeeze} & Sets whether to squeeze the array or not squeese cancels all the 1-\/dim element in the tuple \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a991e5653e03be1daeabfd5dd512fd75c}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a991e5653e03be1daeabfd5dd512fd75c}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!setslice@{setslice}}
+\index{setslice@{setslice}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{setslice()}{setslice()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+setslice (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{indices,  }\item[{}]{values }\end{DoxyParamCaption})}
+
+
+
+Setslice method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & A tuple of indices for the slice ((start,noninclusive end),(start,noninclusive end),...) \\
+\hline
+{\em values} & An iterable containing the values we want to set the specified slice to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_ad506c5469e4f07ccdcd1cca7239d1555}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_ad506c5469e4f07ccdcd1cca7239d1555}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!gqshape@{gqshape}}
+\index{gqshape@{gqshape}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{gqshape}{gqshape}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+gqshape}
+
+
+
+The constructor for the \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{Grid\+Qty}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spec} & The \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridSpec}{Grid\+Spec} object with which to initialize the \hyperlink{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty}{Grid\+Qty} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a78259425113459873f41c8ece6d05c1c}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_a78259425113459873f41c8ece6d05c1c}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!grid@{grid}}
+\index{grid@{grid}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+grid}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_af8f206d6eb9037737417e4fefb52990e}\label{classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty_af8f206d6eb9037737417e4fefb52990e}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}!spec@{spec}}
+\index{spec@{spec}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::grid\+::\+Grid\+Qty}}
+\subsubsection{\texorpdfstring{spec}{spec}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+grid.\+Grid\+Qty.\+spec}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{grid_8py}{grid.\+py}\end{DoxyCompactItemize}

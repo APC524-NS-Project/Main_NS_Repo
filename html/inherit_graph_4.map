@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classMain__PDE__Repo_1_1src_1_1op__nd__scheme_1_1OperatorNDScheme.html" title="The N&#45;dimensional operator scheme class contains a tuple of operator objects. " alt="" coords="5,5,224,47"/>
+<area shape="rect" id="node2" href="$classMain__PDE__Repo_1_1src_1_1grid_1_1GridQty.html" title="The GridQty abstract base class. " alt="" coords="109,78,327,105"/>
+<area shape="rect" id="node5" href="$classMain__PDE__Repo_1_1src_1_1grid_1_1GridSpec.html" title="the GridSpec abstract base class " alt="" coords="104,135,332,162"/>
+<area shape="rect" id="node3" href="$classMain__PDE__Repo_1_1src_1_1grid_1_1GridScalar.html" title="the GridScalar childclass " alt="" coords="396,5,595,47"/>
+<area shape="rect" id="node4" href="$classMain__PDE__Repo_1_1src_1_1grid_1_1GridVector.html" title="the GridVector childclass " alt="" coords="396,71,595,112"/>
+<area shape="rect" id="node6" href="$classMain__PDE__Repo_1_1src_1_1grid_1_1CartesianGridSpec.html" title="the CartesianGridSpec class " alt="" coords="380,136,611,177"/>
 </map>
