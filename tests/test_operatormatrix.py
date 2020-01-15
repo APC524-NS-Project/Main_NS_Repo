@@ -14,4 +14,4 @@ class testOpMat(unittest.TestCase):
 
 		op4 = op1 + op2
 
-		np.testing.assert_array_equal(op4.array,op3.array)
+		np.testing.assert_array_equal(op4.array.todense(),op3.array.todense())

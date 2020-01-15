@@ -50,7 +50,7 @@ class testGridOp(unittest.TestCase):
 		out_cor[2,1:4] = self.mockcd.weights
 		out_cor[3,1:4] = self.mockbd.weights
 
-		self.compare_arrays(out_cor.array,gop_test.opmats[0].array)
+		self.compare_arrays(out_cor.array.toarray(),gop_test.opmats[0].array.toarray())
 
 	def test_instatization2d(self):
 		self.mockSpec2 = Mock()
@@ -85,10 +85,10 @@ class testGridOp(unittest.TestCase):
 			for i in range(3):
 				y_out_cor[3*i+j,j:j+7] = yweights
 
-		self.compare_arrays(x_out_cor.array,gop_test2.opmats[1].array)
-		self.compare_arrays(y_out_cor.array,gop_test2.opmats[0].array)
+		self.compare_arrays(x_out_cor.array.toarray(),gop_test2.opmats[1].array.toarray())
+		self.compare_arrays(y_out_cor.array.toarray(),gop_test2.opmats[0].array.toarray())
 		laplace_cor = x_out_cor + y_out_cor
-		self.compare_arrays(laplace_cor,gop_test2.scalar_op.array)
+		self.compare_arrays(laplace_cor.toarray(),gop_test2.scalar_op.array.toarray())
 
 
 

@@ -145,7 +145,7 @@ class GridScalar(GridQty):
     def applyOp(self,opmat):
         if isinstance(opmat,operatormatrix.OperatorMatrix):
             flat_grid = self._ravel()
-            new_grid = opmat @ flat_grid
+            new_grid = opmat.dot(flat_grid)
             new_grid = np.reshape(new_grid,self.spec.gridshape)
             return GridScalar(self.spec,new_grid)
         else:

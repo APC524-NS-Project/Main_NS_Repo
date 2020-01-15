@@ -37,7 +37,7 @@ class testPopulator(unittest.TestCase):
 		# Test function
 		popul._set_row(op1d,coords,opmat,opindex)
 
-		self.array_equal(opmat.array,opmat_out.array)
+		self.array_equal(opmat.array.toarray(),opmat_out.array.toarray())
 
 		op1d = mockOp1D([-2,-1,0],[1,-2,1],2)
 		mock2 = mockSpec((4,),(1,))
@@ -55,7 +55,7 @@ class testPopulator(unittest.TestCase):
 		# Test function
 		popul._set_row(op1d,coords,opmat,opindex)
 
-		self.array_equal(opmat.array,opmat_out.array)
+		self.array_equal(opmat.array.toarray(),opmat_out.array.toarray())
 
 	def test_populate(self):
 		popul = self.populs[0]
@@ -74,7 +74,7 @@ class testPopulator(unittest.TestCase):
 
 		popul.populate_op(sub_mesh,opmat,op1d)
 
-		self.array_equal(opmat.array,op_out.array)
+		self.array_equal(opmat.array.toarray(),op_out.array.toarray())
 
 	def array_equal(self,ar1,ar2):
 		np.testing.assert_array_equal(ar1,ar2)
