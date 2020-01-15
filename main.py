@@ -20,12 +20,12 @@ ops_dict = {'laplacian': laplace_op}
 
 #set each of the boundaries (using all dirichlet zero for now)
 BCs = []
-BCs.append(static_bcs.Dirichlet(0,'l',np.array([1])))
-BCs.append(static_bcs.Dirichlet(0,'r',np.array([0])))
-# BCs.append(static_bcs.Dirichlet(0,'l',np.ones(grid_u.shape[0])))
-# BCs.append(static_bcs.Dirichlet(0,'r',np.zeros(grid_u.shape[0])))
-# BCs.append(static_bcs.Dirichlet(1,'l',np.zeros(grid_u.shape[0])))
-# BCs.append(static_bcs.Dirichlet(1,'r',np.zeros(grid_u.shape[0])))
+# BCs.append(static_bcs.Dirichlet(0,'l',np.array([1])))
+# BCs.append(static_bcs.Dirichlet(0,'r',np.array([0])))
+BCs.append(static_bcs.Dirichlet(0,'l',np.ones(grid_u.shape[0])))
+BCs.append(static_bcs.Dirichlet(0,'r',np.zeros(grid_u.shape[0])))
+BCs.append(static_bcs.Dirichlet(1,'l',np.zeros(grid_u.shape[0])))
+BCs.append(static_bcs.Dirichlet(1,'r',np.zeros(grid_u.shape[0])))
 
 bound_handlr = dirichlet_hand.DirichletHand(BCs)
 
@@ -33,7 +33,7 @@ data_logger = logger.Logger()
 
 time_stpr = forward_euler.ForwardEuler()
 
-prblm = conduct_heat_eqn.ConductHeatEqn(bound_handlr, alpha=0.5)
+prblm = conduct_heat_eqn.ConductHeatEqn(bound_handlr, alpha=0.05)
 
 prblm.set_ops(ops_dict)
 
@@ -45,7 +45,7 @@ drive.full_solve(initializer.t_start, initializer.t_end, initializer.dt, grid_u)
 
 visualizer = plot_end.PlotEnd(initializer.out_loc)
 
-visualizer.plot1d(data_logger,name=initializer.out_name)
+visualizer.plot2d(data_logger,name=initializer.out_name)
 
 # visualizer = vis_gif_2d.VisGif2d(initializer.out_loc)
 # visualizer.make_2d_movie(data_logger,name = initializer.out_name)
