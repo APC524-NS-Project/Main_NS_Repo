@@ -6,7 +6,7 @@ from src import fixed_edge_ops
 
 # initialize desired parameters (that the user would specify)
 out_loc = r"outputs/"
-out_name = "initializer_2d_plot_1"
+out_name = "initializer_2d_plot_2"
 
 t_start = 0.0 # start time
 t_end = 2.0 # end time
