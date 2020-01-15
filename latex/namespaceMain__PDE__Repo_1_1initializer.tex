@@ -3,21 +3,55 @@
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
+string \hyperlink{namespaceMain__PDE__Repo_1_1initializer_acf6a435968a90051222f233d914c5397}{out\+\_\+loc} = r\char`\"{}outputs/\char`\"{}
+\item 
+string \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a46b587e3a760d2bc366f1b38609c5af9}{out\+\_\+name} = \char`\"{}initializer\+\_\+2d\+\_\+plot\+\_\+3\char`\"{}
+\item 
+float \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a8f26c89cc507005999c925cc575638cf}{t\+\_\+start} = 0.\+0
+\item 
+float \hyperlink{namespaceMain__PDE__Repo_1_1initializer_ab123ebb4c5c95ab09b8d8310af223730}{t\+\_\+end} = 2.\+0
+\item 
+float \hyperlink{namespaceMain__PDE__Repo_1_1initializer_ab8ea6f49ea65c76cfaa727f10e349ec5}{dt} = 0.\+0001
+\item 
+int \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}{nx} = 100
+\item 
+int \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}{ny} = 100
+\item 
+int \hyperlink{namespaceMain__PDE__Repo_1_1initializer_ab7752e585cb1e9951e583722826dc47b}{dx} = 2 / (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}{nx} -\/ 1)
+\item 
+int \hyperlink{namespaceMain__PDE__Repo_1_1initializer_aa755829a50d6b513279ec4ac18abd4ba}{dy} = 2 / (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}{ny} -\/ 1)
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a495f211daae2ee5ae3bbdb86436c35b5}{x} = np.\+linspace(0, 2, \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}{nx})
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a0963e63e11418e26d8cc428b47669ff1}{y} = np.\+linspace(0, 2, \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}{ny})
+\item 
+tuple \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a3349742a76f7fa24317809e551e4b27a}{coords} = (tuple(\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a0963e63e11418e26d8cc428b47669ff1}{y}),tuple(\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a495f211daae2ee5ae3bbdb86436c35b5}{x}))
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_af0ec17a2fbde89969e4c442f9f4fda75}{u} = np.\+zeros((\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}{ny},\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}{nx}))
+\item 
 \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int} = operator\+\_\+1d.\+Operator1D(\mbox{[}-\/1,0,1\mbox{]}, 2)
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a588f8a108166ccbf39c9e31dd69a1a7c}{laplac\+\_\+int} = operator\+\_\+nd.\+Operator\+ND((\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int}, \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int}))
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a588f8a108166ccbf39c9e31dd69a1a7c}{laplac\+\_\+int} = operator\+\_\+nd.\+Operator\+ND((\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int},\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int}))
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a24c8c2b7c649edf215c2573852cd73fc}{d2\+\_\+left} = operator\+\_\+1d.\+Operator1D(\mbox{[}0,1,2\mbox{]}, 2)
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1initializer_afd3adfb33fdba510d2b75e2cd9e01e42}{d2\+\_\+right} = operator\+\_\+1d.\+Operator1D(\mbox{[}-\/2,-\/1,0\mbox{]}, 2)
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a5d29fae6a76c81157540503a6d4340a0}{laplacian}
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a83990a2ef3c33e77b11cc09816b3388c}{x\+\_\+edge\+\_\+ops} = fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops( (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a24c8c2b7c649edf215c2573852cd73fc}{d2\+\_\+left},), (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_afd3adfb33fdba510d2b75e2cd9e01e42}{d2\+\_\+right},) )
 \item 
-dictionary \hyperlink{namespaceMain__PDE__Repo_1_1initializer_aa5c3b3b00275767f3e2e1c8eca05c3e3}{ops\+\_\+dict} = \{\textquotesingle{}\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a5d29fae6a76c81157540503a6d4340a0}{laplacian}\textquotesingle{}\+: \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a5d29fae6a76c81157540503a6d4340a0}{laplacian}\}
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_ae555cb401c7c00308a6d2917bf4459fb}{y\+\_\+edge\+\_\+ops} = fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops( (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a24c8c2b7c649edf215c2573852cd73fc}{d2\+\_\+left},), (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_afd3adfb33fdba510d2b75e2cd9e01e42}{d2\+\_\+right},) )
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a54a7ff0de91b35f3caa1d521b08d99a9}{laplace\+\_\+scheme} = op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme( \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a588f8a108166ccbf39c9e31dd69a1a7c}{laplac\+\_\+int}, (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a83990a2ef3c33e77b11cc09816b3388c}{x\+\_\+edge\+\_\+ops},\hyperlink{namespaceMain__PDE__Repo_1_1initializer_ae555cb401c7c00308a6d2917bf4459fb}{y\+\_\+edge\+\_\+ops}) )
 \end{DoxyCompactItemize}
 
 
 \subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a3349742a76f7fa24317809e551e4b27a}\label{namespaceMain__PDE__Repo_1_1initializer_a3349742a76f7fa24317809e551e4b27a}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!coords@{coords}}
+\index{coords@{coords}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{coords}{coords}}
+{\footnotesize\ttfamily tuple Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+coords = (tuple(\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a0963e63e11418e26d8cc428b47669ff1}{y}),tuple(\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a495f211daae2ee5ae3bbdb86436c35b5}{x}))}
+
 \mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}\label{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!d2\+\_\+int@{d2\+\_\+int}}
 \index{d2\+\_\+int@{d2\+\_\+int}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
@@ -36,29 +70,99 @@ dictionary \hyperlink{namespaceMain__PDE__Repo_1_1initializer_aa5c3b3b00275767f3
 \subsubsection{\texorpdfstring{d2\+\_\+right}{d2\_right}}
 {\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+d2\+\_\+right = operator\+\_\+1d.\+Operator1D(\mbox{[}-\/2,-\/1,0\mbox{]}, 2)}
 
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_ab8ea6f49ea65c76cfaa727f10e349ec5}\label{namespaceMain__PDE__Repo_1_1initializer_ab8ea6f49ea65c76cfaa727f10e349ec5}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!dt@{dt}}
+\index{dt@{dt}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily float Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+dt = 0.\+0001}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_ab7752e585cb1e9951e583722826dc47b}\label{namespaceMain__PDE__Repo_1_1initializer_ab7752e585cb1e9951e583722826dc47b}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!dx@{dx}}
+\index{dx@{dx}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily int Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+dx = 2 / (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}{nx} -\/ 1)}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_aa755829a50d6b513279ec4ac18abd4ba}\label{namespaceMain__PDE__Repo_1_1initializer_aa755829a50d6b513279ec4ac18abd4ba}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!dy@{dy}}
+\index{dy@{dy}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily int Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+dy = 2 / (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}{ny} -\/ 1)}
+
 \mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a588f8a108166ccbf39c9e31dd69a1a7c}\label{namespaceMain__PDE__Repo_1_1initializer_a588f8a108166ccbf39c9e31dd69a1a7c}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!laplac\+\_\+int@{laplac\+\_\+int}}
 \index{laplac\+\_\+int@{laplac\+\_\+int}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
 \subsubsection{\texorpdfstring{laplac\+\_\+int}{laplac\_int}}
-{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+laplac\+\_\+int = operator\+\_\+nd.\+Operator\+ND((\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int}, \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int}))}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+laplac\+\_\+int = operator\+\_\+nd.\+Operator\+ND((\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int},\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{d2\+\_\+int}))}
 
-\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a5d29fae6a76c81157540503a6d4340a0}\label{namespaceMain__PDE__Repo_1_1initializer_a5d29fae6a76c81157540503a6d4340a0}} 
-\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!laplacian@{laplacian}}
-\index{laplacian@{laplacian}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
-\subsubsection{\texorpdfstring{laplacian}{laplacian}}
-{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+laplacian}
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a54a7ff0de91b35f3caa1d521b08d99a9}\label{namespaceMain__PDE__Repo_1_1initializer_a54a7ff0de91b35f3caa1d521b08d99a9}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!laplace\+\_\+scheme@{laplace\+\_\+scheme}}
+\index{laplace\+\_\+scheme@{laplace\+\_\+scheme}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{laplace\+\_\+scheme}{laplace\_scheme}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+laplace\+\_\+scheme = op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme( \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a588f8a108166ccbf39c9e31dd69a1a7c}{laplac\+\_\+int}, (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a83990a2ef3c33e77b11cc09816b3388c}{x\+\_\+edge\+\_\+ops},\hyperlink{namespaceMain__PDE__Repo_1_1initializer_ae555cb401c7c00308a6d2917bf4459fb}{y\+\_\+edge\+\_\+ops}) )}
 
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-1 =  op\_nd\_scheme.OperatorNDScheme(laplac\_int,
-2                                            ( ((d2\_left,),(d2\_right,)),
-3                                              ((d2\_left,),(d2\_right,))
-4                                            )
-5                                          )
-\end{DoxyCode}
-\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_aa5c3b3b00275767f3e2e1c8eca05c3e3}\label{namespaceMain__PDE__Repo_1_1initializer_aa5c3b3b00275767f3e2e1c8eca05c3e3}} 
-\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!ops\+\_\+dict@{ops\+\_\+dict}}
-\index{ops\+\_\+dict@{ops\+\_\+dict}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
-\subsubsection{\texorpdfstring{ops\+\_\+dict}{ops\_dict}}
-{\footnotesize\ttfamily dictionary Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+ops\+\_\+dict = \{\textquotesingle{}\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a5d29fae6a76c81157540503a6d4340a0}{laplacian}\textquotesingle{}\+: \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a5d29fae6a76c81157540503a6d4340a0}{laplacian}\}}
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}\label{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!nx@{nx}}
+\index{nx@{nx}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{nx}{nx}}
+{\footnotesize\ttfamily int Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+nx = 100}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}\label{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!ny@{ny}}
+\index{ny@{ny}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{ny}{ny}}
+{\footnotesize\ttfamily int Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+ny = 100}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_acf6a435968a90051222f233d914c5397}\label{namespaceMain__PDE__Repo_1_1initializer_acf6a435968a90051222f233d914c5397}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!out\+\_\+loc@{out\+\_\+loc}}
+\index{out\+\_\+loc@{out\+\_\+loc}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{out\+\_\+loc}{out\_loc}}
+{\footnotesize\ttfamily string Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+out\+\_\+loc = r\char`\"{}outputs/\char`\"{}}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a46b587e3a760d2bc366f1b38609c5af9}\label{namespaceMain__PDE__Repo_1_1initializer_a46b587e3a760d2bc366f1b38609c5af9}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!out\+\_\+name@{out\+\_\+name}}
+\index{out\+\_\+name@{out\+\_\+name}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{out\+\_\+name}{out\_name}}
+{\footnotesize\ttfamily string Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+out\+\_\+name = \char`\"{}initializer\+\_\+2d\+\_\+plot\+\_\+3\char`\"{}}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_ab123ebb4c5c95ab09b8d8310af223730}\label{namespaceMain__PDE__Repo_1_1initializer_ab123ebb4c5c95ab09b8d8310af223730}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!t\+\_\+end@{t\+\_\+end}}
+\index{t\+\_\+end@{t\+\_\+end}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{t\+\_\+end}{t\_end}}
+{\footnotesize\ttfamily float Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+t\+\_\+end = 2.\+0}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a8f26c89cc507005999c925cc575638cf}\label{namespaceMain__PDE__Repo_1_1initializer_a8f26c89cc507005999c925cc575638cf}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!t\+\_\+start@{t\+\_\+start}}
+\index{t\+\_\+start@{t\+\_\+start}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{t\+\_\+start}{t\_start}}
+{\footnotesize\ttfamily float Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+t\+\_\+start = 0.\+0}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_af0ec17a2fbde89969e4c442f9f4fda75}\label{namespaceMain__PDE__Repo_1_1initializer_af0ec17a2fbde89969e4c442f9f4fda75}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!u@{u}}
+\index{u@{u}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+u = np.\+zeros((\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}{ny},\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}{nx}))}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a495f211daae2ee5ae3bbdb86436c35b5}\label{namespaceMain__PDE__Repo_1_1initializer_a495f211daae2ee5ae3bbdb86436c35b5}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!x@{x}}
+\index{x@{x}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+x = np.\+linspace(0, 2, \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}{nx})}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a83990a2ef3c33e77b11cc09816b3388c}\label{namespaceMain__PDE__Repo_1_1initializer_a83990a2ef3c33e77b11cc09816b3388c}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!x\+\_\+edge\+\_\+ops@{x\+\_\+edge\+\_\+ops}}
+\index{x\+\_\+edge\+\_\+ops@{x\+\_\+edge\+\_\+ops}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{x\+\_\+edge\+\_\+ops}{x\_edge\_ops}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+x\+\_\+edge\+\_\+ops = fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops( (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a24c8c2b7c649edf215c2573852cd73fc}{d2\+\_\+left},), (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_afd3adfb33fdba510d2b75e2cd9e01e42}{d2\+\_\+right},) )}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_a0963e63e11418e26d8cc428b47669ff1}\label{namespaceMain__PDE__Repo_1_1initializer_a0963e63e11418e26d8cc428b47669ff1}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!y@{y}}
+\index{y@{y}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+y = np.\+linspace(0, 2, \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}{ny})}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1initializer_ae555cb401c7c00308a6d2917bf4459fb}\label{namespaceMain__PDE__Repo_1_1initializer_ae555cb401c7c00308a6d2917bf4459fb}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}!y\+\_\+edge\+\_\+ops@{y\+\_\+edge\+\_\+ops}}
+\index{y\+\_\+edge\+\_\+ops@{y\+\_\+edge\+\_\+ops}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::initializer}}
+\subsubsection{\texorpdfstring{y\+\_\+edge\+\_\+ops}{y\_edge\_ops}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+y\+\_\+edge\+\_\+ops = fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops( (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a24c8c2b7c649edf215c2573852cd73fc}{d2\+\_\+left},), (\hyperlink{namespaceMain__PDE__Repo_1_1initializer_afd3adfb33fdba510d2b75e2cd9e01e42}{d2\+\_\+right},) )}
 

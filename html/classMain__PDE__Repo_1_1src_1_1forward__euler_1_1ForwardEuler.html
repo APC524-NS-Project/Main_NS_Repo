@@ -94,9 +94,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aafec83c8cc54107baf7aa842563199b0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler.html#aafec83c8cc54107baf7aa842563199b0">step</a> (self, val_grid, rhs_grid, dt)</td></tr>
 <tr class="memdesc:aafec83c8cc54107baf7aa842563199b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The step method of the Forward Euler class.  <a href="#aafec83c8cc54107baf7aa842563199b0">More...</a><br /></td></tr>
 <tr class="separator:aafec83c8cc54107baf7aa842563199b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebafa27619dffaadc2f9b1c7f6240892"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMain__PDE__Repo_1_1src_1_1forward__euler_1_1ForwardEuler.html#aebafa27619dffaadc2f9b1c7f6240892">get_num_grid_elems</a> (self, grid_obj)</td></tr>
-<tr class="memdesc:aebafa27619dffaadc2f9b1c7f6240892"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method for determining the number of elements in a grid.  <a href="#aebafa27619dffaadc2f9b1c7f6240892">More...</a><br /></td></tr>
-<tr class="separator:aebafa27619dffaadc2f9b1c7f6240892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classMain__PDE__Repo_1_1src_1_1time__stepper_1_1TimeStepper"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMain__PDE__Repo_1_1src_1_1time__stepper_1_1TimeStepper')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMain__PDE__Repo_1_1src_1_1time__stepper_1_1TimeStepper.html">Main_PDE_Repo.src.time_stepper.TimeStepper</a></td></tr>
 <tr class="memitem:a4e5f0ba51d77777a3ef499258f1982ac inherit pub_methods_classMain__PDE__Repo_1_1src_1_1time__stepper_1_1TimeStepper"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMain__PDE__Repo_1_1src_1_1time__stepper_1_1TimeStepper.html#a4e5f0ba51d77777a3ef499258f1982ac">step</a> (self, val_grid, rhs_grid, dt)</td></tr>
 <tr class="memdesc:a4e5f0ba51d77777a3ef499258f1982ac inherit pub_methods_classMain__PDE__Repo_1_1src_1_1time__stepper_1_1TimeStepper"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main step method of the time stepper.  <a href="classMain__PDE__Repo_1_1src_1_1time__stepper_1_1TimeStepper.html#a4e5f0ba51d77777a3ef499258f1982ac">More...</a><br /></td></tr>
@@ -106,43 +103,6 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A concrete Forward Euler subclass of TimeStepper. </p>
 <p>The Forward Euler method uses a simple forward finite difference approach to estimate a value at the next time step. This is done with the approximation {u(t+dt) - u(t)}/dt = RHS which can be rearranged to give u(t+dt) = u(t) + dt*RHS. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aebafa27619dffaadc2f9b1c7f6240892"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebafa27619dffaadc2f9b1c7f6240892">&#9670;&nbsp;</a></span>get_num_grid_elems()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def Main_PDE_Repo.src.forward_euler.ForwardEuler.get_num_grid_elems </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>grid_obj</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A method for determining the number of elements in a grid. </p>
-<p>This is just the product of the spatial dimensions of the grid. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">grid_obj</td><td>The grid to be querried </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of elements in the grid </dd></dl>
-
-</div>
-</div>
 <a id="aafec83c8cc54107baf7aa842563199b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafec83c8cc54107baf7aa842563199b0">&#9670;&nbsp;</a></span>step()</h2>
 

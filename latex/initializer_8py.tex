@@ -8,15 +8,43 @@
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
+string \hyperlink{namespaceMain__PDE__Repo_1_1initializer_acf6a435968a90051222f233d914c5397}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+out\+\_\+loc} = r\char`\"{}outputs/\char`\"{}
+\item 
+string \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a46b587e3a760d2bc366f1b38609c5af9}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+out\+\_\+name} = \char`\"{}initializer\+\_\+2d\+\_\+plot\+\_\+3\char`\"{}
+\item 
+float \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a8f26c89cc507005999c925cc575638cf}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+t\+\_\+start} = 0.\+0
+\item 
+float \hyperlink{namespaceMain__PDE__Repo_1_1initializer_ab123ebb4c5c95ab09b8d8310af223730}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+t\+\_\+end} = 2.\+0
+\item 
+float \hyperlink{namespaceMain__PDE__Repo_1_1initializer_ab8ea6f49ea65c76cfaa727f10e349ec5}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+dt} = 0.\+0001
+\item 
+int \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a7b9a1175cb86388f7315a7c6dee797e3}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+nx} = 100
+\item 
+int \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a705f203425c609ebc41db74879bf413a}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+ny} = 100
+\item 
+int \hyperlink{namespaceMain__PDE__Repo_1_1initializer_ab7752e585cb1e9951e583722826dc47b}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+dx} = 2 / (nx -\/ 1)
+\item 
+int \hyperlink{namespaceMain__PDE__Repo_1_1initializer_aa755829a50d6b513279ec4ac18abd4ba}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+dy} = 2 / (ny -\/ 1)
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a495f211daae2ee5ae3bbdb86436c35b5}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+x} = np.\+linspace(0, 2, nx)
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a0963e63e11418e26d8cc428b47669ff1}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+y} = np.\+linspace(0, 2, ny)
+\item 
+tuple \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a3349742a76f7fa24317809e551e4b27a}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+coords} = (tuple(y),tuple(x))
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_af0ec17a2fbde89969e4c442f9f4fda75}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+u} = np.\+zeros((ny,nx))
+\item 
 \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a657e8b73e6463b4e45e67b4854e3bdcc}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+d2\+\_\+int} = operator\+\_\+1d.\+Operator1D(\mbox{[}-\/1,0,1\mbox{]}, 2)
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a588f8a108166ccbf39c9e31dd69a1a7c}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+laplac\+\_\+int} = operator\+\_\+nd.\+Operator\+ND((d2\+\_\+int, d2\+\_\+int))
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a588f8a108166ccbf39c9e31dd69a1a7c}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+laplac\+\_\+int} = operator\+\_\+nd.\+Operator\+ND((d2\+\_\+int,d2\+\_\+int))
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a24c8c2b7c649edf215c2573852cd73fc}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+d2\+\_\+left} = operator\+\_\+1d.\+Operator1D(\mbox{[}0,1,2\mbox{]}, 2)
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1initializer_afd3adfb33fdba510d2b75e2cd9e01e42}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+d2\+\_\+right} = operator\+\_\+1d.\+Operator1D(\mbox{[}-\/2,-\/1,0\mbox{]}, 2)
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a5d29fae6a76c81157540503a6d4340a0}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+laplacian}
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a83990a2ef3c33e77b11cc09816b3388c}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+x\+\_\+edge\+\_\+ops} = fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops( (d2\+\_\+left,), (d2\+\_\+right,) )
 \item 
-dictionary \hyperlink{namespaceMain__PDE__Repo_1_1initializer_aa5c3b3b00275767f3e2e1c8eca05c3e3}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+ops\+\_\+dict} = \{\textquotesingle{}laplacian\textquotesingle{}\+: laplacian\}
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_ae555cb401c7c00308a6d2917bf4459fb}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+y\+\_\+edge\+\_\+ops} = fixed\+\_\+edge\+\_\+ops.\+Fixed\+Edge\+Ops( (d2\+\_\+left,), (d2\+\_\+right,) )
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a54a7ff0de91b35f3caa1d521b08d99a9}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+initializer.\+laplace\+\_\+scheme} = op\+\_\+nd\+\_\+scheme.\+Operator\+N\+D\+Scheme( laplac\+\_\+int, (x\+\_\+edge\+\_\+ops,y\+\_\+edge\+\_\+ops) )
 \end{DoxyCompactItemize}

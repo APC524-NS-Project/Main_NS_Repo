@@ -1,0 +1,4 @@
+<map id="Main_PDE_Repo.src.static_bcs.StaticBCs" name="Main_PDE_Repo.src.static_bcs.StaticBCs">
+<area shape="rect" id="node3" href="$classMain__PDE__Repo_1_1src_1_1static__bcs_1_1Dirichlet.html" title="Child BCs class for handling one side with static Dirichlet boundary conditions. " alt="" coords="5,169,187,211"/>
+<area shape="rect" id="node4" href="$classMain__PDE__Repo_1_1src_1_1static__bcs_1_1Neumann.html" title="Child BCs class for handling one side with static Neumann boundary conditions. " alt="" coords="211,169,392,211"/>
+</map>

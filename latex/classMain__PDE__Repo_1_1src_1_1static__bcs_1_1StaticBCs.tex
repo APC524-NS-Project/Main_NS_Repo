@@ -1,0 +1,146 @@
+\hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs}{}\section{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs Class Reference}
+\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs}\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs}}
+
+
+Inheritance diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a9231c3b0dd3e4263e453d0ba4211dee3}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_ad2f589646d3cbb6c43747d26802ca239}{dimen}, \hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a4f88c825d9bf611f48678b0d606e24e2}{side}, vals)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a46906776d8eb2c4e773b946dd92c4eb8}{print\+\_\+\+B\+Cs} (self)
+\begin{DoxyCompactList}\small\item\em Method to spit out the contained boundary conditions, for debugging and planning. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a33fc3207e1d39ce2970660ccd31d4084}{get\+\_\+bd} (self)
+\begin{DoxyCompactList}\small\item\em Method to return the side that this boundary condition applies to. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a12e20f5473740c1a93f3516d64b619fb}{get\+\_\+bcs} (self)
+\begin{DoxyCompactList}\small\item\em Method to return the boundary condition values, as a numpy array. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a3844f290b44196915bdf036afbcda8a8}{get\+\_\+bctype} (self)
+\begin{DoxyCompactList}\small\item\em Method to return the type of boundary condition the object is holding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_ad2f589646d3cbb6c43747d26802ca239}{dimen}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a4f88c825d9bf611f48678b0d606e24e2}{side}
+\item 
+\hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a2dfb5aec6e0993299c6c012f6a8b3304}{bound\+\_\+vals}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_afbdd530a3a47d370c99b30eed8bb0644}{bctype} = \char`\"{}None\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a9231c3b0dd3e4263e453d0ba4211dee3}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a9231c3b0dd3e4263e453d0ba4211dee3}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dimen,  }\item[{}]{side,  }\item[{}]{vals }\end{DoxyParamCaption})}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimen} & Int-\/ starting at 0, indicating which dimension the boundary conditions are being applied to. \\
+\hline
+{\em side} & Char-\/ \textquotesingle{}l\textquotesingle{} or \textquotesingle{}r\textquotesingle{}, the side whose \hyperlink{namespaceMain__PDE__Repo_1_1src_1_1BCs}{B\+Cs} are being represented \\
+\hline
+{\em vals} & Numpy array-\/ the static values set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a12e20f5473740c1a93f3516d64b619fb}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a12e20f5473740c1a93f3516d64b619fb}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!get\+\_\+bcs@{get\+\_\+bcs}}
+\index{get\+\_\+bcs@{get\+\_\+bcs}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{get\+\_\+bcs()}{get\_bcs()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+get\+\_\+bcs (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Method to return the boundary condition values, as a numpy array. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a3844f290b44196915bdf036afbcda8a8}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a3844f290b44196915bdf036afbcda8a8}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!get\+\_\+bctype@{get\+\_\+bctype}}
+\index{get\+\_\+bctype@{get\+\_\+bctype}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{get\+\_\+bctype()}{get\_bctype()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+get\+\_\+bctype (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Method to return the type of boundary condition the object is holding. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a33fc3207e1d39ce2970660ccd31d4084}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a33fc3207e1d39ce2970660ccd31d4084}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!get\+\_\+bd@{get\+\_\+bd}}
+\index{get\+\_\+bd@{get\+\_\+bd}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{get\+\_\+bd()}{get\_bd()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+get\+\_\+bd (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Method to return the side that this boundary condition applies to. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a46906776d8eb2c4e773b946dd92c4eb8}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a46906776d8eb2c4e773b946dd92c4eb8}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!print\+\_\+\+B\+Cs@{print\+\_\+\+B\+Cs}}
+\index{print\+\_\+\+B\+Cs@{print\+\_\+\+B\+Cs}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{print\+\_\+\+B\+Cs()}{print\_BCs()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+print\+\_\+\+B\+Cs (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Method to spit out the contained boundary conditions, for debugging and planning. 
+
+Mentions the side number, the kind of boundary, and spits out the prescribed values. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_afbdd530a3a47d370c99b30eed8bb0644}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_afbdd530a3a47d370c99b30eed8bb0644}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!bctype@{bctype}}
+\index{bctype@{bctype}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{bctype}{bctype}}
+{\footnotesize\ttfamily string Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+bctype = \char`\"{}None\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a2dfb5aec6e0993299c6c012f6a8b3304}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a2dfb5aec6e0993299c6c012f6a8b3304}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!bound\+\_\+vals@{bound\+\_\+vals}}
+\index{bound\+\_\+vals@{bound\+\_\+vals}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{bound\+\_\+vals}{bound\_vals}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+bound\+\_\+vals}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_ad2f589646d3cbb6c43747d26802ca239}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_ad2f589646d3cbb6c43747d26802ca239}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!dimen@{dimen}}
+\index{dimen@{dimen}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{dimen}{dimen}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+dimen}
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a4f88c825d9bf611f48678b0d606e24e2}\label{classMain__PDE__Repo_1_1src_1_1static__bcs_1_1StaticBCs_a4f88c825d9bf611f48678b0d606e24e2}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}!side@{side}}
+\index{side@{side}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::static\+\_\+bcs\+::\+Static\+B\+Cs}}
+\subsubsection{\texorpdfstring{side}{side}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+static\+\_\+bcs.\+Static\+B\+Cs.\+side}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{static__bcs_8py}{static\+\_\+bcs.\+py}\end{DoxyCompactItemize}

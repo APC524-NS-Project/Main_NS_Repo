@@ -11,7 +11,13 @@ The \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger}{Logger} class.
 def \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a1cb1b576ea43629aba66f291b97099e2}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
 \begin{DoxyCompactList}\small\item\em The constructor initializes an empty list. \end{DoxyCompactList}\item 
 def \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a5028b1f1929f7124fc5322aaa917f118}{log} (self, t, val\+\_\+grid)
-\begin{DoxyCompactList}\small\item\em The log function appends the current timestep. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The log function appends the current timestep. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a07a3ec736e4a23eb8738f52fc0d27248}{get\+\_\+frame} (self, i)
+\begin{DoxyCompactList}\small\item\em Function to get the log\+\_\+list element at a particular frame. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a3a9c0a4d4efcc23c16de9f19652cb552}{get\+\_\+nframes} (self)
+\begin{DoxyCompactList}\small\item\em Function to return the number of frame currently contained in the \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger}{Logger} This is a wrapper of len(Logger\+Object.\+log\+\_\+list) in case we ever change how the log stores its stuff. \end{DoxyCompactList}\item 
+def \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_af80ede43eb3e9305a18b9ede9f2a8607}{get\+\_\+data\+\_\+limits} (self)
+\begin{DoxyCompactList}\small\item\em Function to get the min and max values of the data contained in the \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger}{Logger}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,6 +44,41 @@ The constructor initializes an empty list.
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_af80ede43eb3e9305a18b9ede9f2a8607}\label{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_af80ede43eb3e9305a18b9ede9f2a8607}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger}!get\+\_\+data\+\_\+limits@{get\+\_\+data\+\_\+limits}}
+\index{get\+\_\+data\+\_\+limits@{get\+\_\+data\+\_\+limits}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+limits()}{get\_data\_limits()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+logger.\+Logger.\+get\+\_\+data\+\_\+limits (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Function to get the min and max values of the data contained in the \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger}{Logger}. 
+
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a07a3ec736e4a23eb8738f52fc0d27248}\label{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a07a3ec736e4a23eb8738f52fc0d27248}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger}!get\+\_\+frame@{get\+\_\+frame}}
+\index{get\+\_\+frame@{get\+\_\+frame}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger}}
+\subsubsection{\texorpdfstring{get\+\_\+frame()}{get\_frame()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+logger.\+Logger.\+get\+\_\+frame (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i }\end{DoxyParamCaption})}
+
+
+
+Function to get the log\+\_\+list element at a particular frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Int-\/ the frame that is desired, starting from 0 This is basically a wrapper of Logger\+Object.\+log\+\_\+list\mbox{[}i\mbox{]}, in case we ever want to change how the log stores its stuff. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a3a9c0a4d4efcc23c16de9f19652cb552}\label{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a3a9c0a4d4efcc23c16de9f19652cb552}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger}!get\+\_\+nframes@{get\+\_\+nframes}}
+\index{get\+\_\+nframes@{get\+\_\+nframes}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger}}
+\subsubsection{\texorpdfstring{get\+\_\+nframes()}{get\_nframes()}}
+{\footnotesize\ttfamily def Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+src.\+logger.\+Logger.\+get\+\_\+nframes (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Function to return the number of frame currently contained in the \hyperlink{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger}{Logger} This is a wrapper of len(Logger\+Object.\+log\+\_\+list) in case we ever change how the log stores its stuff. 
+
 \mbox{\Hypertarget{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a5028b1f1929f7124fc5322aaa917f118}\label{classMain__PDE__Repo_1_1src_1_1logger_1_1Logger_a5028b1f1929f7124fc5322aaa917f118}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger}!log@{log}}
 \index{log@{log}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::src\+::logger\+::\+Logger}}

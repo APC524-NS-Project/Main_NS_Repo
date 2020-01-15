@@ -3,42 +3,46 @@
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-float \hyperlink{namespaceMain__PDE__Repo_1_1main_a623833f709d5a8e70e4b8d306104018f}{t\+\_\+start} = 0.\+0
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a93cc028e2fb81f534086f1b63fe78718}{gspec} = grid.\+Cartesian\+Grid\+Spec(\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a3349742a76f7fa24317809e551e4b27a}{initializer.\+coords})
 \item 
-float \hyperlink{namespaceMain__PDE__Repo_1_1main_aaa64ac17e939825c29e61b5cf0e55d09}{t\+\_\+end} = 10.\+0
+\hyperlink{namespaceMain__PDE__Repo_1_1main_afcaceac73c84e6cc9ab24693d873b0cd}{grid\+\_\+u} = grid.\+Grid\+Scalar(\hyperlink{namespaceMain__PDE__Repo_1_1main_a93cc028e2fb81f534086f1b63fe78718}{gspec},\hyperlink{namespaceMain__PDE__Repo_1_1initializer_af0ec17a2fbde89969e4c442f9f4fda75}{initializer.\+u})
 \item 
-float \hyperlink{namespaceMain__PDE__Repo_1_1main_ad3b582748c81751902dd082c0fc4a57c}{dt} = 0.\+01
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a09e5f3ede1c619b4753684e77c63c9cd}{laplace\+\_\+op} = gridoperator.\+Grid\+Operator(\hyperlink{namespaceMain__PDE__Repo_1_1main_a93cc028e2fb81f534086f1b63fe78718}{gspec}, \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a54a7ff0de91b35f3caa1d521b08d99a9}{initializer.\+laplace\+\_\+scheme})
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_ae4ff7a8576629f56b86d396edb4e3d65}{grid\+\_\+T} = None
+dictionary \hyperlink{namespaceMain__PDE__Repo_1_1main_ab6a691cef532a8d696d6aa06679e1f17}{ops\+\_\+dict} = \{\textquotesingle{}laplacian\textquotesingle{}\+: \hyperlink{namespaceMain__PDE__Repo_1_1main_a09e5f3ede1c619b4753684e77c63c9cd}{laplace\+\_\+op}\}
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_abe5bfe982344188c2ad9d0a8068a01c4}{B\+Cs} = None
+list \hyperlink{namespaceMain__PDE__Repo_1_1main_a19c90e7effeaf1735a2fb466eedd5a1c}{B\+Cs} = \mbox{[}$\,$\mbox{]}
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_a47a9833e51d57f5f1cbaf2e6b38274be}{bound\+\_\+handlr} = None
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a47a9833e51d57f5f1cbaf2e6b38274be}{bound\+\_\+handlr} = dirichlet\+\_\+hand.\+Dirichlet\+Hand(\hyperlink{namespaceMain__PDE__Repo_1_1main_a19c90e7effeaf1735a2fb466eedd5a1c}{B\+Cs})
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1main_af6467b085d01bd160fc83b50e93c0e54}{data\+\_\+logger} = logger.\+Logger()
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1main_a87fde87043b4ff2798a7802cb61a3cbc}{time\+\_\+stpr} = forward\+\_\+euler.\+Forward\+Euler()
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_a3868ee6e3a7637e20745a4aecbdd4002}{prblm} = conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn(alpha=0.\+05)
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a3868ee6e3a7637e20745a4aecbdd4002}{prblm} = conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn(\hyperlink{namespaceMain__PDE__Repo_1_1main_a47a9833e51d57f5f1cbaf2e6b38274be}{bound\+\_\+handlr}, alpha=0.\+05)
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_a9450a1548e6c8d9316ce9ef5b053883e}{space\+\_\+drive}
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a9450a1548e6c8d9316ce9ef5b053883e}{space\+\_\+drive} = spatial\+\_\+driver.\+Spatial\+Driver(\hyperlink{namespaceMain__PDE__Repo_1_1main_a3868ee6e3a7637e20745a4aecbdd4002}{prblm}, \hyperlink{namespaceMain__PDE__Repo_1_1main_af6467b085d01bd160fc83b50e93c0e54}{data\+\_\+logger})
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1main_a9ef42bd76559c7db058c155f447f124b}{drive} = driver.\+Driver(\hyperlink{namespaceMain__PDE__Repo_1_1main_a9450a1548e6c8d9316ce9ef5b053883e}{space\+\_\+drive}, \hyperlink{namespaceMain__PDE__Repo_1_1main_a87fde87043b4ff2798a7802cb61a3cbc}{time\+\_\+stpr})
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a58d58c03728c5267032735d487a00122}{visualizer} = plot\+\_\+end.\+Plot\+End(\hyperlink{namespaceMain__PDE__Repo_1_1initializer_acf6a435968a90051222f233d914c5397}{initializer.\+out\+\_\+loc})
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a73c9ad9e7102300a434152e2fdff577f}{name}
 \end{DoxyCompactItemize}
 
 
 \subsection{Variable Documentation}
-\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_abe5bfe982344188c2ad9d0a8068a01c4}\label{namespaceMain__PDE__Repo_1_1main_abe5bfe982344188c2ad9d0a8068a01c4}} 
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a19c90e7effeaf1735a2fb466eedd5a1c}\label{namespaceMain__PDE__Repo_1_1main_a19c90e7effeaf1735a2fb466eedd5a1c}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!B\+Cs@{B\+Cs}}
 \index{B\+Cs@{B\+Cs}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
 \subsubsection{\texorpdfstring{B\+Cs}{BCs}}
-{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+B\+Cs = None}
+{\footnotesize\ttfamily list Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+B\+Cs = \mbox{[}$\,$\mbox{]}}
 
 \mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a47a9833e51d57f5f1cbaf2e6b38274be}\label{namespaceMain__PDE__Repo_1_1main_a47a9833e51d57f5f1cbaf2e6b38274be}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!bound\+\_\+handlr@{bound\+\_\+handlr}}
 \index{bound\+\_\+handlr@{bound\+\_\+handlr}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
 \subsubsection{\texorpdfstring{bound\+\_\+handlr}{bound\_handlr}}
-{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+bound\+\_\+handlr = None}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+bound\+\_\+handlr = dirichlet\+\_\+hand.\+Dirichlet\+Hand(\hyperlink{namespaceMain__PDE__Repo_1_1main_a19c90e7effeaf1735a2fb466eedd5a1c}{B\+Cs})}
 
 \mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_af6467b085d01bd160fc83b50e93c0e54}\label{namespaceMain__PDE__Repo_1_1main_af6467b085d01bd160fc83b50e93c0e54}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!data\+\_\+logger@{data\+\_\+logger}}
@@ -52,51 +56,57 @@ float \hyperlink{namespaceMain__PDE__Repo_1_1main_ad3b582748c81751902dd082c0fc4a
 \subsubsection{\texorpdfstring{drive}{drive}}
 {\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+drive = driver.\+Driver(\hyperlink{namespaceMain__PDE__Repo_1_1main_a9450a1548e6c8d9316ce9ef5b053883e}{space\+\_\+drive}, \hyperlink{namespaceMain__PDE__Repo_1_1main_a87fde87043b4ff2798a7802cb61a3cbc}{time\+\_\+stpr})}
 
-\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_ad3b582748c81751902dd082c0fc4a57c}\label{namespaceMain__PDE__Repo_1_1main_ad3b582748c81751902dd082c0fc4a57c}} 
-\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!dt@{dt}}
-\index{dt@{dt}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
-\subsubsection{\texorpdfstring{dt}{dt}}
-{\footnotesize\ttfamily float Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+dt = 0.\+01}
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_afcaceac73c84e6cc9ab24693d873b0cd}\label{namespaceMain__PDE__Repo_1_1main_afcaceac73c84e6cc9ab24693d873b0cd}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!grid\+\_\+u@{grid\+\_\+u}}
+\index{grid\+\_\+u@{grid\+\_\+u}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
+\subsubsection{\texorpdfstring{grid\+\_\+u}{grid\_u}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+grid\+\_\+u = grid.\+Grid\+Scalar(\hyperlink{namespaceMain__PDE__Repo_1_1main_a93cc028e2fb81f534086f1b63fe78718}{gspec},\hyperlink{namespaceMain__PDE__Repo_1_1initializer_af0ec17a2fbde89969e4c442f9f4fda75}{initializer.\+u})}
 
-\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_ae4ff7a8576629f56b86d396edb4e3d65}\label{namespaceMain__PDE__Repo_1_1main_ae4ff7a8576629f56b86d396edb4e3d65}} 
-\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!grid\+\_\+T@{grid\+\_\+T}}
-\index{grid\+\_\+T@{grid\+\_\+T}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
-\subsubsection{\texorpdfstring{grid\+\_\+T}{grid\_T}}
-{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+grid\+\_\+T = None}
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a93cc028e2fb81f534086f1b63fe78718}\label{namespaceMain__PDE__Repo_1_1main_a93cc028e2fb81f534086f1b63fe78718}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!gspec@{gspec}}
+\index{gspec@{gspec}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
+\subsubsection{\texorpdfstring{gspec}{gspec}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+gspec = grid.\+Cartesian\+Grid\+Spec(\hyperlink{namespaceMain__PDE__Repo_1_1initializer_a3349742a76f7fa24317809e551e4b27a}{initializer.\+coords})}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a09e5f3ede1c619b4753684e77c63c9cd}\label{namespaceMain__PDE__Repo_1_1main_a09e5f3ede1c619b4753684e77c63c9cd}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!laplace\+\_\+op@{laplace\+\_\+op}}
+\index{laplace\+\_\+op@{laplace\+\_\+op}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
+\subsubsection{\texorpdfstring{laplace\+\_\+op}{laplace\_op}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+laplace\+\_\+op = gridoperator.\+Grid\+Operator(\hyperlink{namespaceMain__PDE__Repo_1_1main_a93cc028e2fb81f534086f1b63fe78718}{gspec}, \hyperlink{namespaceMain__PDE__Repo_1_1initializer_a54a7ff0de91b35f3caa1d521b08d99a9}{initializer.\+laplace\+\_\+scheme})}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a73c9ad9e7102300a434152e2fdff577f}\label{namespaceMain__PDE__Repo_1_1main_a73c9ad9e7102300a434152e2fdff577f}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!name@{name}}
+\index{name@{name}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+name}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_ab6a691cef532a8d696d6aa06679e1f17}\label{namespaceMain__PDE__Repo_1_1main_ab6a691cef532a8d696d6aa06679e1f17}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!ops\+\_\+dict@{ops\+\_\+dict}}
+\index{ops\+\_\+dict@{ops\+\_\+dict}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
+\subsubsection{\texorpdfstring{ops\+\_\+dict}{ops\_dict}}
+{\footnotesize\ttfamily dictionary Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+ops\+\_\+dict = \{\textquotesingle{}laplacian\textquotesingle{}\+: \hyperlink{namespaceMain__PDE__Repo_1_1main_a09e5f3ede1c619b4753684e77c63c9cd}{laplace\+\_\+op}\}}
 
 \mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a3868ee6e3a7637e20745a4aecbdd4002}\label{namespaceMain__PDE__Repo_1_1main_a3868ee6e3a7637e20745a4aecbdd4002}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!prblm@{prblm}}
 \index{prblm@{prblm}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
 \subsubsection{\texorpdfstring{prblm}{prblm}}
-{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+prblm = conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn(alpha=0.\+05)}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+prblm = conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn(\hyperlink{namespaceMain__PDE__Repo_1_1main_a47a9833e51d57f5f1cbaf2e6b38274be}{bound\+\_\+handlr}, alpha=0.\+05)}
 
 \mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a9450a1548e6c8d9316ce9ef5b053883e}\label{namespaceMain__PDE__Repo_1_1main_a9450a1548e6c8d9316ce9ef5b053883e}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!space\+\_\+drive@{space\+\_\+drive}}
 \index{space\+\_\+drive@{space\+\_\+drive}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
 \subsubsection{\texorpdfstring{space\+\_\+drive}{space\_drive}}
-{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+space\+\_\+drive}
-
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-1 =  spatial\_driver.SpatialDriver(bound\_handlr,
-2                                            prblm,
-3                                            data\_logger)
-\end{DoxyCode}
-\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_aaa64ac17e939825c29e61b5cf0e55d09}\label{namespaceMain__PDE__Repo_1_1main_aaa64ac17e939825c29e61b5cf0e55d09}} 
-\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!t\+\_\+end@{t\+\_\+end}}
-\index{t\+\_\+end@{t\+\_\+end}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
-\subsubsection{\texorpdfstring{t\+\_\+end}{t\_end}}
-{\footnotesize\ttfamily float Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+t\+\_\+end = 10.\+0}
-
-\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a623833f709d5a8e70e4b8d306104018f}\label{namespaceMain__PDE__Repo_1_1main_a623833f709d5a8e70e4b8d306104018f}} 
-\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!t\+\_\+start@{t\+\_\+start}}
-\index{t\+\_\+start@{t\+\_\+start}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
-\subsubsection{\texorpdfstring{t\+\_\+start}{t\_start}}
-{\footnotesize\ttfamily float Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+t\+\_\+start = 0.\+0}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+space\+\_\+drive = spatial\+\_\+driver.\+Spatial\+Driver(\hyperlink{namespaceMain__PDE__Repo_1_1main_a3868ee6e3a7637e20745a4aecbdd4002}{prblm}, \hyperlink{namespaceMain__PDE__Repo_1_1main_af6467b085d01bd160fc83b50e93c0e54}{data\+\_\+logger})}
 
 \mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a87fde87043b4ff2798a7802cb61a3cbc}\label{namespaceMain__PDE__Repo_1_1main_a87fde87043b4ff2798a7802cb61a3cbc}} 
 \index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!time\+\_\+stpr@{time\+\_\+stpr}}
 \index{time\+\_\+stpr@{time\+\_\+stpr}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
 \subsubsection{\texorpdfstring{time\+\_\+stpr}{time\_stpr}}
 {\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+time\+\_\+stpr = forward\+\_\+euler.\+Forward\+Euler()}
+
+\mbox{\Hypertarget{namespaceMain__PDE__Repo_1_1main_a58d58c03728c5267032735d487a00122}\label{namespaceMain__PDE__Repo_1_1main_a58d58c03728c5267032735d487a00122}} 
+\index{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}!visualizer@{visualizer}}
+\index{visualizer@{visualizer}!Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main@{Main\+\_\+\+P\+D\+E\+\_\+\+Repo\+::main}}
+\subsubsection{\texorpdfstring{visualizer}{visualizer}}
+{\footnotesize\ttfamily Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+visualizer = plot\+\_\+end.\+Plot\+End(\hyperlink{namespaceMain__PDE__Repo_1_1initializer_acf6a435968a90051222f233d914c5397}{initializer.\+out\+\_\+loc})}
 

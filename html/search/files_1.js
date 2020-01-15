@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['conduct_5fheat_5feqn_2epy',['conduct_heat_eqn.py',['../conduct__heat__eqn_8py.html',1,'']]]
+  ['bchandler_2epy',['BCHandler.py',['../BCHandler_8py.html',1,'']]],
+  ['bcs_2epy',['BCs.py',['../BCs_8py.html',1,'']]]
 ];

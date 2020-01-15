@@ -8,25 +8,29 @@
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-float \hyperlink{namespaceMain__PDE__Repo_1_1main_a623833f709d5a8e70e4b8d306104018f}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+t\+\_\+start} = 0.\+0
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a93cc028e2fb81f534086f1b63fe78718}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+gspec} = grid.\+Cartesian\+Grid\+Spec(initializer.\+coords)
 \item 
-float \hyperlink{namespaceMain__PDE__Repo_1_1main_aaa64ac17e939825c29e61b5cf0e55d09}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+t\+\_\+end} = 10.\+0
+\hyperlink{namespaceMain__PDE__Repo_1_1main_afcaceac73c84e6cc9ab24693d873b0cd}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+grid\+\_\+u} = grid.\+Grid\+Scalar(gspec,initializer.\+u)
 \item 
-float \hyperlink{namespaceMain__PDE__Repo_1_1main_ad3b582748c81751902dd082c0fc4a57c}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+dt} = 0.\+01
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a09e5f3ede1c619b4753684e77c63c9cd}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+laplace\+\_\+op} = gridoperator.\+Grid\+Operator(gspec, initializer.\+laplace\+\_\+scheme)
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_ae4ff7a8576629f56b86d396edb4e3d65}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+grid\+\_\+T} = None
+dictionary \hyperlink{namespaceMain__PDE__Repo_1_1main_ab6a691cef532a8d696d6aa06679e1f17}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+ops\+\_\+dict} = \{\textquotesingle{}laplacian\textquotesingle{}\+: laplace\+\_\+op\}
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_abe5bfe982344188c2ad9d0a8068a01c4}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+B\+Cs} = None
+list \hyperlink{namespaceMain__PDE__Repo_1_1main_a19c90e7effeaf1735a2fb466eedd5a1c}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+B\+Cs} = \mbox{[}$\,$\mbox{]}
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_a47a9833e51d57f5f1cbaf2e6b38274be}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+bound\+\_\+handlr} = None
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a47a9833e51d57f5f1cbaf2e6b38274be}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+bound\+\_\+handlr} = dirichlet\+\_\+hand.\+Dirichlet\+Hand(B\+Cs)
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1main_af6467b085d01bd160fc83b50e93c0e54}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+data\+\_\+logger} = logger.\+Logger()
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1main_a87fde87043b4ff2798a7802cb61a3cbc}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+time\+\_\+stpr} = forward\+\_\+euler.\+Forward\+Euler()
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_a3868ee6e3a7637e20745a4aecbdd4002}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+prblm} = conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn(alpha=0.\+05)
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a3868ee6e3a7637e20745a4aecbdd4002}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+prblm} = conduct\+\_\+heat\+\_\+eqn.\+Conduct\+Heat\+Eqn(bound\+\_\+handlr, alpha=0.\+05)
 \item 
-\hyperlink{namespaceMain__PDE__Repo_1_1main_a9450a1548e6c8d9316ce9ef5b053883e}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+space\+\_\+drive}
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a9450a1548e6c8d9316ce9ef5b053883e}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+space\+\_\+drive} = spatial\+\_\+driver.\+Spatial\+Driver(prblm, data\+\_\+logger)
 \item 
 \hyperlink{namespaceMain__PDE__Repo_1_1main_a9ef42bd76559c7db058c155f447f124b}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+drive} = driver.\+Driver(space\+\_\+drive, time\+\_\+stpr)
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a58d58c03728c5267032735d487a00122}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+visualizer} = plot\+\_\+end.\+Plot\+End(initializer.\+out\+\_\+loc)
+\item 
+\hyperlink{namespaceMain__PDE__Repo_1_1main_a73c9ad9e7102300a434152e2fdff577f}{Main\+\_\+\+P\+D\+E\+\_\+\+Repo.\+main.\+name}
 \end{DoxyCompactItemize}
