@@ -6,10 +6,10 @@ from src import fixed_edge_ops
 
 # initialize desired parameters (that the user would specify)
 out_loc = r"outputs/"
-out_name = "initializer_test_2"
+out_name = "initializer_test_1"
 
 t_start = 0.0 # start time
-t_end = 5.0 # end time
+t_end = 10.0 # end time
 dt = 0.0001 # time step size
 
 #sloppily define the solution grid and stuff
