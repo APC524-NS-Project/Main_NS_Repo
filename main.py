@@ -33,7 +33,7 @@ data_logger = logger.Logger()
 
 time_stpr = forward_euler.ForwardEuler()
 
-prblm = conduct_heat_eqn.ConductHeatEqn(bound_handlr, alpha=0.05)
+prblm = conduct_heat_eqn.ConductHeatEqn(bound_handlr, alpha=0.5)
 
 prblm.set_ops(ops_dict)
 
