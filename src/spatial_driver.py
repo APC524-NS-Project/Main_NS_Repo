@@ -21,14 +21,10 @@ class SpatialDriver():
     #  
     #  Initializes the spatial driver with a PDE problem object,
     #  a boundary handler, and a data logger object.
-    #  \param boundhandl The boundary handler object
     #  \param pde_problem The PDE problem object
     #  \param logger The data logger object
-    def __init__(self, boundhandl, pde_problem, logger):
+    def __init__(self, pde_problem, logger):
         
-        ## A boundary handler object
-        self.boundhandl = boundhandl
-
         ## A PDE problem object
         self.pde_problem = pde_problem
 
@@ -45,7 +41,7 @@ class SpatialDriver():
     #  \param val_grid The spatial grid of function values
     #  \return Updated grid with correct boundary values
     def set_BCs(self, t, val_grid):
-        return self.boundhandl.set_BCs(t, val_grid)
+        return self.pde_problem.set_BCs(t, val_grid)
 
     ## Evaluate the right hand side of the given PDE
     #  
@@ -82,6 +78,6 @@ class SpatialDriver():
     #  \return The spatial grid with correct boundary values
     #  \return The grid object to pass to the time stepper
     def solve(self, t, val_grid):
-        val_grid = self.set_BCs(t, val_grid)
+        self.set_BCs(t, val_grid)
         self.log_data(t, val_grid)
         return val_grid, self.eval_rhs(val_grid)

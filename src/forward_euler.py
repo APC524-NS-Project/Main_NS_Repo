@@ -19,22 +19,9 @@ class ForwardEuler(time_stepper.TimeStepper):
     #  \param dt The time step size
     #  \return Spatial grid with new values for the next time step
     def step(self, val_grid, rhs_grid, dt):
-        assert self.get_num_grid_elems(val_grid) == \
-               self.get_num_grid_elems(rhs_grid), \
+        assert val_grid.gqshape == rhs_grid.gqshape, \
                "Grid objects must be equally sized!"
         
         new_val_grid = val_grid + dt * rhs_grid
         return new_val_grid
 
-    ## A method for determining the number of elements in a grid
-    #  
-    #  This is just the product of the spatial dimensions of the
-    #  grid.
-    #  \param grid_obj The grid to be querried
-    #  \return The number of elements in the grid
-    def get_num_grid_elems(self, grid_obj):
-        grid_phys_dim = grid_obj.get_phys_dim()
-        num_grid_elems = 1
-        for item in grid_phys_dim:
-            num_grid_elems *= item
-        return num_grid_elems

@@ -8,10 +8,14 @@ from src import problem
 class ConductHeatEqn(problem.Problem):
 
     ## The constructor
+    #  \param boundhandl A boundary handler object
     #  \param alpha The value of the thermal diffusivity.
     #  Default value is 1 m^2/s.
-    def __init__(self, alpha=1):
+    def __init__(self, boundhandl, alpha=1):
         
+        ## \var boundhandl The boundary handler object
+        self.boundhandl = boundhandl
+
         ## \var ops_set_flag False if the operators have not
         #  been defined
         self.ops_set_flag = False
@@ -44,4 +48,16 @@ class ConductHeatEqn(problem.Problem):
     def RHS(self, val_grid):
         assert self.ops_set_flag, \
         'The RHS operators must be defined before calling RHS()!'
-        return self.alpha * self.laplacian(val_grid)
+        new_grid0 = val_grid.applyOp(self.laplacian.scalar_op)
+        new_grid1 = new_grid0 * self.alpha
+        return new_grid1
+
+    ## Call the boundary handler to set the spatial boundaries
+    #  to the appropriate values based on the BCs.
+    #  \param t The current time
+    #  \param val_grid The spatial grid of function values
+    #  \return Updated grid with correct boundary values
+    def set_BCs(self, t, val_grid):
+        return self.boundhandl.set_BCs(t, val_grid)
+
+
