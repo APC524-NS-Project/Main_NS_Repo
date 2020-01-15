@@ -70,7 +70,8 @@ class PlotEnd(visualizer.Visualizer):
 		levels2 = MaxNLocator(nbins=15).tick_values(last_frame[1].grid.min(), initial_frame[1].grid.max())
 
 		cmap = plt.get_cmap('PiYG')
-		norm = BoundaryNorm(levels, ncolors=cmap.N, clip=True)
+		norm1 = BoundaryNorm(levels1, ncolors=cmap.N, clip=True)
+		norm2 = BoundaryNorm(levels2, ncolors=cmap.N, clip=True)
 
 		fig, (ax0, ax1) = plt.subplots(nrows=2)
 
